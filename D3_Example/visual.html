@@ -56,8 +56,8 @@
 				
 				//Create scale functions
 				var xScale = d3.scale.linear()
-									 .domain([0, d3.max(dataset, function(d) { return +d.yield; })])
-									 .range([0,0.75]);
+									 .domain([d3.min(dataset, function(d) { return +d.yield; }), d3.max(dataset, function(d) { return +d.yield; })])
+									 .range([0,1]);
 									 
 				 var Needle, arc, arcEndRad, arcStartRad, barWidth, chart, chartInset, degToRad, el, endPadRad, height, margin, needle, numSections, padRad, percToDeg, percToRad, percent, radius, sectionIndx, sectionPerc, startPadRad, svg, totalPercent, width, _i;
 

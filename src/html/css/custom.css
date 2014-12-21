@@ -1,0 +1,17 @@
+#bg{
+	background: #000 url(../images/bg.jpg) no-repeat top center;
+	height: 940px;
+}
+
+#first{
+	text-align:center;
+	margin-top:80px;
+}
+
+#big{
+	margin-left:50px;
+}	
+
+#small{
+	margin-left:50px;
+}	
