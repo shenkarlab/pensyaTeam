@@ -1,17 +1,77 @@
-#bg{
-	background: #000 url(../images/bg.jpg) no-repeat top center;
+* {
+	margin:0;
+	padding:0;	
+}
+
+header,nav,article,footer,aside,main{
+	display:block;
+}
+
+#wrapper{
 	height: 940px;
+	width: 1250px;
+}
+
+#scene{
 }
 
 #first{
-	text-align:center;
-	margin-top:80px;
+	margin-top:100px;
+	margin-left:150px;
 }
 
-#big{
-	margin-left:50px;
+#second{
+	margin-top:200px;
+	margin-left:90px;
 }	
 
-#small{
-	margin-left:50px;
+#third{
+	margin-top:360px;
+	margin-left:30px;
 }	
+#fourth{
+	margin-top:420px;
+	margin-left:20px;
+}	
+#fifth{
+	margin-top:520px;
+	margin-left:30px;
+}	
+
+#left{
+	height:940px;
+	width:90px;
+	background: #000 url(../images/left.jpg) no-repeat top center;
+	position:fixed;
+	float:left;
+	left:0px;
+	top:0px;
+	z-index:9;
+}
+
+#right{
+	height:940px;
+	width:90px;
+	background: url(../images/right.jpg) no-repeat top center;
+	position:fixed;
+	float:right;
+	right:0px;
+	top:0px;
+	z-index:9;
+}
+
+header{
+	height:90px;
+	width:1190px;
+	background: url(../images/head.jpg) no-repeat top center;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:10;
+}
+
+main{
+	height:940px;
+	width:1200px;
+	margin-top:80px;
+}
