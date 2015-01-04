@@ -32,13 +32,13 @@ nav{
 	right: 0px;
 	position:fixed;
 }
-section{
+aside{
 	height:711px;
 	width:180px;
 	position:fixed;
 	bottom: 58px;
 	left:0;
-	background: #2da491 url(../images/man_closed_bag.png) no-repeat center bottom;
+	background: #2da491 url(../images/man_closed_bag.png) no-repeat center 483px;
 	background-size : 150px 150px;
 }
 footer{
@@ -53,8 +53,19 @@ main{
 	background-color: #2da491;
 	height:100%;
 	width:100%;
-	background:#2da491 url(../images/placeholder.jpg) no-repeat 50% 20%;
 	
+	
+}
+#sec1{
+	background:#2da491 url(../images/placeholder.jpg) no-repeat 50% 20%;
+	height:100%;
+	width:100%;
+}
+#sec2{
+	background:#2da491 url(../images/placeholder.jpg) no-repeat 50% 20%;
+	background-color: #2da491;
+	height:100%;
+	width:100%;
 }
 
 /* Common styles and resets */
@@ -100,45 +111,21 @@ main{
 	outline: none;
 }
 
-/* Dot Hop */
 
-.dotstyle-hop li a {
-	border: 1px solid #c44d48;
-	background: transparent;
+/* Scale up */
+
+.dotstyle-scaleup li a {
+	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.dotstyle-hop li a::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	border-radius: 50%;
-	visibility: hidden;
-	background: #fff;
-	opacity: 0;
-	-webkit-transform: rotate(-100deg);
-	transform: rotate(-100deg);
-	-webkit-transform-origin: -200% 50%;
-	transform-origin: -200% 50%;
-	-webkit-transition: -webkit-transform 0.3s ease 0.3s, opacity 0.3s ease, visibility 0s 0.3s ease;
-	transition: transform 0.3s ease 0.3s, opacity 0.3s ease, visibility 0s 0.3s ease;
+
+.dotstyle-scaleup li a:hover,
+.dotstyle-scaleup li a:focus {
+	background-color: white;
 }
-.dotstyle-hop li a:focus {
-	background: rgba(255, 255, 255, 0.2);
-}
-.dotstyle-hop li.current-from-right a::after {
-	-webkit-transition: none;
-	transition: none;
-	-webkit-transform: rotate(100deg);
-	transform: rotate(100deg);
-	-webkit-transform-origin: 300% 50%;
-	transform-origin: 300% 50%;
-}
-.dotstyle-hop li.current a::after {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
-	transition: transform 0.3s ease, opacity 0.3s ease;
+
+.dotstyle-scaleup li.current a {
+	background-color: white;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
 }
