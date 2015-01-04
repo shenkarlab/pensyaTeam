@@ -53,7 +53,8 @@ main{
 	background-color: #2da491;
 	height:100%;
 	width:100%;
-	background-image: url(../images/placeholder.jpg);
+	background:#2da491 url(../images/placeholder.jpg) no-repeat 50% 20%;
+	
 }
 
 /* Common styles and resets */
