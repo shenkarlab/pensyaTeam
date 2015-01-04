@@ -1,65 +1,54 @@
-	/* kuku kuku kuku */
-	/* chennnnnnnn */
-
-
 * {
 	margin:0;
 	padding:0;	
 }
-
-header,nav,article,footer,aside,main{
+header,nav,article,footer,aside,main,section{
 	display:block;
 }
-
 ul,li{
 	text-decoration: none;
 	list-style-type: none;
 }
-	
 a{
 	text-decoration: none;
 	color:black;
 }
-	
 a:visited,a:active,a:after{
 		color:black;
 }
-
 #wrapper{
 	height:768px;
 	width:100%;
 	display:block;
 	margin:0 auto;
 }
-
 #scene{
 }
-
 nav{
-	background-color: #2da000;
+	background-color: #2da491;
 	height:711px;
 	width:91px;
-	top:0;
-	right:0;
+	top: 0px;
+	right: 0px;
 	position:fixed;
 }
 section{
-	background-color: #2da100;
 	height:711px;
 	width:180px;
-	top:0;
-	left:0;
 	position:fixed;
+	bottom: 58px;
+	left:0;
+	background: #2da491 url(../images/man_closed_bag.png) no-repeat center bottom;
+	background-size : 150px 150px;
 }
 footer{
-	background-color: #9da491;
+	background-color: #2da491;
 	height:58px;
 	width:100%;
     bottom:0px;
     right:0px;
 	position:fixed;
 }
-
 main{
 	background-color: #2da491;
 	height:100%;
@@ -83,21 +72,19 @@ main{
 	-ms-user-select: none;
 	user-select: none;
 }
-
 .dotstyle li {
 	position: relative;
 	display: block;
 	float: left;
 	margin: 0 16px;
-	margin-top:10px;
+	margin-top: 20%;
 	width: 16px;
 	height: 16px;
 	cursor: pointer;
 }
-
 .dotstyle li a {
-	top: 0;
-	left: 0;
+	top: 400%;
+	left: 100%;
 	width: 100%;
 	height: 100%;
 	outline: none;
@@ -108,11 +95,9 @@ main{
 	cursor: pointer;
 	position: absolute;
 }
-
 .dotstyle li a:focus {
 	outline: none;
 }
-
 
 /* Dot Hop */
 
@@ -120,7 +105,6 @@ main{
 	border: 1px solid #c44d48;
 	background: transparent;
 }
-
 .dotstyle-hop li a::after {
 	content: '';
 	width: 100%;
@@ -138,11 +122,9 @@ main{
 	-webkit-transition: -webkit-transform 0.3s ease 0.3s, opacity 0.3s ease, visibility 0s 0.3s ease;
 	transition: transform 0.3s ease 0.3s, opacity 0.3s ease, visibility 0s 0.3s ease;
 }
-
 .dotstyle-hop li a:focus {
 	background: rgba(255, 255, 255, 0.2);
 }
-
 .dotstyle-hop li.current-from-right a::after {
 	-webkit-transition: none;
 	transition: none;
@@ -151,7 +133,6 @@ main{
 	-webkit-transform-origin: 300% 50%;
 	transform-origin: 300% 50%;
 }
-
 .dotstyle-hop li.current a::after {
 	visibility: visible;
 	opacity: 1;
