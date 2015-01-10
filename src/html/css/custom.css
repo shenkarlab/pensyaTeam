@@ -75,7 +75,11 @@ main{
 	width:100%;
 }
 #sec2{
+<<<<<<< HEAD
 	background-color: #CE404A;	
+=======
+	background:#6666CC url(../images/placeholder.jpg) no-repeat 50% 20%;
+>>>>>>> origin/master
 	height:100%;
 	width:100%;
 	position: relative;
