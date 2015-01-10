@@ -137,11 +137,7 @@ function calcIt(valX,valPer) {
 	});
 	
 
-
-/*
- <!-- Scripts -->
-	<script src="deploy/dots.js"></script>
-	<script>
+$(document).ready(function(){
 		[].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
 			new DotNav( nav, {
 				callback : function( idx ) {
@@ -149,7 +145,10 @@ function calcIt(valX,valPer) {
 				}
 			} );
 		} );
-	</script>
+		});
+
+	
+	/*
 	<script type="text/javascript" src="deploy/parallax.min.js"></script>
 	<script>
 
