@@ -170,6 +170,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
+if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+  document.onkeydown = keydown;
+
 function preventDefault(e) {
   e = e || window.event;
   if (e.preventDefault)
@@ -181,11 +187,5 @@ function preventDefault(e) {
 function wheel(e) {
   preventDefault(e);
 }
-
-  if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', wheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = wheel;
-  document.onkeydown = keydown;
 
 });
