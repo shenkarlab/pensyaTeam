@@ -10,7 +10,11 @@
 
 	<title>Pensya Team</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	
 	<link href="css/custom.css" rel="stylesheet" type="text/css">
+	
+	<link href="css/social_buttons_footer.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="deploy/percentagePageFunctions.js"></script>
 	<script type="text/javascript" src="deploy/modernizr.min.js"></script>
 	<script type="text/javascript" src="deploy/jquery-2.1.3.min.js"></script>
 	<script>
@@ -36,6 +40,20 @@
 			<section id="sec1">
 			</section>
 			<section id="sec2">
+					<article id="percentageButtons">
+						<button value="5" onclick="calcIt(document.getElementById('salary').value,this.value)" onactivate="selectesButton(this)"> 	5%	 </button>
+						<button value="6" onclick="calcIt(document.getElementById('salary').value,this.value)" onactivate="selectesButton(this)"> 	6%	 </button>
+						<button value="7" onclick="calcIt(document.getElementById('salary').value,this.value)" onactivate="selectesButton(this)"> 	7%	 </button>
+					</article>
+					<article id="percentageInputs">
+						<input class="shake" id="totalAmout" type="text" name="total_amount_after_40years" value="581,674" readonly> 
+						<input id="perMonth" type="text" name="monthly_secretion" value="450" readonly> 
+						<input id="salary" type="text" name="monthly_salary" value="9,000" onchange="calcIt(this.value,5)">
+						<br> <br>
+						<p> הפרשה חודשית </p>
+						<p> שכר חודשי </p>
+						<p> אחרי 40 שנה </p>
+					</article>
 			</section>
 		</main>
 		<nav>
@@ -60,7 +78,10 @@
 		
 		</aside>
 		<footer>
-		
+				<div class="buttons">
+						<a class="twitter" href=""><img src="images/social_buttons/twitter.png" /></a>
+						<a class="facebook" href=""><img src="images/social_buttons/facebook.png" /></a>
+				</div>
 		</footer>
 	</div>
 	
