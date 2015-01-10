@@ -122,38 +122,6 @@ function calcIt(valX,valPer) {
     	document.getElementById("salary").value = commaSeparateNumber(x); 
 	}
 
-function selectedButton(num) {
-	switch (num) {
-		case "5": 	
-			document.getElementById("per5").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-			document.getElementById("per5").style.fontSize = "26px";
-			document.getElementById("per6").style.textShadow = "none";
-			document.getElementById("per6").style.fontSize = "20px";
-			document.getElementById("per7").style.textShadow = "none";
-			document.getElementById("per7").style.fontSize = "20px";
-			break;
-		case "6": 	
-			document.getElementById("per6").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-			document.getElementById("per6").style.fontSize = "26px";
-			document.getElementById("per5").style.textShadow = "none";
-			document.getElementById("per5").style.fontSize = "20px";
-			document.getElementById("per7").style.textShadow = "none";
-			document.getElementById("per7").style.fontSize = "20px";
-			break;
-		case "7": 	
-			document.getElementById("per7").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-			document.getElementById("per7").style.fontSize = "26px";
-			document.getElementById("per5").style.textShadow = "none";
-			document.getElementById("per5").style.fontSize = "20px";
-			document.getElementById("per6").style.textShadow = "none";
-			document.getElementById("per6").style.fontSize = "20px";
-			break;
-		default: break;
-	}
-}
-
-window.onload = selectedButton("5");
-
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 
 	$(document).ready(function(){
@@ -208,6 +176,12 @@ if (window.addEventListener) {
   window.onmousewheel = document.onmousewheel = wheel;
   document.onkeydown = keydown;
 
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
 
 function wheel(e) {
   preventDefault(e);
