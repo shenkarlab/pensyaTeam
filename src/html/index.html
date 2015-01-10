@@ -15,16 +15,16 @@
 	<script type="text/javascript" src="deploy/dots.js"></script>
 	<title>Pensya</title>
 </head>
-<body>
+<body onload ="selectedButton('5')">
 	<div id="wrapper">
 		<main>
 			<section id="sec1">
 			</section>
 			<section id="sec2">
 					<article id="percentageButtons">
-						<button value="5" onclick="calcIt(document.getElementById('salary').value,this.value)" onactivate="selectesButton(this)"> 	5%	 </button>
-						<button value="6" onclick="calcIt(document.getElementById('salary').value,this.value)" onactivate="selectesButton(this)"> 	6%	 </button>
-						<button value="7" onclick="calcIt(document.getElementById('salary').value,this.value)" onactivate="selectesButton(this)"> 	7%	 </button>
+						<button id="per5" value="5" onclick="calcIt(document.getElementById('salary').value,this.value)" onmouseup="selectedButton('5')"> 5%	 </button>
+						<button id="per6" value="6" onclick="calcIt(document.getElementById('salary').value,this.value)" onmouseup="selectedButton('6')"> 	6%	 </button>
+						<button id="per7" value="7" onclick="calcIt(document.getElementById('salary').value,this.value)" onmouseup="selectedButton('7')"> 	7%	 </button>
 					</article>
 					<article id="percentageInputs">
 						<input class="shake" id="totalAmout" type="text" name="total_amount_after_40years" value="581,674" readonly> 

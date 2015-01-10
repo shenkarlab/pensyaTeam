@@ -127,6 +127,7 @@ button {
 	-moz-border-radius:10px 10px 10px 10px;
 	-webkit-border-radius:10px 10px 10px 10px;
 	cursor:pointer;
+	outline: none;
 }
 button:hover {
 	cursor:pointer;
