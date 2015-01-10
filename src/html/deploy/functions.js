@@ -208,13 +208,6 @@ if (window.addEventListener) {
   window.onmousewheel = document.onmousewheel = wheel;
   document.onkeydown = keydown;
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
-}
-
 
 function wheel(e) {
   preventDefault(e);
