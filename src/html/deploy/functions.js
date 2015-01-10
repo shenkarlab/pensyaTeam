@@ -164,3 +164,28 @@ $(document).ready(function(){
  
  
  */
+ 
+ 
+//Disable scrolling 
+
+$(document).ready(function(){
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+
+function wheel(e) {
+  preventDefault(e);
+}
+
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+  document.onkeydown = keydown;
+
+});
