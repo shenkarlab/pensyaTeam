@@ -15,6 +15,19 @@ function scrollTo(elementId){
       
     };
 
+function colorChange(colorId){
+      $('nav').animate({
+           backgroundColor: colorId
+      }, 1400); 
+      $('aside').animate({
+           backgroundColor: colorId
+      }, 1400); 
+      $('footer').animate({
+           backgroundColor: colorId
+      }, 1400); 
+      
+    };
+
  $(window).resize(function(){
     onPageResize();
  });
@@ -22,14 +35,15 @@ function scrollTo(elementId){
  onPageResize();
  
  $("#one").click(function(){
-      console.log("One clicked");
-      console.log($("#sec1").offset().top);
+ 
       scrollTo("#sec1");
+      colorChange("#2da491");
     });
 
 $("#two").click(function(){
-      console.log("Two clicked");
+
       scrollTo("#sec2");
+      colorChange("#6666CC");
     });
 
 $("#three").click(function(){
