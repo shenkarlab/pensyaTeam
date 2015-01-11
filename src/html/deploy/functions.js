@@ -55,6 +55,33 @@ $("#four").click(function(){
       
       scrollTo("#sec4");
     });
+    
+    
+    /**Bind Keys to scroll**/
+    
+    $(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+        break;
+
+        case 38: // up
+        break;
+
+        case 39: // right
+        break;
+
+        case 40: // down
+		    var v = $('#nav').filter('.current').html();
+		    alert(v);
+        	scrollTo("#sec2");
+      		colorChange("#CE404A");
+        break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+	});
+
 });
 
 /**LandingResize**/
@@ -199,25 +226,24 @@ $(document).ready(function(){
  */
  
  
-//Disable scrolling 
+//Disable scrolling
 
 $(document).ready(function(){
 
-if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', wheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = wheel;
-  document.onkeydown = keydown;
+	if (window.addEventListener) {
+		  window.addEventListener('DOMMouseScroll', wheel, false);
+	  }
+	  window.onmousewheel = document.onmousewheel = wheel;
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
-}
+	function preventDefault(e) {
+	  e = e || window.event;
+	  if (e.preventDefault)
+		  e.preventDefault();
+	  e.returnValue = false;  
+	}
 
-function wheel(e) {
-  preventDefault(e);
-}
+	function wheel(e) {
+	  preventDefault(e);
+	}
 
 });
