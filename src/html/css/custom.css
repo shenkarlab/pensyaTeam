@@ -195,8 +195,7 @@ button:hover {
 	transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.dotstyle-scaleup li a:hover,
-.dotstyle-scaleup li a:focus {
+.dotstyle-scaleup li a:hover {
 	background-color: white;
 }
 

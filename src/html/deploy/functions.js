@@ -35,25 +35,40 @@ function colorChange(colorId){
  onPageResize();
  
  $("#one").click(function(){
- 
+ 	
+ 	  var element = $(".current");
+ 	  $(element).removeClass("current");
+ 	  $("#one").addClass("current");
+ 	  
       scrollTo("#sec1");
       colorChange("#2da491");
     });
 
 $("#two").click(function(){
-
+	  
+	  var element = $(".current");
+ 	  $(element).removeClass("current");
+ 	  $("#two").addClass("current");
       scrollTo("#sec2");
       colorChange("#CE404A");
     });
 
 $("#three").click(function(){
       
+      var element = $(".current");
+ 	  $(element).removeClass("current");
+ 	  $("#three").addClass("current");
       scrollTo("#sec3");
+      colorChange("#CE404A");
     });
 
 $("#four").click(function(){
       
+      var element = $(".current");
+ 	  $(element).removeClass("current");
+ 	  $("#four").addClass("current");
       scrollTo("#sec4");
+      colorChange("#CE404A");
     });
     
     
@@ -207,17 +222,6 @@ $(document).ready(function(){
         console.log("Current scroll percent: " + scrollPercent);
 	  });
 	});
-	
-
-$(document).ready(function(){
-		[].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
-			new DotNav( nav, {
-				callback : function( idx ) {
-					//console.log( idx )
-				}
-			} );
-		} );
-		});
 
 	
 	/*
