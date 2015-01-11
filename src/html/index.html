@@ -29,10 +29,10 @@
 					<article id="percentageInputs">
 						<input class="shake" id="totalAmout" type="text" name="total_amount_after_40years" value="581,674" readonly> 
 						<input id="perMonth" type="text" name="monthly_secretion" value="450" readonly> 
-						<input id="salary" type="text" name="monthly_salary" value="9,000" onchange="calcIt(this.value,5)">
+						<input id="salary" type="text" name="monthly_salary" value="9,000" onchange="calcIt(this.value,5), selectedButton('5')">
 						<br> <br>
-						<p> הפרשה חודשית </p>
 						<p> שכר חודשי </p>
+						<p> הפרשה חודשית </p>
 						<p> אחרי 40 שנה </p>
 					</article>
 			</section>
@@ -40,8 +40,8 @@
 		<nav>
 			<div class="dotstyle dotstyle-scaleup">
 				<ul id="nav">
-					<li id="one" class="current"><a href="#">Home</a></li>
-					<li id="two"><a href="#">About</a></li>
+					<li id="one" data-sec="1" class="current"><a href="#">Home</a></li>
+					<li id="two" data-sec="2"><a href="#">About</a></li>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Portfolio</a></li>
 					<li><a href="#">Blog</a></li>

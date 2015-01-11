@@ -65,16 +65,32 @@ $("#four").click(function(){
         break;
 
         case 38: // up
+        	var element = $(".current");
+        	if (element.prev().length)
+        	{
+				var x = element.attr('data-sec');
+				$(element).prev().addClass("current");
+				$(element).removeClass("current");
+				x--;
+				scrollTo("#sec" + x);
+				colorChange($("#sec" + x).css('backgroundColor'));
+			}
         break;
 
         case 39: // right
         break;
 
         case 40: // down
-		    var v = $('#nav').filter('.current').html();
-		    alert(v);
-        	scrollTo("#sec2");
-      		colorChange("#CE404A");
+        	var element = $(".current");
+        	if (element.next().length)
+        	{
+				var x = element.attr('data-sec');
+				$(element).next().addClass("current");
+				$(element).removeClass("current");
+				x++;
+				scrollTo("#sec" + x);
+				colorChange($("#sec" + x).css('backgroundColor'));
+			}
         break;
 
         default: return; // exit this handler for other keys
@@ -148,6 +164,35 @@ function calcIt(valX,valPer) {
     	document.getElementById("perMonth").value = commaSeparateNumber(x*valPer/100); 
     	document.getElementById("salary").value = commaSeparateNumber(x); 
 	}
+	
+	function selectedButton(num) {
+	if (num=="5") {
+			document.getElementById("per5").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
+			document.getElementById("per5").style.fontSize = "26px";
+			document.getElementById("per6").style.textShadow = "none";
+			document.getElementById("per6").style.fontSize = "20px";
+			document.getElementById("per7").style.textShadow = "none";
+			document.getElementById("per7").style.fontSize = "20px";
+	} else if (num=="6") {
+			document.getElementById("per6").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
+			document.getElementById("per6").style.fontSize = "26px";
+			document.getElementById("per5").style.textShadow = "none";
+			document.getElementById("per5").style.fontSize = "20px";
+			document.getElementById("per7").style.textShadow = "none";
+			document.getElementById("per7").style.fontSize = "20px";
+	} else if (num=="7") {
+			document.getElementById("per7").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
+			document.getElementById("per7").style.fontSize = "26px";
+			document.getElementById("per5").style.textShadow = "none";
+			document.getElementById("per5").style.fontSize = "20px";
+			document.getElementById("per6").style.textShadow = "none";
+			document.getElementById("per6").style.fontSize = "20px";
+	}
+};
+
+$(document).ready(function(){
+		selectedButton("5"); 
+});
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 
