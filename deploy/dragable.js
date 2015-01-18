@@ -1,8 +1,9 @@
 function dragStart(ev) {
    ev.dataTransfer.effectAllowed='move';
-   console.log(ev.dataTransfer.setData("Text", ev.target.getAttribute('id')));
-   console.log(ev.target.getElementsByTagName('article'));
-   ev.dataTransfer.setDragImage(ev.target,100,100);
+   var img = document.createElement("img");
+	img.src = "images/Screen 2/Man_Up.png";
+    ev.dataTransfer.setDragImage(img, 100, 100);
+    console.log("IN");
    return true;
 }
 
