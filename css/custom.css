@@ -87,11 +87,10 @@ main{
 	margin-top:5%;
 }
 #sec3{
-	background:#dddddd;
+	background:#4a9e69 url("../images/Screen 8/Envelope.png") no-repeat center 75%;
 	height:100%;
 	width:100%;
 }
-
 #percentageButtons {
 	position: absolute;
 	margin-left: 40%;
