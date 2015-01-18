@@ -1,9 +1,10 @@
 function dragStart(ev) {
    ev.dataTransfer.effectAllowed='move';
    var img = document.createElement("img");
-	img.src = "images/Screen 2/Man_Up.png";
-    ev.dataTransfer.setDragImage(img, 100, 100);
-    console.log("IN");
+   img.src = "images/Screen 2/Man_Up.png";
+   ev.dataTransfer.setDragImage(img, 100, 100);
+   $('#office').attr("src", "images/Screen 2/Office_Empty.png");
+   $('#sofa').attr("src", "images/Screen 2/Sofa_Empty.png");
    return true;
 }
 
@@ -20,13 +21,11 @@ function dragOver(ev) {
 }
 
 function dragDrop(ev) {
-   var data = ev.dataTransfer.getData("Text");
-   console.log(data);
-   console.log(ev.target)
-   if($(ev.target).prop("tagName") == 'IMG')
-   	  ev.target.parentNode.parentNode.appendChild(document.getElementById(data));
-   else
-   	  ev.target.appendChild(document.getElementById(data));
-   ev.stopPropagation();
+	if (ev.target.id == "office"){
+		$('#office').attr("src", "images/Screen 2/Office_Man.png");
+	}
+	else{
+		$('#sofa').attr("src", "images/Screen 2/Sofa_Man.png");
+	}
    return false;
 }
