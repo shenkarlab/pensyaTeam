@@ -70,9 +70,20 @@ main{
 	width:100%;
 }
 #sec1{
-	background:#84c560 url("") no-repeat 50% 30%;
+	background: url("../images/Screen 1/text.png") no-repeat 95% 10%,
+				#84c560 url("../images/Screen 1/Age_Man_None.png")no-repeat 50% 30%;
 	height:100%;
 	width:100%;
+}
+#male{
+	position:relative;
+	top:23%;
+	left:65%;
+}
+#female{
+	position:relative;
+	top:43%;
+	left:59.3%;
 }
 #sec2{	
 	background:#4a9e69 url("../images/Screen 2/text.png") no-repeat 95% 10%;
@@ -130,6 +141,7 @@ main{
 
 
 
+/* 
 button {
 	text-align: center;
 	width: 80px;
@@ -156,6 +168,7 @@ button:hover {
 	top:2px;
 	font: bold 24px Walter Turncoat,Tahoma, Geneva, sans-serif;
 }
+ */
 
 /* Common styles and resets */
 
