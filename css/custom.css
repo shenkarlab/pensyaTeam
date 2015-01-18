@@ -74,12 +74,17 @@ main{
 	height:100%;
 	width:100%;
 }
-#sec2{
-	background:url("../images/Screen 2/Office_Empty.png") no-repeat 25% 30%,
-			   url("../images/Screen 2/sofa_man.png") no-repeat 80% 51.2%,
-			   #4a9e69 url("../images/Screen 2/text.png") no-repeat 95% 10%;
+#sec2{	
+	background:#4a9e69 url("../images/Screen 2/text.png") no-repeat 95% 10%;
 	height:100%;
 	width:100%;
+}
+#sec2>img:nth-child(1){
+	margin-top:5%;
+	margin-left:17%;
+}
+#sec2>img:nth-child(2){
+	margin-top:5%;
 }
 #sec3{
 	background:#dddddd;
