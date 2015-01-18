@@ -15,18 +15,18 @@ function scrollTo(elementId){
       
     };
 
-function colorChange(colorId){
-      $('nav').animate({
-           backgroundColor: colorId
-      }, 1400); 
-      $('aside').animate({
-           backgroundColor: colorId
-      }, 1400); 
-      $('footer').animate({
-           backgroundColor: colorId
-      }, 1400); 
-      
-    };
+// function colorChange(colorId){
+//       $('nav').animate({
+//            backgroundColor: colorId
+//       }, 1400); 
+//       $('aside').animate({
+//            backgroundColor: colorId
+//       }, 1400); 
+//       $('header').animate({
+//            backgroundColor: colorId
+//       }, 1400); 
+//       
+//     };
 
  $(window).resize(function(){
     onPageResize();
@@ -34,41 +34,14 @@ function colorChange(colorId){
 
  onPageResize();
  
- $("#one").click(function(){
+ $(".navs").click(function(){
  	
  	  var element = $(".current");
  	  $(element).removeClass("current");
- 	  $("#one").addClass("current");
+ 	  $(this).addClass("current");
  	  
-      scrollTo("#sec1");
-      colorChange("#2da491");
-    });
-
-$("#two").click(function(){
-	  
-	  var element = $(".current");
- 	  $(element).removeClass("current");
- 	  $("#two").addClass("current");
-      scrollTo("#sec2");
-      colorChange("#CE404A");
-    });
-
-$("#three").click(function(){
-      
-      var element = $(".current");
- 	  $(element).removeClass("current");
- 	  $("#three").addClass("current");
-      scrollTo("#sec3");
-      colorChange("#CE404A");
-    });
-
-$("#four").click(function(){
-      
-      var element = $(".current");
- 	  $(element).removeClass("current");
- 	  $("#four").addClass("current");
-      scrollTo("#sec4");
-      colorChange("#CE404A");
+      scrollTo("#sec" + $(this).attr('data-sec'));
+      // colorChange("#84c560");
     });
     
     
@@ -88,7 +61,7 @@ $("#four").click(function(){
 				$(element).removeClass("current");
 				x--;
 				scrollTo("#sec" + x);
-				colorChange($("#sec" + x).css('backgroundColor'));
+				// colorChange($("#sec" + x).css('backgroundColor'));
 			}
         break;
 
@@ -104,7 +77,7 @@ $("#four").click(function(){
 				$(element).removeClass("current");
 				x++;
 				scrollTo("#sec" + x);
-				colorChange($("#sec" + x).css('backgroundColor'));
+				// colorChange($("#sec" + x).css('backgroundColor'));
 			}
         break;
 
@@ -205,9 +178,9 @@ function calcIt(valX,valPer) {
 	}
 };
 
-$(document).ready(function(){
-		selectedButton("5"); 
-});
+// $(document).ready(function(){
+// 		selectedButton("5"); 
+// });
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 
