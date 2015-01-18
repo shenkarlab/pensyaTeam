@@ -77,7 +77,7 @@ main{
 }
 #male{
 	position:relative;
-	top:23%;
+	top:13%;
 	left:65%;
 }
 #female{
@@ -85,6 +85,52 @@ main{
 	top:43%;
 	left:59.3%;
 }
+/* 
+#slider{  
+    position: relative;   
+    background: url('../images/Screen 1/Age_line_None.png') no-repeat ;   
+    left:30%;
+    top:20%; 
+    height:320px;
+} 
+#sliderValue {
+	position: relative;   
+    background: url('../images/Screen 1/Age_Button_None.png') no-repeat ;   
+    left:30%;
+    top:20%; 
+    -webkit-transform-rotate(90deg);
+} 
+ */
+input[type='range']{
+		position:relative;
+		top:20%;
+		left:30%;
+        vertical-align: middle;
+        writing-mode: bt-lr; /* IE */
+		-webkit-appearance: slider-vertical; /* WebKit */
+		-webkit-appearance: none;
+		width: 8px;
+		height: 375px;
+		padding: 0 5px;
+		background: url("../images/Screen 1/Age_line_None.png") no-repeat;
+}
+
+input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		margin-left:250%;
+        height:120px;
+        width: 100px;
+        background: url("../images/Screen 1/Age_Button_None.png")no-repeat;
+}
+input[type='range']::-moz-range-thumb {
+		-webkit-appearance: none;
+		margin-left:250%;
+        height: 120px;
+        width: 100px;
+        background: url("../images/Screen 1/Age_Button_None.png")no-repeat;
+}
+
+
 #sec2{	
 	background:#4a9e69 url("../images/Screen 2/text.png") no-repeat 95% 10%;
 	height:100%;
