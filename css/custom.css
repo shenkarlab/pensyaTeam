@@ -70,20 +70,26 @@ main{
 	width:100%;
 }
 #sec1{
-	background: url("../images/Screen 1/text.png") no-repeat 95% 10%,
-				#84c560 url("../images/Screen 1/Age_Man_None.png")no-repeat 50% 30%;
+	background:#84c560 url("../images/Screen 1/text.png") no-repeat 95% 10%;
 	height:100%;
 	width:100%;
 }
+#user{
+	position:relative;
+	top:20%;
+	left:30%;
+}
 #male{
 	position:relative;
-	top:13%;
+	top:-20%;
 	left:65%;
+	outline: 0;
 }
 #female{
 	position:relative;
-	top:43%;
+	top:13%;
 	left:59.3%;
+	outline: 0;
 }
 /* 
 #slider{  
@@ -103,7 +109,7 @@ main{
  */
 input[type='range']{
 		position:relative;
-		top:20%;
+		top:-10%;
 		left:30%;
         vertical-align: middle;
         writing-mode: bt-lr; /* IE */

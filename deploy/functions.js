@@ -263,6 +263,21 @@ $(document).ready(function(){
 //     
 // });
 
+$(document).ready(function(){
+	$("#male").click(function(){
+		$("#male").attr("src", "images/Screen 1/Boy_S.png");
+		$("#female").attr("src", "images/Screen 1/Girl.png");
+		$("#user").attr("src", "images/Screen 1/Age_Man.png");
+	});
+});
+$(document).ready(function(){
+	$("#female").click(function(){
+		$("#female").attr("src", "images/Screen 1/Girl_S.png");
+		$("#male").attr("src", "images/Screen 1/Boy.png");
+		$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
+	});
+});
+
 /* --------sec 2 --------------------------------------------------------------------*/
 
 $(document).ready(function(){
