@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Scatterplot!</title>
+		<script type="text/javascript" src="d3.v3.js"></script>
+		<style type="text/css">
+			.chart-gauge 
+			{
+			  width: 400px;
+			  margin: 100px auto;
+			}
+
+			.chart-color3
+			{
+			  fill: #458B00;
+			}
+
+			.chart-color2 
+			{
+			  fill: #e6e600;
+			}
+
+			.chart-color1 
+			{
+			  fill: #e92213;
+			}
+
+			.needle,
+			.needle-center 
+			{
+			  fill: #464A4F;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="buttonContainer">
+			<input type="button" value="2005">
+			<input type="button" value="2006">
+			<input type="button" value="2007">
+			<input type="button" value="2008">
+			<input type="button" value="2009">
+			<input type="button" value="2010">
+			<input type="button" value="2011">
+			<input type="button" value="2012">
+			<input type="button" value="2013">
+		</div>
+		<div class="chart-gauge"></div>
+			<script type="text/javascript">
+			//dataset from csv file
+			d3.csv("data.csv", function (dataset)
+			{
+					
+				console.log(dataset);
+				console.log(d3.max(dataset, function(d) { return +d.yield; }));
+				
+				//Create scale functions
+				var xScale = d3.scale.linear()
+									 .domain([d3.min(dataset, function(d) { return +d.yield; }), d3.max(dataset, function(d) { return +d.yield; })])
+									 .range([0,1]);
+									 
+				 var Needle, arc, arcEndRad, arcStartRad, barWidth, chart, chartInset, degToRad, el, endPadRad, height, margin, needle, numSections, padRad, percToDeg, percToRad, percent, radius, sectionIndx, sectionPerc, startPadRad, svg, totalPercent, width, _i;
+
+				  percent = 0;
+
+				  barWidth = 40;
+
+				  numSections = 3;
+
+				  sectionPerc = 1 / numSections / 2;
+
+				  padRad = 0.05;
+
+				  chartInset = 35;
+
+				  totalPercent = .75;
+
+				  el = d3.select('.chart-gauge');
+					 
+		
+				function play(num) 
+				{
+				  percent = num;
+				 
+				  margin = {
+					top: 20,
+					right: 20,
+					bottom: 30,
+					left: 20
+				  };
+
+				  width = el[0][0].offsetWidth - margin.left - margin.right;
+
+				  height = width;
+
+				  radius = Math.min(width, height) / 2;
+
+				  percToDeg = function(perc) {
+					return perc * 360;
+				  };
+
+				  percToRad = function(perc) {
+					return degToRad(percToDeg(perc));
+				  };
+
+				  degToRad = function(deg) {
+					return deg * Math.PI / 180;
+				  };
+
+				  svg = el.append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom);
+
+				  chart = svg.append('g').attr('transform', "translate(" + ((width + margin.left) / 2) + ", " + ((height + margin.top) / 2) + ")");
+
+				  for (sectionIndx = _i = 1; 1 <= numSections ? _i <= numSections : _i >= numSections; sectionIndx = 1 <= numSections ? ++_i : --_i) {
+					arcStartRad = percToRad(totalPercent);
+					arcEndRad = arcStartRad + percToRad(sectionPerc);
+					totalPercent += sectionPerc;
+					startPadRad = sectionIndx === 0 ? 0 : padRad / 2;
+					endPadRad = sectionIndx === numSections ? 0 : padRad / 2;
+					arc = d3.svg.arc().outerRadius(radius - chartInset).innerRadius(radius - chartInset - barWidth).startAngle(arcStartRad + startPadRad).endAngle(arcEndRad - endPadRad);
+					chart.append('path').attr('class', "arc chart-color" + sectionIndx).attr('d', arc);
+					chart.append("text").attr("dy", "-5em").attr("dx", "-11.8em").attr("text-anchor", "left").text("Bad Yield");
+					chart.append("text").attr("dy", "-11em").attr("dx", "0em").attr("text-anchor", "middle").text("Medium Yield");
+					chart.append("text").attr("dy", "-5em").attr("dx", "8.2em").attr("text-anchor", "right").text("Good Yield");
+				  }
+
+				  Needle = (function() {
+					function Needle(len, radius) {
+					  this.len = len;
+					  this.radius = radius;
+					}
+
+					Needle.prototype.drawOn = function(el, perc) {
+					  el.append('circle').attr('class', 'needle-center').attr('cx', 0).attr('cy', 0).attr('r', this.radius);
+					  return el.append('path').attr('class', 'needle').attr('d', this.mkCmd(perc));
+					};
+
+					Needle.prototype.animateOn = function(el, perc) {
+					  var self;
+					  self = this;
+					  return el.transition().delay(500).ease('elastic').duration(3000).selectAll('.needle').tween('progress', function() {
+						return function(percentOfPercent) {
+						  var progress;
+						  progress = percentOfPercent * perc;
+						  return d3.select(this).attr('d', self.mkCmd(progress));
+						};
+					  });
+					};
+
+					Needle.prototype.mkCmd = function(perc) {
+					  var centerX, centerY, leftX, leftY, rightX, rightY, thetaRad, topX, topY;
+					  thetaRad = percToRad(perc / 2);
+					  centerX = 0;
+					  centerY = 0;
+					  topX = centerX - this.len * Math.cos(thetaRad);
+					  topY = centerY - this.len * Math.sin(thetaRad);
+					  leftX = centerX - this.radius * Math.cos(thetaRad - Math.PI / 2);
+					  leftY = centerY - this.radius * Math.sin(thetaRad - Math.PI / 2);
+					  rightX = centerX - this.radius * Math.cos(thetaRad + Math.PI / 2);
+					  rightY = centerY - this.radius * Math.sin(thetaRad + Math.PI / 2);
+					  return "M " + leftX + " " + leftY + " L " + topX + " " + topY + " L " + rightX + " " + rightY;
+					};
+
+					return Needle;
+
+				  })();
+
+				  needle = new Needle(90, 15);
+
+				  needle.drawOn(chart, 0);
+
+				  needle.animateOn(chart, percent);
+
+				}
+				
+				play(0);
+				
+				d3.selectAll("input")
+					.on("click", function() 
+					{
+						console.log(this.value)
+						if(this.value == "2005")
+						{
+							needle.animateOn(chart, xScale(dataset[0].yield))
+						}
+						else if(this.value == "2006")
+						{
+							needle.animateOn(chart, xScale(dataset[1].yield))
+						}
+						else if(this.value == "2007")
+						{
+							needle.animateOn(chart, xScale(dataset[2].yield))
+						}
+						else if(this.value == "2008")
+						{
+							needle.animateOn(chart, xScale(dataset[3].yield))
+						}
+						else if(this.value == "2009")
+						{
+							needle.animateOn(chart, xScale(dataset[4].yield))
+						}
+						else if(this.value == "2010")
+						{
+							needle.animateOn(chart, xScale(dataset[5].yield))
+						}
+						else if(this.value == "2011")
+						{
+							needle.animateOn(chart, xScale(dataset[6].yield))
+						}
+						else if(this.value == "2012")
+						{
+							needle.animateOn(chart, xScale(dataset[7].yield))
+						}
+						else if(this.value == "2013")
+						{
+							needle.animateOn(chart, xScale(dataset[8].yield))
+						}
+						
+					});
+			});
+			</script>
+		</div>
+	</body>
+</html>
