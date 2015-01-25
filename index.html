@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/custom.css" >
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" >
 	<script type="text/javascript" src="deploy/modernizr.min.js"></script>
 	<script type="text/javascript" src="deploy/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="deploy/functions.js"></script>
@@ -24,27 +25,29 @@
 		</section>
 		<main>
 			<section id="sec1">
-				<input type="range" orient="vertical"> </input>
-				<input type="image" src="images/Screen 1/Boy.png" id="male"></input>
-				<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
-				<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
+					<input type="range" orient="vertical"> </input>
+					<input type="image" src="images/Screen 1/Boy.png" id="male"></input>
+					<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
+					<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
 			</section>
 			<section id="sec2" ondragstart="dragStart(event)" ondragenter="dragEnter(event)" ondrop="dragDrop(event)" ondragover="dragOver(event)">
-				<img id="office" src="images/Screen 2/Office_Empty.png">	
-				<img id="sofa" src="images/Screen 2/Sofa_Man.png">
+					<img id="office" src="images/Screen 2/Office_Empty.png">	
+					<img id="sofa" src="images/Screen 2/Sofa_Man.png">
 			</section>
-			<section id="sec3">	3</section>
-			<section id="sec4">	4</section>
-			<section id="sec5">	5</section>
-			<section id="sec6">	6</section>
-			<section id="sec7">	7</section>
+			<section id="sec3">
+					<div id="cin"><input name="paycheck" type="text" id="paycheck" placeholder="         הכנס את המשכורת שלך" size="30"></div>
+			</section>
+			<section id="sec4">	4 </section>
+			<section id="sec5">	5 </section>
+			<section id="sec6">	6 </section>
+			<section id="sec7">	7 </section>
 			<section id="sec8">		
 					<div id="envelope_up"> </div>
 					<div id="envelope_down"> </div>
 					<div id="card"> </div>   
 			</section>
-			<section id="sec9">	9</section>
-			<section id="sec10">10</section>
+			<section id="sec9">	9 </section>
+			<section id="sec10">10 </section>
 		</main>
 		<nav>
 			<div class="dotstyle dotstyle-scaleup">
@@ -64,10 +67,7 @@
 				</ul>
 			</div>
 		</nav>
-		<aside>
-		
-		</aside>
-		
+		<aside>	</aside>
 	</div>
 </body>
 </html>

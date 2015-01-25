@@ -91,22 +91,26 @@ main{
 	left:59.3%;
 	outline: 0;
 }
-/* 
-#slider{  
-    position: relative;   
-    background: url('../images/Screen 1/Age_line_None.png') no-repeat ;   
+
+.ui-slider-handle
+{
+	background: url("../images/Screen 1/Age_Button_None.png")0% 30% no-repeat !important;
+    width:100px !important;
+    height:100px !important;
+    top:-18px !important;
+    border:none !important;
+}
+.ui-slider-vertical{
+	background: url("../images/Screen 1/Age_line_None.png")50% 50% no-repeat !important;
+	border:none !important;
+}
+
+#slider-vertical{
+	height:40%;
+	position:relative;
+    top:15%;
     left:30%;
-    top:20%; 
-    height:320px;
-} 
-#sliderValue {
-	position: relative;   
-    background: url('../images/Screen 1/Age_Button_None.png') no-repeat ;   
-    left:30%;
-    top:20%; 
-    -webkit-transform-rotate(90deg);
-} 
- */
+}
 input[type='range']{
 		position:relative;
 		top:-10%;
@@ -120,7 +124,6 @@ input[type='range']{
 		padding: 0 5px;
 		background: url("../images/Screen 1/Age_line_None.png") no-repeat;
 }
-
 input[type='range']::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		margin-left:250%;
@@ -147,16 +150,6 @@ input[type='range']::-moz-range-thumb {
 #sec2>img:nth-child(2){
 	margin-top:5%;
 }
-#sec3{	
-	background: #4a9e69;
-	height:100%;
-	width:100%;
-}
-#sec4{	
-	background: #4a9e69;
-	height:100%;
-	width:100%;
-}
 #sec5{	
 	background: #4a9e69;
 	height:100%;
@@ -173,9 +166,6 @@ input[type='range']::-moz-range-thumb {
 	width:100%;
 }
 #sec8{
-/*	background: url("../images/Screen 8/Envelope.png") no-repeat center 75%,
-						#4a9e69	url("../images/Screen 8/Envelope_Back.png") no-repeat center 14%; 
-*/
 	background: #4a9e69	;
 	position: relative;
 	height:100%;
@@ -191,6 +181,51 @@ input[type='range']::-moz-range-thumb {
 	height:100%;
 	width:100%;
 }
+#sec3{
+	background:#dddddd url("../images/Screen 3/red_line.png") no-repeat center 47%;
+	height:100%;
+	width:100%;
+}
+#cin{
+	position:relative;
+	top:35%;
+	left:32%;
+}
+#paycheck {
+	background-color:rgba(0, 0, 0, 0);
+    color:#686868;
+    border: none;
+    outline:none;
+    height:100px;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+    font-size:30px; 
+    
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #686868;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #686868;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #686868;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #686868;
+}
+#paycheck:focus{
+
+}
+
+#sec4{
+	background:#ffbf47 url("../images/Screen 3/Salary.png") no-repeat 59% 27%;
+	height:100%;
+	width:100%;
+}
+
 #percentageButtons {
 	position: absolute;
 	margin-left: 40%;
