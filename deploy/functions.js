@@ -286,5 +286,36 @@ $(document).ready(function(){
 	});
 });
 
+/* --------sec 8 --------------------------------------------------------------------*/
 
-
+$(document).ready(function(){
+	$("#card").hover(function(){
+		  	$("#card").css("top","1%");
+	  		},function(){
+	  		$("#card").css("top","7%");
+		});
+	$("#card").hover(function(){
+		  	$("#envelope_down").css("top","47%");
+	  		},function(){
+	  		$("#envelope_down").css("top","33%");
+		});
+	$("#card").hover(function(){
+		  	$("#envelope_up").css("top","14%");
+	  		},function(){
+	  		$("#envelope_up").css("top","0%");
+		});			
+});
+/*
+$(document).ready(function(){
+    $('#card').hover(function(e){
+        //This is onMouseIn event
+        $('#onMouseIn').slideDown(600);
+        $('#onMouseOut').slideUp(600);
+    }, 
+    function(e){
+        //This is onMouseOut event
+  	     $('#onMouseOut').slideDown(600);
+    	 $('#onMouseIn').slideUp(600);
+    });
+});
+*/

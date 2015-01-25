@@ -135,8 +135,6 @@ input[type='range']::-moz-range-thumb {
         width: 100px;
         background: url("../images/Screen 1/Age_Button_None.png")no-repeat;
 }
-
-
 #sec2{	
 	background:#4a9e69 url("../images/Screen 2/text.png") no-repeat 95% 10%;
 	height:100%;
@@ -149,8 +147,47 @@ input[type='range']::-moz-range-thumb {
 #sec2>img:nth-child(2){
 	margin-top:5%;
 }
-#sec3{
-	background:#4a9e69 url("../images/Screen 8/Envelope.png") no-repeat center 75%;
+#sec3{	
+	background: #4a9e69;
+	height:100%;
+	width:100%;
+}
+#sec4{	
+	background: #4a9e69;
+	height:100%;
+	width:100%;
+}
+#sec5{	
+	background: #4a9e69;
+	height:100%;
+	width:100%;
+}
+#sec6{	
+	background: #4a9e69;
+	height:100%;
+	width:100%;
+}
+#sec7{	
+	background: #4a9e69;
+	height:100%;
+	width:100%;
+}
+#sec8{
+/*	background: url("../images/Screen 8/Envelope.png") no-repeat center 75%,
+						#4a9e69	url("../images/Screen 8/Envelope_Back.png") no-repeat center 14%; 
+*/
+	background: #4a9e69	;
+	position: relative;
+	height:100%;
+	width:100%;
+}
+#sec9{	
+	background: #000000;
+	height:100%;
+	width:100%;
+}
+#sec10{	
+	background: #4a9e69;
 	height:100%;
 	width:100%;
 }
@@ -308,4 +345,36 @@ button:hover {
 }
 .shake {
 	display:inline-block
+}
+
+
+/* --------sec 8 --------------------------------------------------------------------*/
+
+#envelope_up {
+	position: absolute;
+	top: 0%;
+	left: 22%;
+	height: 508px;
+	width: 759px;
+	background: url("../images/Screen 8/Envelope_Back.png") no-repeat center top;
+	z-index: 1;
+}
+#envelope_down {
+	position: absolute;
+	top: 33%;
+	left: 22%;
+	height: 382px;
+	width: 759px;
+	background: url("../images/Screen 8/Envelope.png") no-repeat center 50%;
+	z-index: 3;
+}
+#card {
+	position: absolute;
+	top: 7%;
+	left: 25%;
+	margin-left: 9px;
+	height: 703px;
+	width: 667px;
+	background: url("../images/Screen 8/Card.png") no-repeat center 50%;
+	z-index: 2;
 }
