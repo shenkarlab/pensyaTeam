@@ -54,6 +54,7 @@ aside{
 	left:0;
 	background: url("../images/Frame/PensionBag.png") no-repeat center 350px;
 	background-size : 150px 150px;
+	display:none;
 }
 header{
 	background:url("../images/Frame/Social_Twitter_S.png") no-repeat 1% 45%,
@@ -70,6 +71,9 @@ main{
 	height:100%;
 	width:100%;
 }
+
+/* --------sec 1 --------------------------------------------------------------------*/
+
 #sec1{
 	background:#84c560 url("../images/Screen 1/text.png") no-repeat 95% 10%;
 	height:100%;
@@ -78,7 +82,7 @@ main{
 #user{
 	position:relative;
 	top:20%;
-	left:30%;
+	left:25%;
 }
 #male{
 	position:relative;
@@ -93,51 +97,23 @@ main{
 	outline: 0;
 }
 
-.ui-slider-handle
-{
-	background: url("../images/Screen 1/Age_Button_None.png")0% 30% no-repeat !important;
-    width:100px !important;
-    height:100px !important;
-    top:-18px !important;
-    border:none !important;
-}
-.ui-slider-vertical{
-	background: url("../images/Screen 1/Age_line_None.png")50% 50% no-repeat !important;
-	border:none !important;
+#slider {
+ border:none;
+ position:relative;
+ left:-170%;
+ height:100px;
+ width:30px;
+ padding: 0.5em; 
+ background: url("../images/Screen 1/Age_Button_None.png") no-repeat 100%;
 }
 
-#slider-vertical{
-	height:40%;
-	position:relative;
-    top:15%;
-    left:30%;
-}
-input[type='range']{
-		position:relative;
-		top:-10%;
-		left:30%;
-        vertical-align: middle;
-        writing-mode: bt-lr; /* IE */
-		-webkit-appearance: slider-vertical; /* WebKit */
-		-webkit-appearance: none;
-		width: 8px;
-		height: 375px;
-		padding: 0 5px;
-		background: url("../images/Screen 1/Age_line_None.png") no-repeat;
-}
-input[type='range']::-webkit-slider-thumb {
-		-webkit-appearance: none;
-		margin-left:250%;
-        height:120px;
-        width: 100px;
-        background: url("../images/Screen 1/Age_Button_None.png")no-repeat;
-}
-input[type='range']::-moz-range-thumb {
-		-webkit-appearance: none;
-		margin-left:250%;
-        height: 120px;
-        width: 100px;
-        background: url("../images/Screen 1/Age_Button_None.png")no-repeat;
+#slider_wrapper{
+	position:absolute;
+	top:24%;
+	left:26%;
+	height:400px;
+	width:10px;
+	background: url("../images/Screen 1/Age_line_None.png") no-repeat 100%;
 }
 
 /* --------sec 2 --------------------------------------------------------------------*/
@@ -177,6 +153,7 @@ input[type='range']::-moz-range-thumb {
     -webkit-transition:height 1s;
     font-size:30px; 
     text-align: center;
+    line-height:35px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #686868;
@@ -198,20 +175,30 @@ input[type='range']::-moz-range-thumb {
 /* --------sec 4 --------------------------------------------------------------------*/
 
 #sec4{
+	background: #3a5f8d;
+	height:100%;
+	width:100%;
+}
+
+/* --------sec 5 --------------------------------------------------------------------*/
+#sec5{	
 	background:#ffbf47 url("../images/Screen 3/Salary.png") no-repeat 59% 27%;
 	height:100%;
 	width:100%;
 }
-#sec5{	
-	background: #4a9e69;
-	height:100%;
-	width:100%;
-}
+
+
+
+/* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
-	background: #4a9e69;
+	background: #c73746;
 	height:100%;
 	width:100%;
 }
+
+
+
+/* --------sec 7 --------------------------------------------------------------------*/
 #sec7{	
 	background:#dddddd;
 	height:100%;

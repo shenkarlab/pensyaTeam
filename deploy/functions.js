@@ -42,6 +42,7 @@ function scrollTo(elementId){
  	  
       scrollTo("#sec" + $(this).attr('data-sec'));
       // colorChange("#84c560");
+      return false;
     });
     
     
@@ -184,6 +185,8 @@ function calcIt(valX,valPer) {
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 
+	var scrollPercent = 0;
+	
 	$(document).ready(function(){
 	  $(window).scroll(function()
 	  {
@@ -242,32 +245,21 @@ $(document).ready(function(){
 
 /* --------sec 1 --------------------------------------------------------------------*/
 
-// 
-// $(document).ready(function() {
-//  
-//     $("#slider").slider({value:'',min: 0,max: 150,step: 1, range: 'min'});
-//     
-//     var thumb = $($('#slider').children('.ui-slider-handle'));   
-//     setLabelPosition();    
-//     
-//     $('#slider').bind('slide', function () {        
-//         $('#sliderValue').val($('#slider').slider('value'));
-//         setLabelPosition();
-//     });
-//     
-//     function setLabelPosition() {
-//         var label = $('#sliderValue');
-//         label.css('top', thumb.offset().top + label.outerHeight(true));
-//         label.css('left', thumb.offset().left - (label.width() - thumb.width())/ 2);        
-//     }
-//     
-// });
+
+$(document).ready(function() {
+ $(function() {
+    $( "#slider" ).draggable({ axis: "y" });
+    $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
+  });
+});
 
 $(document).ready(function(){
 	$("#male").click(function(){
 		$("#male").attr("src", "images/Screen 1/Boy_S.png");
 		$("#female").attr("src", "images/Screen 1/Girl.png");
 		$("#user").attr("src", "images/Screen 1/Age_Man.png");
+		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
+		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
 	});
 });
 $(document).ready(function(){
@@ -275,6 +267,8 @@ $(document).ready(function(){
 		$("#female").attr("src", "images/Screen 1/Girl_S.png");
 		$("#male").attr("src", "images/Screen 1/Boy.png");
 		$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
+		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
+		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
 	});
 	
 });
@@ -304,3 +298,21 @@ $(document).ready(function(){
 	
 	});
 });
+
+
+
+/* --------sec 6 --------------------------------------------------------------------*/
+
+
+
+$(document).ready(function(){
+	   x = 0;
+	  $(window).scroll(function()
+	  {
+		if(scrollPercent >= 30 && x == 0){
+			console.log("HHHHHH");
+			x = 1;
+		}
+	  });
+});
+
