@@ -23,6 +23,7 @@ function dragOver(ev) {
 function dragDrop(ev) {
 	if (ev.target.id == "office"){
 		$('#office').attr("src", "images/Screen 2/Office_Man.png");
+		$('aside').show();
 	}
 	else{
 		$('#sofa').attr("src", "images/Screen 2/Sofa_Man.png");
