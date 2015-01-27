@@ -306,15 +306,50 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-	   x = 0;
+	  x = 0;
 	  $(window).scroll(function()
 	  {
-		if(scrollPercent >= 30 && x == 0){
-			console.log("HHHHHH");
+		if(scrollPercent >= 51 && x == 0){
+			console.log("Sec 6 reached");
+			$('#no_idea').animate({ height:507, top:'0%' }, {
+					queue: false,
+                    duration: 600,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            $('#medium').animate({ height:411, top:'0%' }, {
+            		queue: false,
+                    duration: 700,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            $('#danger').animate({ height:543, top:'0%' }, {
+            		queue: false,
+                    duration: 800,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            $('#solid').animate({ height:280, top:'0%' }, {
+            		queue: false,
+                    duration: 2400,
+                    easing: 'easeOutBounce',
+                    complete: function() { 
+                    	$("#p1").delay(600).animate({ opacity: 1 }, 700)
+                    	$("#p2").delay(600).animate({ opacity: 1 }, 700)
+                    	$("#p3").delay(600).animate({ opacity: 1 }, 700)
+                    	$("#p4").delay(600).animate({ opacity: 1 }, 700)
+                    }
+                });
 			x = 1;
 		}
 	  });
+	  
+	  
 });
+
+/* --------sec 7 --------------------------------------------------------------------*/
+
+
 
 
 
@@ -324,34 +359,11 @@ $(document).ready(function(){
 
 /* --------sec 8 --------------------------------------------------------------------*/
 
-$(document).ready(function(){
-	$("#card").hover(function(){
-		  	$("#card").css("top","1%");
-	  		},function(){
-	  		$("#card").css("top","7%");
-		});
-	$("#card").hover(function(){
-		  	$("#envelope_down").css("top","47%");
-	  		},function(){
-	  		$("#envelope_down").css("top","33%");
-		});
-	$("#card").hover(function(){
-		  	$("#envelope_up").css("top","14%");
-	  		},function(){
-	  		$("#envelope_up").css("top","0%");
-		});			
-});
-/*
-$(document).ready(function(){
-    $('#card').hover(function(e){
-        //This is onMouseIn event
-        $('#onMouseIn').slideDown(600);
-        $('#onMouseOut').slideUp(600);
-    }, 
-    function(e){
-        //This is onMouseOut event
-  	     $('#onMouseOut').slideDown(600);
-    	 $('#onMouseIn').slideUp(600);
-    });
-});
-*/
+
+
+
+
+
+
+
+/* --------sec 9 --------------------------------------------------------------------*/
