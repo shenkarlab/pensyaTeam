@@ -365,7 +365,22 @@ $(document).ready(function(){
 		}
 	  });
 	  
-	  
+	$( "#p1" ).click(function() {
+	  $( "#plus1" ).toggle( "fold" );
+	  console.log("CLicked");
+	});
+	$( "#p2" ).click(function() {
+	  $( "#plus2" ).toggle( "fold" );
+	  console.log("CLicked");
+	});
+	$( "#p3" ).click(function() {
+	  $( "#plus3" ).toggle( "fold" );
+	  console.log("CLicked");
+	});
+	$( "#p4" ).click(function() {
+	  $( "#plus4" ).toggle( "fold" );
+	  console.log("CLicked");
+	});
 });
 
 /* --------sec 7 --------------------------------------------------------------------*/

@@ -335,7 +335,50 @@ main{
 }
 #sec6 input:hover{background:url("../images/Screen 6/plus_hover.png");}
 
-
+#plus1 {
+	position:relative;
+	bottom:50%;
+	left:10%;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(153,35,47,0.5);
+    display:none;
+    z-index:3;
+    color:#FFFFFF;
+  }
+#plus2{
+	position:relative;
+	bottom:30%;
+	left:35%;
+	width: 200px;
+	height: 100px;
+	background-color: rgba(153,35,47,0.5);
+	display:none;
+	z-index:3;
+	color:#FFFFFF;
+	}
+#plus3 {
+	position:relative;
+	bottom:30%;
+	left:50%;
+	width: 200px;
+	height: 100px;
+	background-color: rgba(153,35,47,0.5);
+	display:none;
+	z-index:3;
+	color:#FFFFFF;
+	}
+#plus4 {
+	position:relative;
+	bottom:55%;
+	left:70%;
+	width: 200px;
+	height: 100px;
+	background-color: rgba(153,35,47,0.5);
+	display:none;
+	z-index:3;
+	color:#FFFFFF;
+	}
 /* --------sec 7 --------------------------------------------------------------------*/
 #sec7{	
 	background:#dddddd;
