@@ -260,10 +260,82 @@ main{
 }
 /* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
-	background: #c73746;
+	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 50% 72%;
 	height:100%;
 	width:100%;
+	
+	/* div.animate({ top: '-=100px' }, 600, 'easeOutCubic', function () { … }) */
 }
+
+
+#no_idea{
+	position:relative;
+	left:23%;
+	top:80%;
+	z-index:0;
+	height:0px;
+	display:inline-block;
+}
+
+#medium{
+	position:relative;
+	left:11.5%;
+	top:80%;
+	z-index:1;
+	height:0px;
+	display:inline-block;
+}
+
+#solid{
+	position:relative;
+	left:4%;
+	top:80%;
+	z-index:2;
+	height:0px;
+	display:inline-block;
+}
+
+#danger{
+	position:relative;
+	right:17%;
+	top:80%;
+	z-index:0;
+	height:0px;
+	display:inline-block;	
+}
+
+#p1{
+	position:relative;
+	bottom:40%;
+	right:80%;
+	outline: 0;
+	opacity:0;
+}
+
+#p2{
+	position:relative;
+	bottom:100%;
+	right:30%;
+	outline: 0;
+	opacity:0;
+}
+#p3{
+	position:relative;
+	bottom:110%;
+	right:70%;
+	outline: 0;
+	opacity:0;
+}
+#p4{
+	position:relative;
+	bottom:85%;
+	right:8%;
+	outline: 0;
+	opacity:0;
+}
+#sec6 input:hover{background:url("../images/Screen 6/plus_hover.png");}
+
+
 /* --------sec 7 --------------------------------------------------------------------*/
 #sec7{	
 	background:#dddddd;
@@ -327,6 +399,9 @@ main{
 	height:100%;
 	width:100%;
 }
+
+
+/* --------sec 10 --------------------------------------------------------------------*/
 #sec10{	
 	background: #4a9e69;
 	height:100%;

@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="deploy/jquery.color-2.1.2.js"></script>
 	<script type="text/javascript" src="deploy/dragable.js"> </script>
 	<script type="text/javascript" src="deploy/jquery-ui.js"> </script>
+	<script type="text/javascript" src="deploy/jquery.easing.1.3.js"> </script>
 
 	<title>Pensya</title>
 </head>
@@ -29,19 +30,19 @@
 		</section>
 		<main>
 			<section id="sec1">
-					<div id="slider_wrapper">
-						<div id="slider" class="draggable ui-widget-content"></div>
-					</div>
-					<input type="image" src="images/Screen 1/Boy.png" id="male"></input>
-					<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
-					<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
+				<div id="slider_wrapper">
+					<div id="slider" class="draggable ui-widget-content"></div>
+				</div>
+				<input type="image" src="images/Screen 1/Boy.png" id="male"></input>
+				<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
+				<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
 			</section>
 			<section id="sec2" ondragstart="dragStart(event)" ondragenter="dragEnter(event)" ondrop="dragDrop(event)" ondragover="dragOver(event)">
-					<img id="office" src="images/Screen 2/Office_Empty.png">	
-					<img id="sofa" src="images/Screen 2/Sofa_Man.png">
+				<img id="office" src="images/Screen 2/Office_Empty.png">	
+				<img id="sofa"   src="images/Screen 2/Sofa_Man.png">
 			</section>
 			<section id="sec3">
-					<div id="cin"><input name="paycheck" type="text" id="paycheck" placeholder="הכנס את המשכורת שלך     " size="30"></div>
+				<div id="cin"><input name="paycheck" type="text" id="paycheck" placeholder="הכנס את המשכורת שלך     " size="30"></div>
 			</section>
 			<section id="sec4">	 
 					<h1> ?מה אחוז ההפרשה לקרן הפנסיה שלך	</h1>
@@ -61,12 +62,29 @@
 					</article>
 			</section>
 			<section id="sec5">	 </section>
-			<section id="sec6">	 </section>
+			<section id="sec6">	 
+				<div id="no_idea">
+					<img src="images/Screen 6/sign_no_idea.png">
+					<input type="image" src="images/Screen 6/plus_normal.png" id="p1"></input>
+				</div>
+				<div id="medium">
+					<img  src="images/Screen 6/sign_medium.png">
+					<input type="image" src="images/Screen 6/plus_normal.png" id="p2"></input>
+				</div>	
+				<div id="solid">
+					<img   src="images/Screen 6/sign_solid.png">
+					<input type="image" src="images/Screen 6/plus_normal.png" id="p3"></input>
+				</div>	
+				<div id="danger">
+					<img   src="images/Screen 6/sign_danger.png">
+					<input type="image" src="images/Screen 6/plus_normal.png" id="p4"></input>
+				</div>		
+			</section>
 			<section id="sec7">	 </section>
 			<section id="sec8">		
-					<div id="card"> </div>   
-					<div id="envelope_up"> </div>
-					<div id="envelope_down"> </div>
+				<div id="card"> </div>   
+				<div id="envelope_up"> </div>
+				<div id="envelope_down"> </div>
 			</section>
 			<section id="sec9">	</section>
 			<section id="sec10"> </section>
