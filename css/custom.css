@@ -178,26 +178,92 @@ main{
 	background: #3a5f8d;
 	height:100%;
 	width:100%;
+	margin-top: 10%;
 }
-
+#sec4>h1 {
+	font-family: aduma;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: right;	
+	padding: 40px;
+}
+#percentageButtons {
+	position: absolute;
+	width: 60%;
+	margin-left: 20%; 
+}
+.perButton {	
+	display:inline-block;
+	height: 40%;
+	width: 18%;
+	margin-left: 7%;
+	margin-right: 7%;
+	text-align: center;
+	font-family: aduma;
+	font-size: 60px;
+	color: #FFFFFF;	
+	background: url("../images/Screen_4/Selection.png") no-repeat center top;
+	background-size: 25%;
+	border: none;
+	outline: none;
+}
+.perButton:hover {
+	background: url("../images/Screen_4/Selection_Hover.png") no-repeat center top;
+	background-size: 25%;
+}
+.selected {
+	background: url("../images/Screen_4/Selection_Active.png") no-repeat center top;
+	background-size: 25%;
+}
+.preload { 
+	opacity: 0; 
+	position: absolute; 
+	top: -9999px; 
+	left: -9999px; 
+}
+#percentageInputs {
+	position: absolute;
+	width: 60%;
+	margin-left: 20%; 
+	margin-top: 22%;
+}
+#percentageInputs>input {
+	background: url("../images/Screen_4/NIS.png") no-repeat center right;
+	height: 40px;
+	width: 133px;
+	margin-left: 7%;
+	margin-right: 7%;
+	text-align: center;
+	font-family: aduma;
+	font-size: 28px;
+	color: #FFFFFF;
+	border: none;
+	outline: none;
+}
+#percentageInputs>p {
+	display: inline-block;
+	font: 24px aduma,Arial,Geneva, sans-serif;
+	float: right;
+	color: #FFFFFF;
+}
+#percentageInputs>p:nth-child(6) {
+	margin-right: 11%;  
+}
+#percentageInputs>p:nth-child(7), #percentageInputs>p:nth-child(8)  {
+	padding-right: 18%;
+}
 /* --------sec 5 --------------------------------------------------------------------*/
 #sec5{	
 	background:#ffbf47 url("../images/Screen 3/Salary.png") no-repeat 59% 27%;
 	height:100%;
 	width:100%;
 }
-
-
-
 /* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
 	background: #c73746;
 	height:100%;
 	width:100%;
 }
-
-
-
 /* --------sec 7 --------------------------------------------------------------------*/
 #sec7{	
 	background:#dddddd;
@@ -266,75 +332,6 @@ main{
 	height:100%;
 	width:100%;
 }
-
-
-#percentageButtons {
-	position: absolute;
-	margin-left: 40%;
-	margin-top: 8%;
-}
-#percentageInputs {
-	position: absolute;
-	margin-left: 27%;
-	margin-top: 20%;
-}
-#percentageInputs>input {
-	background: #FFFFFF url("../images/NIS.png") no-repeat center right;
-	background-position-x: 90%;
-	background-size: 15px 15px;
-	text-align: center;
-	border-radius: 30px;
-	height: 32px;
-	width: 200px;
-	font-family: Walter Turncoat,aduma,Arial;
-	font-size: 18px;
-	font-weight: bold;
-	margin-right: 12px;
-	outline: none;
-}
-#percentageInputs>p {
-	display: inline-block;
-	font: 24px aduma,Arial,Geneva, sans-serif;
-	float: right;
-}
-#percentageInputs>p:nth-child(6) {
-	margin-right: 9%;  
-}
-#percentageInputs>p:nth-child(7), #percentageInputs>p:nth-child(8) {
-	padding-right: 20%;
-}
-
-
-
-
-/* 
-button {
-	text-align: center;
-	width: 80px;
-	padding: 8px 10px;
-	margin-right: 20px;
-	font: bold 20px Walter Turncoat,Tahoma, Geneva, sans-serif;
-	font-style:normal;
-	color:#ffffff;
-	background: #F79A00;
-	border:0px solid #ffffff;
-	text-shadow:0px -1px 1px #222222;
-	box-shadow:-1px 2px 5px #000000;
-	-moz-box-shadow:-1px 2px 5px #000000;
-	-webkit-box-shadow:-1px 2px 5px #000000;
-	border-radius:10px 10px 10px 10px;
-	-moz-border-radius:10px 10px 10px 10px;
-	-webkit-border-radius:10px 10px 10px 10px;
-	cursor:pointer;
-	outline: none;
-}
-button:hover {
-	cursor:pointer;
-	position:relative;
-	top:2px;
-	font: bold 24px Walter Turncoat,Tahoma, Geneva, sans-serif;
-}
- */
 
 /* Common styles and resets */
 

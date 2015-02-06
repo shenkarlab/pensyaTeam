@@ -7,12 +7,10 @@ $(".gallery_li").click(function() {
 	$(".gallery_page").addClass('hide').eq($(this).index()).removeClass('hide');
 });
 
-    
 function scrollTo(elementId){
       $('html, body').animate({
           scrollTop: $(elementId).offset().top
       }, 1400); 
-      
     };
 
 // function colorChange(colorId){
@@ -102,7 +100,7 @@ function showHeight(ele, h) {
       showHeight("window", $(window).height());
     });
 
-/* -------------------------------------------------- PERCENTAGE PAGE -------------------------------------------------- */
+/* -------------------------------------------------- page 4 -------------------------------------------------- */
 
 /*
  * function for page which need to decide 5/6/7 percanetage of your salary you want to move to your pensya 
@@ -154,30 +152,70 @@ function calcIt(valX,valPer) {
     	document.getElementById("salary").value = commaSeparateNumber(x); 
 	}
 	
+
+$(document).ready(function(){
+
+	$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money5per.png)");
+	$("#per5").css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+	$("#per5").css("background-size","25%");
+
+	$("#per5").click(function(){
+		calcIt($("#salary").val(),5);
+		$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money5per.png)");
+		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+		$(this).css("background-size","25%");
+		$("#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per6").css("background-size","25%");
+		$("#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per7").css("background-size","25%");	
+	});	
+	$("#per6").click(function(){
+		calcIt($("#salary").val(),6);
+		$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money6per.png)"); 
+		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+		$(this).css("background-size","25%");	
+		$("#per5").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per5").css("background-size","25%");	
+		$("#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per7").css("background-size","25%");	
+	});	
+	$("#per7").click(function(){
+		calcIt($("#salary").val(),7);
+		$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money6per.png)");
+		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+		$(this).css("background-size","25%");	
+		$("#per5").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per5").css("background-size","25%");	
+		$("#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per6").css("background-size","25%");	
+	});
+});			
+	
+/*	
 	function selectedButton(num) {
-	if (num=="5") {
-			document.getElementById("per5").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-			document.getElementById("per5").style.fontSize = "26px";
-			document.getElementById("per6").style.textShadow = "none";
-			document.getElementById("per6").style.fontSize = "20px";
-			document.getElementById("per7").style.textShadow = "none";
-			document.getElementById("per7").style.fontSize = "20px";
-	} else if (num=="6") {
-			document.getElementById("per6").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-			document.getElementById("per6").style.fontSize = "26px";
-			document.getElementById("per5").style.textShadow = "none";
-			document.getElementById("per5").style.fontSize = "20px";
-			document.getElementById("per7").style.textShadow = "none";
-			document.getElementById("per7").style.fontSize = "20px";
-	} else if (num=="7") {
-			document.getElementById("per7").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-			document.getElementById("per7").style.fontSize = "26px";
-			document.getElementById("per5").style.textShadow = "none";
-			document.getElementById("per5").style.fontSize = "20px";
-			document.getElementById("per6").style.textShadow = "none";
-			document.getElementById("per6").style.fontSize = "20px";
-	}
-};
+		if (num=="5") {
+				document.getElementById("per5").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
+				document.getElementById("per5").style.fontSize = "26px";
+				document.getElementById("per6").style.textShadow = "none";
+				document.getElementById("per6").style.fontSize = "20px";
+				document.getElementById("per7").style.textShadow = "none";
+				document.getElementById("per7").style.fontSize = "20px";
+		} else if (num=="6") {
+				document.getElementById("per6").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
+				document.getElementById("per6").style.fontSize = "26px";
+				document.getElementById("per5").style.textShadow = "none";
+				document.getElementById("per5").style.fontSize = "20px";
+				document.getElementById("per7").style.textShadow = "none";
+				document.getElementById("per7").style.fontSize = "20px";
+		} else if (num=="7") {
+				document.getElementById("per7").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
+				document.getElementById("per7").style.fontSize = "26px";
+				document.getElementById("per5").style.textShadow = "none";
+				document.getElementById("per5").style.fontSize = "20px";
+				document.getElementById("per6").style.textShadow = "none";
+				document.getElementById("per6").style.fontSize = "20px";
+		}
+	};
 
 // $(document).ready(function(){
 // 		selectedButton("5"); 
@@ -209,14 +247,7 @@ function calcIt(valX,valPer) {
 	var parallax = new Parallax(scene);
 	
 	</script>
- 
- 
- 
- 
- 
- 
  */
- 
  
 //Disable scrolling
 
@@ -240,11 +271,7 @@ $(document).ready(function(){
 
 });
 
-
-
-
 /* --------sec 1 --------------------------------------------------------------------*/
-
 
 $(document).ready(function() {
  $(function() {
@@ -289,8 +316,6 @@ $(document).ready(function(){
   });
 });
 
-
-
 /* --------sec 2 --------------------------------------------------------------------*/
 
 $(document).ready(function(){
@@ -299,11 +324,7 @@ $(document).ready(function(){
 	});
 });
 
-
-
 /* --------sec 6 --------------------------------------------------------------------*/
-
-
 
 $(document).ready(function(){
 	   x = 0;
