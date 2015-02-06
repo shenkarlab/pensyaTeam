@@ -310,6 +310,10 @@ main{
 	right:80%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
 
 #p2{
@@ -318,6 +322,10 @@ main{
 	right:30%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
 #p3{
 	position:relative;
@@ -325,6 +333,10 @@ main{
 	right:70%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
 #p4{
 	position:relative;
@@ -332,7 +344,12 @@ main{
 	right:8%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
+#sec6 input {background:url("../images/Screen 6/plus_normal.png");}
 #sec6 input:hover{background:url("../images/Screen 6/plus_hover.png");}
 
 #plus1 {
