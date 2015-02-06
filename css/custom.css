@@ -116,6 +116,11 @@ main{
 	background: url("../images/Screen 1/Age_line_None.png") no-repeat 100%;
 }
 
+#slider_num{
+	margin-top:140%;
+	margin-left:27%;
+}
+
 /* --------sec 2 --------------------------------------------------------------------*/
 
 #sec2{	

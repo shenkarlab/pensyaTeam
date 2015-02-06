@@ -275,7 +275,13 @@ $(document).ready(function(){
 
 $(document).ready(function() {
  $(function() {
-    $( "#slider" ).draggable({ axis: "y" });
+    $( "#slider" ).draggable({
+  	  axis: "y",
+      drag: function() {
+        var relativeY = $("#slider").offset().top - $("#slider_wrapper").offset().top;
+  	  	console.log(relativeY);
+      }
+    });
     $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
   });
 });
@@ -299,23 +305,6 @@ $(document).ready(function(){
 	});
 	
 });
-
-$(document).ready(function(){
-	$(function() {
-    $( "#slider-vertical" ).slider({
-      orientation: "vertical",
-      range: "min",
-      min: 0,
-      max: 100,
-      value: 60,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( ui.value );
-      }
-    });
-    $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
-  });
-});
-
 /* --------sec 2 --------------------------------------------------------------------*/
 
 $(document).ready(function(){
@@ -367,19 +356,19 @@ $(document).ready(function(){
 	  
 	$( "#p1" ).click(function() {
 	  $( "#plus1" ).toggle( "fold" );
-	  console.log("CLicked");
+	  console.log("plus1");
 	});
 	$( "#p2" ).click(function() {
 	  $( "#plus2" ).toggle( "fold" );
-	  console.log("CLicked");
+	  console.log("plus2");
 	});
 	$( "#p3" ).click(function() {
 	  $( "#plus3" ).toggle( "fold" );
-	  console.log("CLicked");
+	  console.log("plus3");
 	});
 	$( "#p4" ).click(function() {
 	  $( "#plus4" ).toggle( "fold" );
-	  console.log("CLicked");
+	  console.log("plus4");
 	});
 });
 
