@@ -468,7 +468,7 @@ main{
 	height:100%;
 	width:100%;
 }
-#sec_text{
+#sec9_text{
 	position:relative;
 	top:9%;
 	left:73%;
@@ -515,10 +515,38 @@ main{
 
 /* --------sec 10 --------------------------------------------------------------------*/
 #sec10{	
-	background: #4a9e69;
+	background: #ffbf47 url("../images/Screen 10/Bos.png") no-repeat 50% 30%;
 	height:100%;
 	width:100%;
 }
+
+#boss_face{
+	position:relative;
+	top:2%;
+	left:44.8%;
+	width:115px;
+	height:115px;
+	background-image: url("../images/Screen 10/Bos_Face_1.png");
+}
+
+#sec10_text{
+	position:relative;
+	top:9%;
+	left:42%;
+	width:676px;
+	height:104px;
+	background: #ffbf47 url("../images/Screen 10/text.png") no-repeat 50% 92%;
+}
+
+/* --------sec 11 --------------------------------------------------------------------*/
+
+
+
+
+/* --------sec 12 --------------------------------------------------------------------*/
+
+
+
 
 /* Common styles and resets */
 
