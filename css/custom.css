@@ -178,19 +178,22 @@ main{
 	background: #3a5f8d;
 	height:100%;
 	width:100%;
-	margin-top: 10%;
+	position:relative;
 }
 #sec4>h1 {
+	position:absolute;
 	font-family: aduma;
 	font-size: 40px;
 	color: #FFFFFF;
 	text-align: right;	
-	padding: 40px;
+	top: 40px;
+	right: 40px;
 }
 #percentageButtons {
-	position: absolute;
+	position: relative;
 	width: 60%;
-	margin-left: 20%; 
+	margin-left: 20%;
+	top: 20%; 
 }
 .perButton {	
 	display:inline-block;
@@ -222,10 +225,10 @@ main{
 	left: -9999px; 
 }
 #percentageInputs {
-	position: absolute;
+	position: relative;
 	width: 60%;
-	margin-left: 20%; 
-	margin-top: 22%;
+	left: 20%; 
+	top: 36%;
 }
 #percentageInputs>input {
 	background: url("../images/Screen_4/NIS.png") no-repeat center right;
@@ -247,7 +250,7 @@ main{
 	color: #FFFFFF;
 }
 #percentageInputs>p:nth-child(6) {
-	margin-right: 11%;  
+	padding-right: 11%;  
 }
 #percentageInputs>p:nth-child(7), #percentageInputs>p:nth-child(8)  {
 	padding-right: 18%;

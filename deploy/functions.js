@@ -152,7 +152,6 @@ function calcIt(valX,valPer) {
     	document.getElementById("salary").value = commaSeparateNumber(x); 
 	}
 	
-
 $(document).ready(function(){
 
 	$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money5per.png)");
@@ -190,6 +189,7 @@ $(document).ready(function(){
 		$("#per6").css("background-size","25%");	
 	});
 });			
+	
 	
 /*	
 	function selectedButton(num) {
