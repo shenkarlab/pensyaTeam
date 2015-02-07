@@ -273,13 +273,41 @@ $(document).ready(function(){
 
 /* --------sec 1 --------------------------------------------------------------------*/
 
+var male = 0;
+var relativeY = 0;
+
 $(document).ready(function() {
  $(function() {
     $( "#slider" ).draggable({
   	  axis: "y",
       drag: function() {
-        var relativeY = $("#slider").offset().top - $("#slider_wrapper").offset().top;
+        relativeY = $("#slider").offset().top - $("#slider_wrapper").offset().top;
   	  	console.log(relativeY);
+  	  	
+  	  	if (male == 1){
+  	  		if (relativeY < 96){
+  	  			$("#user").attr("src", "images/Screen 1/Age_boy_Hey.png");
+  	  		}
+  	  		if (relativeY < 190 && relativeY > 96){
+  	  			$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
+  	  		}
+  	  		if (relativeY > 190){
+  	  			$("#user").attr("src", "images/Screen 1/Age_oldman_Hey.png");
+  	  		}
+  	  	}
+  	  	else if (male == 2){
+  	  		if (relativeY < 96){
+  	  			$("#user").attr("src", "images/Screen 1/Age_girl_Hey.png");
+  	  		}
+  	  		if (relativeY < 190 && relativeY > 96){
+  	  			$("#user").attr("src", "images/Screen 1/Age_woman_Hey.png");
+  	  		}
+  	  		if (relativeY > 190){
+  	  			$("#user").attr("src", "images/Screen 1/Age_oldwoman_Hey.png");
+  	  		}
+  	  	}
+  	  	
+  	  	$('#slider_num').text(Math.round(relativeY/4));
       }
     });
     $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
@@ -290,18 +318,36 @@ $(document).ready(function(){
 	$("#male").click(function(){
 		$("#male").attr("src", "images/Screen 1/Boy_S.png");
 		$("#female").attr("src", "images/Screen 1/Girl.png");
-		$("#user").attr("src", "images/Screen 1/Age_Man.png");
 		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
 		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
+		if (relativeY < 96){
+			$("#user").attr("src", "images/Screen 1/Age_boy_Hey.png");
+		}
+		if (relativeY < 190 && relativeY > 96){
+			$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
+		}
+		if (relativeY > 190){
+			$("#user").attr("src", "images/Screen 1/Age_oldman_Hey.png");
+		}
+		male = 1;
 	});
 });
 $(document).ready(function(){
 	$("#female").click(function(){
 		$("#female").attr("src", "images/Screen 1/Girl_S.png");
 		$("#male").attr("src", "images/Screen 1/Boy.png");
-		$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
 		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
 		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
+		if (relativeY < 96){
+			$("#user").attr("src", "images/Screen 1/Age_girl_Hey.png");
+		}
+		if (relativeY < 190 && relativeY > 96){
+			$("#user").attr("src", "images/Screen 1/Age_woman_Hey.png");
+		}
+		if (relativeY > 190){
+			$("#user").attr("src", "images/Screen 1/Age_oldwoman_Hey.png");
+		}
+		male = 2;
 	});
 	
 });
