@@ -116,6 +116,11 @@ main{
 	background: url("../images/Screen 1/Age_line_None.png") no-repeat 100%;
 }
 
+#slider_num{
+	margin-top:140%;
+	margin-left:27%;
+}
+
 /* --------sec 2 --------------------------------------------------------------------*/
 
 #sec2{	
@@ -313,6 +318,10 @@ main{
 	right:80%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
 
 #p2{
@@ -321,6 +330,10 @@ main{
 	right:30%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
 #p3{
 	position:relative;
@@ -328,6 +341,10 @@ main{
 	right:70%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
 #p4{
 	position:relative;
@@ -335,10 +352,58 @@ main{
 	right:8%;
 	outline: 0;
 	opacity:0;
+	width:42px;
+	height:42px;
+	border: 0;
+	button { outline: 0; }
 }
+#sec6 input {background:url("../images/Screen 6/plus_normal.png");}
 #sec6 input:hover{background:url("../images/Screen 6/plus_hover.png");}
 
-
+#plus1 {
+	position:relative;
+	bottom:50%;
+	left:10%;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(153,35,47,0.5);
+    display:none;
+    z-index:3;
+    color:#FFFFFF;
+  }
+#plus2{
+	position:relative;
+	bottom:30%;
+	left:35%;
+	width: 200px;
+	height: 100px;
+	background-color: rgba(153,35,47,0.5);
+	display:none;
+	z-index:3;
+	color:#FFFFFF;
+	}
+#plus3 {
+	position:relative;
+	bottom:30%;
+	left:50%;
+	width: 200px;
+	height: 100px;
+	background-color: rgba(153,35,47,0.5);
+	display:none;
+	z-index:3;
+	color:#FFFFFF;
+	}
+#plus4 {
+	position:relative;
+	bottom:55%;
+	left:70%;
+	width: 200px;
+	height: 100px;
+	background-color: rgba(153,35,47,0.5);
+	display:none;
+	z-index:3;
+	color:#FFFFFF;
+	}
 /* --------sec 7 --------------------------------------------------------------------*/
 #sec7{	
 	background:#dddddd;
