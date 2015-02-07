@@ -446,5 +446,31 @@ $(document).ready(function(){
 		  'background-position-x': '50%',
 		  'background-position-y': '0%'
 		}, 2000, 'linear');
+		
+		$("#B_no").animate({
+			top: '90%',
+			opacity: '0'
+        }, 1800);
+        $("#B_yes").animate({
+			top: '73.5%',
+			opacity: '0'
+        }, 1800);
 	});
+	
+	$( "#B_yes" ).click(function() {
+	  	$('#sec9').animate({
+		  'background-position-x': '50%',
+		  'background-position-y': '0%'
+		}, 2000, 'linear');
+		
+		$("#B_no").animate({
+			top: '90%',
+			opacity: '0'
+        }, 1800);
+        $("#B_yes").animate({
+			top: '73.5%',
+			opacity: '0'
+        }, 1800);
+	});
+	
 });
