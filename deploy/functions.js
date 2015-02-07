@@ -438,3 +438,13 @@ $(document).ready(function(){
 
 
 /* --------sec 9 --------------------------------------------------------------------*/
+
+
+$(document).ready(function(){
+	$( "#B_no" ).click(function() {
+	  	$('#sec9').animate({
+		  'background-position-x': '50%',
+		  'background-position-y': '0%'
+		}, 2000, 'linear');
+	});
+});
