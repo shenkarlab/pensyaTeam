@@ -400,19 +400,19 @@ $(document).ready(function(){
 		}
 	  });
 	  
-	$( "#p1" ).click(function() {
+	$( "#p1" ).hover(function() {
 	  $( "#plus1" ).toggle( "fold" );
 	  console.log("plus1");
 	});
-	$( "#p2" ).click(function() {
+	$( "#p2" ).hover(function() {
 	  $( "#plus2" ).toggle( "fold" );
 	  console.log("plus2");
 	});
-	$( "#p3" ).click(function() {
+	$( "#p3" ).hover(function() {
 	  $( "#plus3" ).toggle( "fold" );
 	  console.log("plus3");
 	});
-	$( "#p4" ).click(function() {
+	$( "#p4" ).hover(function() {
 	  $( "#plus4" ).toggle( "fold" );
 	  console.log("plus4");
 	});
