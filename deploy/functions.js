@@ -99,130 +99,7 @@ function showHeight(ele, h) {
     $("#getw").click(function () {
       showHeight("window", $(window).height());
     });
-
-/* -------------------------------------------------- page 4 -------------------------------------------------- */
-
-/*
- * function for page which need to decide 5/6/7 percanetage of your salary you want to move to your pensya 
- */
-var x = 9000;		 // salary
-var per = 5;			// 5% 
-
-var calculateContribution = function() {
-	// getting data from user
-	var y = 10000;		// initial amount
-	var z = 4;				//
-	var i = 0;
-	var sum = 0;			// total amount after 40 years
-	 
-		// changing values to percentages
-		per /= 100;
-		z +=100;
-		z /=100;
-		// for loop calculating the total pensya amount after 40 years
-		for ( ; i < 40; i++) {
-			sum = Math.round((x*per*12+y)*z);
-			y = sum;
-		}
-		return sum;
-};
 	
-function commaSeparateNumber(val){
-    while (/(\d+)(\d{3})/.test(val.toString())){
-      val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
-    }
-    return val;
-}
-function unCommaSeparate(val) {
-	temp = val.replace(/\,/g,''); // val is a string type, so convert it to number
-	temp = parseInt(temp,10);
-	 if ( temp >=0 && temp <= 999) {
-	 		temp = val;
-	 } else if (temp < 0) {
-	 	// handle error
-	 }
-	return temp;
-}
-
-function calcIt(valX,valPer) {
-    	x = unCommaSeparate(valX);
-    	per = valPer;
-    	document.getElementById("totalAmout").value = commaSeparateNumber(calculateContribution());
-    	document.getElementById("perMonth").value = commaSeparateNumber(x*valPer/100); 
-    	document.getElementById("salary").value = commaSeparateNumber(x); 
-	}
-	
-$(document).ready(function(){
-
-	$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money5per.png)");
-	$("#per5").css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
-	$("#per5").css("background-size","25%");
-
-	$("#per5").click(function(){
-		calcIt($("#salary").val(),5);
-		$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money5per.png)");
-		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
-		$(this).css("background-size","25%");
-		$("#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
-		$("#per6").css("background-size","25%");
-		$("#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
-		$("#per7").css("background-size","25%");	
-	});	
-	$("#per6").click(function(){
-		calcIt($("#salary").val(),6);
-		$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money6per.png)"); 
-		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
-		$(this).css("background-size","25%");	
-		$("#per5").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
-		$("#per5").css("background-size","25%");	
-		$("#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
-		$("#per7").css("background-size","25%");	
-	});	
-	$("#per7").click(function(){
-		calcIt($("#salary").val(),7);
-		$("#sec4").css("background","#3a5f8d  url(images/Screen_4/money6per.png)");
-		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
-		$(this).css("background-size","25%");	
-		$("#per5").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
-		$("#per5").css("background-size","25%");	
-		$("#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
-		$("#per6").css("background-size","25%");	
-	});
-});			
-	
-	
-/*	
-	function selectedButton(num) {
-		if (num=="5") {
-				document.getElementById("per5").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-				document.getElementById("per5").style.fontSize = "26px";
-				document.getElementById("per6").style.textShadow = "none";
-				document.getElementById("per6").style.fontSize = "20px";
-				document.getElementById("per7").style.textShadow = "none";
-				document.getElementById("per7").style.fontSize = "20px";
-		} else if (num=="6") {
-				document.getElementById("per6").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-				document.getElementById("per6").style.fontSize = "26px";
-				document.getElementById("per5").style.textShadow = "none";
-				document.getElementById("per5").style.fontSize = "20px";
-				document.getElementById("per7").style.textShadow = "none";
-				document.getElementById("per7").style.fontSize = "20px";
-		} else if (num=="7") {
-				document.getElementById("per7").style.textShadow = "0px 0px 6px rgba(255,255,255,0.7)";
-				document.getElementById("per7").style.fontSize = "26px";
-				document.getElementById("per5").style.textShadow = "none";
-				document.getElementById("per5").style.fontSize = "20px";
-				document.getElementById("per6").style.textShadow = "none";
-				document.getElementById("per6").style.fontSize = "20px";
-		}
-	};
-
-// $(document).ready(function(){
-// 		selectedButton("5"); 
-// });
-
-/* ------------------------------------------------------------------------------------------------------------------------------ */
-
 	var scrollPercent = 0;
 	
 	$(document).ready(function(){
@@ -358,6 +235,115 @@ $(document).ready(function(){
 	
 	});
 });
+
+/* --------sec 3 --------------------------------------------------------------------*/
+
+$(document).ready(function(){
+
+	$('#paycheck').on('change',function(){
+	    $('#paycheck').animate({opacity:"0.7", zoom: '70%'}, 'slow');
+	});
+	$('#paycheck').on('click',function(){
+	    $('#paycheck').animate({opacity:"1", zoom: '100%'}, 'slow');
+	});
+});
+
+/* --------sec 4 --------------------------------------------------------------------*/
+
+/*
+ * function for page which need to decide 5/6/7 percanetage of your salary you want to move to your pensya 
+ */
+var x = 9000;		 // salary
+var per = 5;			// 5% 
+
+var calculateContribution = function() {
+	// getting data from user
+	var y = 10000;		// initial amount
+	var z = 4;				//
+	var i = 0;
+	var sum = 0;			// total amount after 40 years
+	 
+		// changing values to percentages
+		per /= 100;
+		z +=100;
+		z /=100;
+		// for loop calculating the total pensya amount after 40 years
+		for ( ; i < 40; i++) {
+			sum = Math.round((x*per*12+y)*z);
+			y = sum;
+		}
+		return sum;
+};
+	
+function commaSeparateNumber(val){
+    while (/(\d+)(\d{3})/.test(val.toString())){
+      val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+    }
+    return val;
+}
+function unCommaSeparate(val) {
+	temp = val.replace(/\,/g,''); // val is a string type, so convert it to number
+	temp = parseInt(temp,10);
+	 if ( temp >=0 && temp <= 999) {
+	 		temp = val;
+	 } else if (temp < 0) {
+	 	// handle error
+	 }
+	return temp;
+}
+
+function calcIt(valX,valPer) {
+    	x = unCommaSeparate(valX);
+    	per = valPer;
+    	document.getElementById("totalAmout").value = commaSeparateNumber(calculateContribution());
+    	document.getElementById("perMonth").value = commaSeparateNumber(x*valPer/100); 
+	}
+	
+$(document).ready(function(){
+
+	 $(window).scroll(function()
+	  {
+			if(scrollPercent > 26 && scrollPercent < 34 ){
+				console.log("Sec 4 reached");
+				$('#little_check').slideDown('100','linear');
+				$('#check_no_changed').val( $('#check').val()); 
+			}
+			else if (scrollPercent >= 35 || scrollPercent <= 25){
+				$('#little_check').slideUp('fast','linear');
+			}
+	  });	
+	
+	$("#per5,#per6,#per7").click(function(){
+		$("#percentage_first").css("visibility","hidden");
+		$("#percentage_second").css("visibility","visible");
+	});
+
+	$("#per5").click(function(){
+		calcIt($("#check").val(),5);
+		$("#img_per").attr("src","images/Screen_4/money5per.png")
+		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+		$(this).css("background-size","25%");
+		$("#per6,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per6,#per7").css("background-size","25%");
+	});	
+	$("#per6").click(function(){
+		calcIt($("#check").val(),6);
+		$("#img_per").attr("src","images/Screen_4/money6per.png")
+		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+		$(this).css("background-size","25%");	
+		$("#per5,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per5,#per7").css("background-size","25%");
+	});	
+	$("#per7").click(function(){
+		calcIt($("#check").val(),7);
+		$("#img_per").attr("src","images/Screen_4/money7per.png")
+		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
+		$(this).css("background-size","25%");	
+		$("#per5,#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per5,#per6").css("background-size","25%");
+	});
+});			
+
 
 /* --------sec 6 --------------------------------------------------------------------*/
 

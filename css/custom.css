@@ -140,42 +140,48 @@ main{
 /* --------sec 3 --------------------------------------------------------------------*/
 
 #sec3{
-	background:#dddddd url("../images/Screen 3/red_line.png") no-repeat center 47%;
+	background:#3a5f8d;
 	height:100%;
 	width:100%;
+	position: relative;
 }
-#cin{
-	position:relative;
-	top:35%;
-	left:32%;
+#sec3>h1 {
+	position: absolute;
+	font-family: aduma;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: right;	
+	top: 28px;
+	right: 40px;
+	letter-spacing: 1px;
 }
-#paycheck {
+#paycheck{
+	position: relative;
+	width:794px;
+	height:347px;
+	margin: auto;
+	top: 18%;
+}
+#paycheck>img {
+	position: absolute;
+	max-width:100%;
+	max-height:100%;
+}
+#check {
+	position: absolute;
+	top: 41%;
+	left: 63%;
 	background-color:rgba(0, 0, 0, 0);
-    color:#686868;
+ 	color: #000000;
     border: none;
     outline:none;
     height:100px;
     transition:height 1s;
     -webkit-transition:height 1s;
-    font-size:30px; 
+    font-size:24px; 
     text-align: center;
+    font-family: aduma;
     line-height:35px;
-}
-::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #686868;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #686868;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #686868;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-   color:    #686868;
-}
-#paycheck:focus{
 }
 
 /* --------sec 4 --------------------------------------------------------------------*/
@@ -186,6 +192,30 @@ main{
 	width:100%;
 	position:relative;
 }
+#little_check {
+	display:none;
+	position: absolute;
+	background: #3a5f8d url("../images/Screen 3/Salary.png") no-repeat;
+	background-size: 100% 100%;
+	width: 41%;
+	height: 25%;
+	left: 29%;
+	top: 0%;
+	opacity: 0.6;
+}
+#check_no_changed{
+	position: absolute;
+	width: 140px;
+	top: 54%;
+	left: 69%;
+	background-color:rgba(0, 0, 0, 0);
+ 	color: #000000;
+    border: none;
+    outline:none;
+ font-size:16px; 
+	text-align:center;
+    font-family: aduma;
+}
 #sec4>h1 {
 	position:absolute;
 	font-family: aduma;
@@ -194,12 +224,13 @@ main{
 	text-align: right;	
 	top: 40px;
 	right: 40px;
+	letter-spacing: 1px;
 }
 #percentageButtons {
 	position: relative;
 	width: 60%;
-	margin-left: 20%;
-	top: 20%; 
+	left: 20%;
+	top: 29%; 
 }
 .perButton {	
 	display:inline-block;
@@ -216,54 +247,63 @@ main{
 	border: none;
 	outline: none;
 }
-.perButton:hover {
-	background: url("../images/Screen_4/Selection_Hover.png") no-repeat center top;
-	background-size: 25%;
-}
-.selected {
-	background: url("../images/Screen_4/Selection_Active.png") no-repeat center top;
-	background-size: 25%;
-}
 .preload { 
 	opacity: 0; 
 	position: absolute; 
 	top: -9999px; 
 	left: -9999px; 
 }
-#percentageInputs {
-	position: relative;
-	width: 60%;
-	left: 20%; 
-	top: 36%;
+#percentages{
+	position: absolute;
+	width: 55%;
+	height: 20%;
+	top: 46%;
+	left: 18%;
 }
-#percentageInputs>input {
-	background: url("../images/Screen_4/NIS.png") no-repeat center right;
-	height: 40px;
-	width: 133px;
-	margin-left: 7%;
-	margin-right: 7%;
+#percentage_first{
+	visibility: visible;	
+	position: absolute;
+	left: 30%;
+	top: 35%;
+}
+.first_msg{
 	text-align: center;
-	font-family: aduma;
-	font-size: 28px;
+	color: #FFFFFF;
+	font: 48px aduma,Arial,Geneva, sans-serif;
+}
+#img_per{
+	position: absolute;
+	top: 47%;
+	right: 15%;
+}
+#percentage_second{
+	direction: rtl;
+	visibility: hidden;
+	position: absolute;
+	width: 80%;
+	top: 35%;	
+}
+#percentage_second p{
+	background: url("../images/Screen_4/NIS.png") no-repeat left center;
+	color: #FFFFFF;
+	font: 48px aduma,Arial,Geneva, sans-serif;
+}
+#percentage_second input{
+	background: none;
+	text-align: left;
+	width: 25%;
+	float: left;
+	margin-right: 7%;
+	margin-left: 7%;
 	color: #FFFFFF;
 	border: none;
 	outline: none;
 }
-#percentageInputs>p {
-	display: inline-block;
-	font: 24px aduma,Arial,Geneva, sans-serif;
-	float: right;
-	color: #FFFFFF;
-}
-#percentageInputs>p:nth-child(6) {
-	padding-right: 11%;  
-}
-#percentageInputs>p:nth-child(7), #percentageInputs>p:nth-child(8)  {
-	padding-right: 18%;
-}
+
+
 /* --------sec 5 --------------------------------------------------------------------*/
 #sec5{	
-	background:#ffbf47 url("../images/Screen 3/Salary.png") no-repeat 59% 27%;
+	background:#ffbf47;
 	height:100%;
 	width:100%;
 }
@@ -418,48 +458,43 @@ main{
 	background: #4a9e69	;
 	height:100%;
 	width:100%;
-	margin-top: 10%;
+	position: relative;
 }
 #envelope_up {
-	position: relative;
-	margin-top: -450px;
-	top: 23%;
-	left: 22%;
+	position: absolute;
+	top: 17%;
+	left: 21%;
 	height: 508px;
-	width: 759px;
+	width: 755px;
 	background: url("../images/Screen 8/Envelope_Back.png") no-repeat center top;
 	background-size: 75%;
 	z-index: 1;
 }
 #envelope_down {
-	position: relative;
-	margin-top: -598px;
-	top: 53%;
-	left: 22%;
+	position: absolute;
+	top: 35%;
+	left: 21%;
 	height: 382px;
-	width: 759px;
+	width: 755px;
 	background: url("../images/Screen 8/Envelope.png") no-repeat center 50%;
 	background-size: 75%;
 	z-index: 3;
 }
 #card {
-	position: relative;
+	position: absolute;
 	left: 25%;
 	top: 17%;
-	margin-top: -250px;
-	margin-left: 5px;
 	height:	 380px; 
 	width: 667px;
 	background: url("../images/Screen 8/Card.png") no-repeat center 50%;
 	background-position-y: 0px;
-	background-size: 78%;
+	background-size: 77%;
 	z-index: 2;
-	transition-property: height,margin-top;
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
 #card:hover {
 	height: 520px;
-	margin-top: -390px;
+	top: 0%;
 }
 /* --------sec 9 --------------------------------------------------------------------*/
 
@@ -540,17 +575,22 @@ main{
 
 /* --------sec 11 --------------------------------------------------------------------*/
 #sec11{	
-	background: #ffbf47;
+	background: #84c560 url("../images/Screen_11/retirement.png") no-repeat 50% 34%;
+	background-size: 45%; 
 	height:100%;
 	width:100%;
 }
-
-
+#sec11>img {
+	position: relative;
+	top: 21%;
+	left: 10%;
+	width: 14%;
+}
 
 /* --------sec 12 --------------------------------------------------------------------*/
 
 #sec12{	
-	background: #ffbf47;
+	background: #3a5f8d;
 	height:100%;
 	width:100%;
 }

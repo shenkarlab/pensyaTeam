@@ -24,9 +24,7 @@
 		<header>
 			<div class="preload">
 				    <img src="images/Screen_4/money6per.png" alt="">
-					
 				    <img src="" alt="">
-	
 			</div>	
 		</header>
 		<section id="title">
@@ -47,24 +45,39 @@
 				<img id="sofa"   src="images/Screen 2/Sofa_Man.png">
 			</section>
 			<section id="sec3">
-				<div id="cin"><input name="paycheck" type="text" id="paycheck" placeholder="הכנס את המשכורת שלך     " size="30"></div>
+				<h1> ?מהי ההכנסה החודשית שלך </h1>
+				<div id="paycheck">
+					<img src="images/Screen 3/Salary.png ">
+					<input id="check" name="paycheck" value="" type="text" placeholder="הכנס/י את המשכורת שלך" size="30">
+				</div>
 			</section>
 			<section id="sec4">	 
-					<h1> ?מה אחוז ההפרשה לקרן הפנסיה שלך	</h1>
+					<h1> אחוז חיסכון חודשי	</h1>
+					<div id="little_check">
+						<input id="check_no_changed" value="" type="text" readonly> </input>
+					</div>
+					<img id="img_per" src=""> 
 					<article id="percentageButtons">
-						<p class="perButton" id="per7"> <br>  7%	 </p>		
+						<p class="perButton" id="per7"> <br>  7%	 </p>
 						<p class="perButton" id="per6"> <br>	6%	 </p>
-						<p class="perButton selected" id="per5"> <br>	5%	 </p>
+						<p class="perButton" id="per5"> <br>	5%	 </p>
 					</article>
-					<article id="percentageInputs">
-						<input id="totalAmout" type="text" name="total_amount_after_40years" value="581,674" readonly> 
-						<input id="perMonth" type="text" name="monthly_secretion" value="450" readonly> 
-						<input id="salary" type="text" name="monthly_salary" value="9,000" readonly>
-						<br> <br>
-						<p> שכר חודשי שלך </p>
-						<p> הפרשה חודשית </p>
-						<p> בעוד 40 שנה </p>
-					</article>
+					<section id="percentages">
+								<article id="percentage_first">
+									<p class="first_msg"> מה אחוז ההפקדה החודשי</p> <br>
+									<p class="first_msg"> ?לקרן הפנסיה שלך </p>
+								</article>
+
+								<article id="percentage_second">	
+									<p> <label> בכל חודש אתה מפקיד
+										<input id="totalAmout" type="text" name="total_amount_after_40years" value="581,674" readonly> </label>
+									</p>
+									<br> 
+									<p> <label>ובעוד 40 שנה יהיה לך 
+										<input id="perMonth" type="text" name="monthly_secretion" value="450" readonly> </label>
+									</p> 
+								</article>
+						</section>
 			</section>
 			<section id="sec5">	 </section>
 			<section id="sec6">	 
@@ -120,8 +133,10 @@
 				<div id="sec10_text"></div>
 				<div id="boss_face"></div>
 			</section>
-			<section id="sec11"> </section>
-			<section id="sec12"> </section>
+			<section id="sec11">
+				 	<img src="images/Screen_11/info.png">  </img>
+			</section>
+			<section id="sec12">	</section>
 		</main>
 		<nav>
 			<div class="dotstyle dotstyle-scaleup">
