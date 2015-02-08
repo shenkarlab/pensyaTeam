@@ -212,7 +212,7 @@ main{
  	color: #000000;
     border: none;
     outline:none;
- font-size:16px; 
+ 	font-size:16px; 
 	text-align:center;
     font-family: aduma;
 }
@@ -247,15 +247,9 @@ main{
 	border: none;
 	outline: none;
 }
-.preload { 
-	opacity: 0; 
-	position: absolute; 
-	top: -9999px; 
-	left: -9999px; 
-}
 #percentages{
 	position: absolute;
-	width: 55%;
+	width: 64%;
 	height: 20%;
 	top: 46%;
 	left: 18%;
@@ -274,7 +268,7 @@ main{
 #img_per{
 	position: absolute;
 	top: 47%;
-	right: 15%;
+	right: 8%;
 }
 #percentage_second{
 	direction: rtl;
@@ -291,15 +285,13 @@ main{
 #percentage_second input{
 	background: none;
 	text-align: left;
-	width: 25%;
+	width: 36%;
 	float: left;
-	margin-right: 7%;
-	margin-left: 7%;
+	margin-left: 5%;
 	color: #FFFFFF;
 	border: none;
 	outline: none;
 }
-
 
 /* --------sec 5 --------------------------------------------------------------------*/
 #sec5{	

@@ -312,7 +312,7 @@ $(document).ready(function(){
 				$('#little_check').slideUp('fast','linear');
 			}
 	  });	
-	
+
 	$("#per5,#per6,#per7").click(function(){
 		$("#percentage_first").css("visibility","hidden");
 		$("#percentage_second").css("visibility","visible");
