@@ -348,10 +348,10 @@ $(document).ready(function(){
 /* --------sec 6 --------------------------------------------------------------------*/
 
 $(document).ready(function(){
-	  x = 0;
+	  Animation_happend = 0;
 	  $(window).scroll(function()
 	  {
-		if(scrollPercent >= 41 && x == 0){
+		if(scrollPercent >= 41 && Animation_happend == 0){
 			console.log("Sec 6 reached");
 			$('#no_idea').animate({ height:507, top:'0%' }, {
 					queue: false,
@@ -382,7 +382,7 @@ $(document).ready(function(){
                     	$("#p4").delay(600).animate({ opacity: 1 }, 700)
                     }
                 });
-			x = 1;
+			Animation_happend = 1;
 		}
 	  });
 	  
