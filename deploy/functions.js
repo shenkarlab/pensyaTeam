@@ -465,8 +465,29 @@ $(document).ready(function(){
 /* --------sec 10 --------------------------------------------------------------------*/
 
 
+var clicks = 0;
 
+$(document).ready(function(){
 
+	$( "#sec10" ).click(function() {
+		clicks++;
+		
+		if (clicks == 3){
+			$(".progressbar-value").css("background-color", "#4771a5");
+			$(".progressbar-value").css("height", "130px");
+			$(".progressbar-value").css("top", "85px");
+			$(".progressbar-per").css("background-image", "url(images/Screen 10/80per.png)");
+		}
+		if (clicks == 6){
+			$(".progressbar-value").css("background-color", "#84c560");
+			$(".progressbar-value").css("height", "190px");
+			$(".progressbar-value").css("top", "25px");
+		}
+		if (clicks == 9){
+
+		}
+	});
+});
 
 
 /* --------sec 11 --------------------------------------------------------------------*/

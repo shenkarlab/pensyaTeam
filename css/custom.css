@@ -565,6 +565,39 @@ main{
 	background: #ffbf47 url("../images/Screen 10/text.png") no-repeat 50% 92%;
 }
 
+.progressbar {
+ background-color:#e69601;
+ width: 30px;
+ height: 215px;
+ position: relative;
+ bottom:15%;
+ left:15%;
+ border-radius: 25px;
+}
+.progressbar-value {
+ position: absolute;
+ display: block;
+ margin: 0;
+ border: 0;
+ width: 30px;
+ height: 80px;
+ top: 135px;
+ left: 0px;
+ overflow: hidden;
+ text-indent: -30px;
+ background-color: #c73746;
+ border-bottom-left-radius: 25px;
+ border-bottom-right-radius: 25px;
+}
+
+#progressbar-per {
+	position:relative;
+	top:55%;
+	background-image: url("../images/Screen 10/40per.png");
+	width:141px;
+	height:33px;
+}
+  
 /* --------sec 11 --------------------------------------------------------------------*/
 #sec11{	
 	background: #84c560 url("../images/Screen_11/retirement.png") no-repeat 50% 34%;
