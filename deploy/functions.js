@@ -510,6 +510,7 @@ $(document).ready(function(){
 			top: '73.5%',
 			opacity: '0'
         }, 1800);
+        
 	});
 	
 	$( "#B_yes" ).click(function() {
@@ -545,15 +546,20 @@ $(document).ready(function(){
 			$(".progressbar-value").css("background-color", "#4771a5");
 			$(".progressbar-value").css("height", "130px");
 			$(".progressbar-value").css("top", "85px");
-			$(".progressbar-per").css("background-image", "url(images/Screen 10/80per.png)");
+			$('#progressbar-per').css('background-image','url("images/Screen 10/80per.png")');
+			$('#progressbar-per').css("top", "32%");
+			$('#boss_face').css('background-image','url("images/Screen 10/Bos_Face_2.png")');
 		}
 		if (clicks == 6){
 			$(".progressbar-value").css("background-color", "#84c560");
 			$(".progressbar-value").css("height", "190px");
 			$(".progressbar-value").css("top", "25px");
+			$('#progressbar-per').css('background-image','url("images/Screen 10/95per.png")');
+			$('#progressbar-per').css("top", "5%");
+			$('#boss_face').css('background-image','url("images/Screen 10/Bos_Face_3.png")');
 		}
 		if (clicks == 9){
-
+			$('#boss_face').css('background-image','url("images/Screen 10/Bos_Face_4.png")');
 		}
 	});
 });

@@ -604,10 +604,21 @@ main{
 /* --------sec 9 --------------------------------------------------------------------*/
 
 #sec9{	
-	background: #b5b5b5 url("../images/Screen 9/Man_Box.png") no-repeat 50% 92%;
+	background: #b5b5b5 url("../images/Screen 9/Man_Box_cut.png") no-repeat 50% 92%;
 	height:100%;
 	width:100%;
 }
+
+#hair{
+	width:613px;
+	height:101px;
+	position:relative;
+	top:1.5%;
+	left:23.78%;
+	background: transparent url("../images/Screen 9/Man_Box (1).png") no-repeat;
+	display:none;
+}
+
 #sec9_text{
 	position:relative;
 	top:9%;
@@ -619,7 +630,7 @@ main{
 
 #B_no{
 	position:relative;
-	top:40.8%;
+	top:38.8%;
 	left:36%;
 	width:163px;
 	height:121px;
@@ -628,7 +639,7 @@ main{
 
 #B_yes{
 	position:relative;
-	top:25%;
+	top:23%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -637,7 +648,7 @@ main{
 
 #B_no:hover{
 	position:relative;
-	top:40.8%;
+	top:38.8%;
 	left:36%;
 	width:163px;
 	height:121px;
@@ -646,7 +657,7 @@ main{
 
 #B_yes:hover{
 	position:relative;
-	top:25%;
+	top:23%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -669,13 +680,23 @@ main{
 	background-image: url("../images/Screen 10/Bos_Face_1.png");
 }
 
+#boss_talk{
+	position:relative;
+	bottom:39%;
+	left:58%;
+	width:145px;
+	height:140px;
+	background-image: url("../images/Screen 10/Bos_Talk2.png");
+}
+
 #sec10_text{
 	position:relative;
-	top:9%;
-	left:42%;
+	top:3%;
+	left:45%;
 	width:676px;
 	height:104px;
 	background: #ffbf47 url("../images/Screen 10/text.png") no-repeat 50% 92%;
+	background-size:70%;
 }
 
 .progressbar {
