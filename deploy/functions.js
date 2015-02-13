@@ -503,13 +503,13 @@ $(document).ready(function(){
 		}, 2000, 'linear');
 		
 		$("#B_no").animate({
-			top: '90%',
+			top: '123%',
 			opacity: '0'
-        }, 1800);
+        }, 2250);
         $("#B_yes").animate({
-			top: '73.5%',
+			top: '103.5%',
 			opacity: '0'
-        }, 1800);
+        }, 2250);
         
 	});
 	
@@ -520,13 +520,13 @@ $(document).ready(function(){
 		}, 2000, 'linear');
 		
 		$("#B_no").animate({
-			top: '90%',
+			top: '123%',
 			opacity: '0'
-        }, 1800);
+        }, 2250);
         $("#B_yes").animate({
-			top: '73.5%',
+			top: '103.5%',
 			opacity: '0'
-        }, 1800);
+        }, 2250);
 	});
 	
 });
