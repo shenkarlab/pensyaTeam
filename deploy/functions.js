@@ -78,7 +78,7 @@ function scrollTo(elementId){
 				scrollTo("#sec" + x);
 				// colorChange($("#sec" + x).css('backgroundColor'));
 			}
-        break;
+        	break;
 
         default: return; // exit this handler for other keys
     }
@@ -305,11 +305,19 @@ $(document).ready(function(){
 	  {
 			if(scrollPercent > 26 && scrollPercent < 34 ){
 				console.log("Sec 4 reached");
-				$('#little_check').slideDown('100','linear');
-				$('#check_no_changed').val( $('#check').val()); 
+		//		$('#little_check').slideDown('100','linear');
+				$('#little_check').css("display","block");
+				$('#little_check').animate({ top:'-7%' }, {
+            		queue: false,
+                    duration: 1000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+				$('#check_no_changed').val( $('#check').val());
+				$('#check_no_changed2').val( $('#check').val());
 			}
 			else if (scrollPercent >= 35 || scrollPercent <= 25){
-				$('#little_check').slideUp('fast','linear');
+	//			$('#little_check').slideUp('fast','linear');
 			}
 	  });	
 
@@ -342,7 +350,68 @@ $(document).ready(function(){
 		$("#per5,#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
 		$("#per5,#per6").css("background-size","25%");
 	});
+	
+	
 });			
+
+/* --------sec 5 --------------------------------------------------------------------*/
+
+$(document).ready(function(){
+
+	$(window).scroll(function()
+	  {
+			var flagPage5 = 0;	  	
+			if(scrollPercent >= 33 && flagPage5 == 0){
+				console.log("Sec 5 reached");
+
+				$('#little_check2').animate({ top:'12%' }, {
+            		queue: false,
+                    duration: 3000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+				
+				setTimeout(function(){
+					$('#envelope5_part').css("display","none");
+				//	$('#envelope5_part').fadeOut("slow");
+					$('#slider-wrapper5').fadeIn("1200","linear");					
+					}, 3020);
+				flagPage5 = 1;
+				
+			}
+	  });	
+	
+	$('.sp').first().addClass('active');
+	$('.sp').hide();    
+	$('.active').show();
+
+    $("#button-next").click(function(){
+		    $('.active').removeClass('active').addClass('oldActive');    
+		                   if ( $('.oldActive').is(':last-child')) {
+		        $('.sp').first().addClass('active');
+		        }
+		        else{
+		        $('.oldActive').next().addClass('active');
+		        }
+		    $('.oldActive').removeClass('oldActive');
+		    $('.sp').fadeOut();
+		    $('.active').fadeIn();
+    });
+    
+       $('#button-previous').click(function(){
+			    $('.active').removeClass('active').addClass('oldActive');    
+			           if ( $('.oldActive').is(':first-child')) {
+			        $('.sp').last().addClass('active');
+			        }
+			           else{
+			    $('.oldActive').prev().addClass('active');
+			           }
+			    $('.oldActive').removeClass('oldActive');
+			    $('.sp').fadeOut();
+			    $('.active').fadeIn();
+    });
+  
+});
 
 
 /* --------sec 6 --------------------------------------------------------------------*/

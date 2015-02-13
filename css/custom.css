@@ -193,14 +193,14 @@ main{
 	position:relative;
 }
 #little_check {
-	display:none;
+	display: none;
 	position: absolute;
 	background: #3a5f8d url("../images/Screen 3/Salary.png") no-repeat;
 	background-size: 100% 100%;
 	width: 41%;
 	height: 25%;
 	left: 29%;
-	top: 0%;
+	top: -40%;
 	opacity: 0.6;
 }
 #check_no_changed{
@@ -299,6 +299,119 @@ main{
 	height:100%;
 	width:100%;
 }
+
+/* opening animation to sec 5 */
+
+#envelope5_part{
+	background:#ffbf47;
+	height:100%;
+	width:100%;
+	position: relative;
+}
+#env_up{
+	position: absolute;
+	top: 5%;
+	left: 20%;
+	background: url("../images/Screen_5/env_up.png") no-repeat center top;
+	background-size: 60%; 
+	width: 60%;
+	height: 40%;
+	z-index: 1;
+}
+#env_down{
+	position: absolute;
+	bottom: 13%;
+	left: 20%;
+	background: url("../images/Screen_5/env_down.png") no-repeat center bottom;
+	background-size: 60%;
+	width: 60%;
+	height: 65%;
+	z-index: 3;
+}
+#little_check2 {
+	position: absolute;
+	background: url("../images/Screen 3/Salary.png") no-repeat;
+	background-size: 80% 100%;
+	width: 41%;
+	height: 25%;
+	left: 34%;
+	top: -15%;
+	z-index: 2;	
+}
+#check_no_changed2{
+	z-index: 10;
+	position: relative;
+	width: 140px;
+	top: 52%;
+	left: 51%;
+	background-color:rgba(0, 0, 0, 0);
+ 	color: #000000;
+    border: none;
+    outline:none;
+ 	font-size:16px; 
+	text-align:center;
+    font-family: aduma;
+}
+/* actually sec 5 */
+
+#slider-wrapper5 {
+/*	background: #ffbf47	url("../images/Screen_5/mini_env.png") no-repeat center top;
+	background-size: 11%; */  
+	display: none;
+	position: relative;
+	width: 60%;
+	margin: auto;
+	height: 72%; 
+	top: 0%;
+}
+#slider5 {
+	position: relative;
+	height: 78%;
+	width: 40%;
+	left: 30%;
+	top: 12%;
+}
+#button-previous {
+	position: absolute;
+	background: #ffbf47 url("../images/Screen_5/button-arrow-left.png") no-repeat;
+	background-size: 75% 75%; 
+	left: 15%;
+	top: 52%;
+	width: 82px;
+	height: 82px;  
+}
+#button-next {
+	position: absolute;
+	background: #ffbf47 url("../images/Screen_5/button-arrow-right.png") no-repeat;
+	background-size: 75% 75%; 
+	right: 15%;
+	top: 52%;
+	width: 82px;
+	height: 82px;
+}
+.sp {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: 90% 100%;	
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+#drag_env{
+	display: block;
+	margin: auto;
+	height: 14%;
+	width: 10%;
+ 	outline: none;
+}
+
+#slider5>.sp:nth-child(1){background-image: url("../images/Screen_5/Box_Ayalon.png"); }
+#slider5>.sp:nth-child(2){background-image: url("../images/Screen_5/Box_Klal.png") ;}
+#slider5>.sp:nth-child(3){background-image	: url("../images/Screen_5/Box_Harel.png"); }
+#slider5>.sp:nth-child(4){background-image: url("../images/Screen_5/Box_Menorah.png"); }
+#slider5>.sp:nth-child(5){background-image: url("../images/Screen_5/Box_Migdal.png"); }
+#slider5>.sp:nth-child(6){background-image: url("../images/Screen_5/Box_Phoenix.png");}
+
 /* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
 	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 50% 72%;
