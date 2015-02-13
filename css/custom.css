@@ -12,6 +12,16 @@
     font-weight: 500;
     font-style: normal;
 }
+@font-face {   
+    font-family: 'EzerBlock';
+    src: url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.eot');
+    src: url('../fonts/EzerBlock_webfont/aduma-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.woff') format('woff'),
+         url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
 
 * {
 	margin:0;
@@ -439,7 +449,7 @@ main{
 
 /* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
-	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 46% 72%;
+	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 45.5% 77%;
 	position:relative;
 	height:100%;
 	width:100%;	
@@ -452,12 +462,13 @@ main{
 	padding-top:25px;
 	padding-left:10px;
 	padding-right:15px;
-	font-family: aduma;
+	font-family: EzerBlock;
 }
 
 .headerz{
 	font-weight: 900;
-	font-size:20px;
+	font-size:20pt;
+	font-family: aduma;
 }
 
 #sec6>h1 {
@@ -474,7 +485,8 @@ main{
 #no_idea{
 	position:relative;
 	left:20%;
-	top:80%;
+	top:85%;
+	margin-top:6%;
 	z-index:0;
 	height:0px;
 	display:inline-block;
@@ -483,7 +495,7 @@ main{
 #medium{
 	position:relative;
 	left:8.5%;
-	top:80%;
+	top:85%;
 	z-index:1;
 	height:0px;
 	display:inline-block;
@@ -492,7 +504,7 @@ main{
 #solid{
 	position:relative;
 	left:1%;
-	top:80%;
+	top:85%;
 	z-index:2;
 	height:0px;
 	display:inline-block;
@@ -501,7 +513,7 @@ main{
 #danger{
 	position:relative;
 	right:20%;
-	top:80%;
+	top:85%;
 	z-index:0;
 	height:0px;
 	display:inline-block;	
@@ -509,7 +521,7 @@ main{
 
 #p1{
 	position:relative;
-	bottom:40%;
+	bottom:39%;
 	right:83%;
 	outline: 0;
 	opacity:0;
@@ -521,8 +533,8 @@ main{
 
 #p2{
 	position:relative;
-	bottom:100%;
-	right:33%;
+	bottom:99%;
+	right:35%;
 	outline: 0;
 	opacity:0;
 	width:42px;
@@ -532,7 +544,7 @@ main{
 }
 #p3{
 	position:relative;
-	bottom:110%;
+	bottom:107%;
 	right:73%;
 	outline: 0;
 	opacity:0;
@@ -543,7 +555,7 @@ main{
 }
 #p4{
 	position:relative;
-	bottom:85%;
+	bottom:82%;
 	right:11%;
 	outline: 0;
 	opacity:0;
@@ -658,8 +670,20 @@ main{
 
 #sec9{	
 	background: #b5b5b5 url("../images/Screen 9/Man_Box_cut.png") no-repeat 50% 92%;
+	position:relative;
 	height:100%;
 	width:100%;
+}
+
+#sec9>h1 {
+	position: absolute;
+	font-family: aduma;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: right;	
+	top: 28px;
+	right: 40px;
+	letter-spacing: 1px;
 }
 
 #hair{
@@ -672,18 +696,10 @@ main{
 	display:none;
 }
 
-#sec9_text{
-	position:relative;
-	top:9%;
-	left:73%;
-	width:308px;
-	height:32px;
-	background: #b5b5b5 url("../images/Screen 9/text.png") no-repeat 50% 92%;
-}
 
 #B_no{
 	position:relative;
-	top:38.8%;
+	top:41.8%;
 	left:36%;
 	width:163px;
 	height:121px;
@@ -692,7 +708,7 @@ main{
 
 #B_yes{
 	position:relative;
-	top:23%;
+	top:26%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -701,7 +717,7 @@ main{
 
 #B_no:hover{
 	position:relative;
-	top:38.8%;
+	top:41.8%;
 	left:36%;
 	width:163px;
 	height:121px;
@@ -710,7 +726,7 @@ main{
 
 #B_yes:hover{
 	position:relative;
-	top:23%;
+	top:26%;
 	left:51%;
 	width:163px;
 	height:121px;
