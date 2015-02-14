@@ -811,8 +811,8 @@ main{
 
 
 #boss_face{
-	position:relative;
-	top:18.5%;
+	position:absolute;
+	top:17.3%;
 	left:44.8%;
 	width:115px;
 	height:115px;
@@ -820,8 +820,8 @@ main{
 }
 
 #boss_talk{
-	position:relative;
-	bottom:30%;
+	position:absolute;
+	top:22%;
 	left:58%;
 	width:145px;
 	height:140px;
@@ -832,8 +832,8 @@ main{
  background-color:#e69601;
  width: 30px;
  height: 215px;
- position: relative;
- top:2%;
+ position: absolute;
+ top:20%;
  left:15%;
  border-radius: 25px;
 }
