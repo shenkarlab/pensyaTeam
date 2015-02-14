@@ -1,11 +1,25 @@
+//Variables...
+
+var sexOfUser = "male";		// sex of the user with default value 
+var ageOfUser = 27;			// age of the user with default value
+
+
+
+
+
+
+
+
+
+//End Variables
+
+
 $(document).ready(function() { 
+	$(".gallery_li").click(function() {
 
-
-$(".gallery_li").click(function() {
-
-	$(this).addClass('current').siblings().removeClass('current');
-	$(".gallery_page").addClass('hide').eq($(this).index()).removeClass('hide');
-});
+		$(this).addClass('current').siblings().removeClass('current');
+		$(".gallery_page").addClass('hide').eq($(this).index()).removeClass('hide');
+	});
 
 function scrollTo(elementId){
       $('html, body').animate({
@@ -151,40 +165,43 @@ $(document).ready(function(){
 /* --------sec 1 --------------------------------------------------------------------*/
 
 var male = 0;
-var relativeY = 0;
+var relativeY = -150;
 
 $(document).ready(function() {
  $(function() {
     $( "#slider" ).draggable({
   	  axis: "y",
       drag: function() {
-        relativeY = $("#slider").offset().top - $("#slider_wrapper").offset().top;
+        relativeY = $("#slider_wrapper").offset().top - $("#slider").offset().top;
   	  	console.log(relativeY);
   	  	
   	  	if (male == 1){
-  	  		if (relativeY < 96){
+  	  		if (relativeY < -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_boy_Hey.png");
   	  		}
-  	  		if (relativeY < 190 && relativeY > 96){
+  	  		if (relativeY < -85 && relativeY > -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
   	  		}
-  	  		if (relativeY > 190){
+  	  		if (relativeY > -85){
   	  			$("#user").attr("src", "images/Screen 1/Age_oldman_Hey.png");
   	  		}
   	  	}
   	  	else if (male == 2){
-  	  		if (relativeY < 96){
+  	  		if (relativeY < -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_girl_Hey.png");
   	  		}
-  	  		if (relativeY < 190 && relativeY > 96){
+  	  		if (relativeY < -85 && relativeY > -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_woman_Hey.png");
   	  		}
-  	  		if (relativeY > 190){
+  	  		if (relativeY > -85){
   	  			$("#user").attr("src", "images/Screen 1/Age_oldwoman_Hey.png");
   	  		}
   	  	}
   	  	
-  	  	$('#slider_num').text(Math.round(relativeY/4));
+  	  	$('#slider_num').text(Math.round(relativeY/4) + 71);
+  	  	ageOfUser = Math.round(relativeY/4) + 71;
+  	  	imageHasChanged = 0;
+  	  	sec9_imageHasChanged = 0;
       }
     });
     $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
@@ -197,16 +214,19 @@ $(document).ready(function(){
 		$("#female").attr("src", "images/Screen 1/Girl.png");
 		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
 		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
-		if (relativeY < 96){
+		if (relativeY < -190){
 			$("#user").attr("src", "images/Screen 1/Age_boy_Hey.png");
 		}
-		if (relativeY < 190 && relativeY > 96){
+		if (relativeY < -85 && relativeY > -190){
 			$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
 		}
-		if (relativeY > 190){
+		if (relativeY > -85){
 			$("#user").attr("src", "images/Screen 1/Age_oldman_Hey.png");
 		}
 		male = 1;
+		sexOfUser = "male";
+		imageHasChanged = 0;
+		sec9_imageHasChanged = 0;
 	});
 });
 $(document).ready(function(){
@@ -215,26 +235,120 @@ $(document).ready(function(){
 		$("#male").attr("src", "images/Screen 1/Boy.png");
 		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
 		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
-		if (relativeY < 96){
+		if (relativeY < -190){
 			$("#user").attr("src", "images/Screen 1/Age_girl_Hey.png");
 		}
-		if (relativeY < 190 && relativeY > 96){
+		if (relativeY < -85 && relativeY > -190){
 			$("#user").attr("src", "images/Screen 1/Age_woman_Hey.png");
 		}
-		if (relativeY > 190){
+		if (relativeY > -85){
 			$("#user").attr("src", "images/Screen 1/Age_oldwoman_Hey.png");
 		}
 		male = 2;
+		sexOfUser = "female";
+		imageHasChanged = 0;
+		sec9_imageHasChanged = 0;
 	});
 	
 });
 /* --------sec 2 --------------------------------------------------------------------*/
 
+var dragimg = document.createElement("img");
+var officeImg = "images/Screen 2/Office_Man.png";
+var sofaImg = "images/Screen 2/Sofa_Man.png";
+var imageHasChanged = 0;
+
 $(document).ready(function(){
-	$("#sec2").click(function(){
-	
-	});
+	$(window).scroll(function(){
+		if (scrollPercent > 0){
+			if(imageHasChanged == 0){
+				if(sexOfUser == "male"){
+					if(ageOfUser < 23){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Boy_Up.png";
+						officeImg = "images/Screen 2/Office_Boy.png";
+						sofaImg = "images/Screen 2/Sofa_Boy.png";
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Man_Up.png";
+						officeImg = "images/Screen 2/Office_Man.png";
+						sofaImg = "images/Screen 2/Sofa_Man.png";
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Oldman_Up.png";
+						officeImg = "images/Screen 2/Office_Oldman.png";
+						sofaImg = "images/Screen 2/Sofa_Oldman.png";
+						imageHasChanged = 1;
+					}
+				}
+				else{
+					if(ageOfUser < 23){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Girl_Up.png";
+						officeImg = "images/Screen 2/Office_Girl.png";
+						sofaImg = "images/Screen 2/Sofa_Girl.png";
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Woman_Up.png";
+						officeImg = "images/Screen 2/Office_Woman.png";
+						sofaImg = "images/Screen 2/Sofa_Woman.png";
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Oldwoman_Up.png";
+						officeImg = "images/Screen 2/Office_Oldwoman.png";
+						sofaImg = "images/Screen 2/Sofa_Oldwoman.png";
+						imageHasChanged = 1;
+					}
+				}
+				
+				$('#sofa').attr("src", sofaImg);
+				$('#office').attr("src", "images/Screen 2/Office_Empty.png");
+			}
+		}
+    });
 });
+
+
+function dragStart(ev) {
+   ev.dataTransfer.effectAllowed='move';
+   ev.dataTransfer.setDragImage(dragimg, 100, 100);
+   $('#office').attr("src", "images/Screen 2/Office_Empty.png");
+   $('#sofa').attr("src", "images/Screen 2/Sofa_Empty.png");
+   return true;
+}
+
+function dragEnter(ev) {
+   ev.preventDefault();
+   console.log("dragEnter");
+   return true;
+}
+
+function dragOver(ev) {
+	ev.preventDefault();
+	console.log("dragOver");
+	return false;
+}
+
+function dragDrop(ev) {
+	if (ev.target.id == "office"){
+		$('#office').attr("src", officeImg);
+		$('aside').show();
+		$('#sec2_info').show(400);
+	}
+	else{
+		$('#sofa').attr("src", sofaImg);
+	}
+   return false;
+}
+
 
 /* --------sec 3 --------------------------------------------------------------------*/
 
@@ -516,6 +630,7 @@ $(document).ready(function(){
   
 });
 
+
 /* --------sec 6 --------------------------------------------------------------------*/
 
 $(document).ready(function(){
@@ -530,19 +645,19 @@ $(document).ready(function(){
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#medium').animate({ height:411, top:'0%' }, {
+            $('#medium').animate({ height:411, top:'27.5%' }, {
             		queue: false,
                     duration: 700,
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#danger').animate({ height:543, top:'0%' }, {
+            $('#danger').animate({ height:543, top:'6%' }, {
             		queue: false,
                     duration: 800,
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#solid').animate({ height:280, top:'0%' }, {
+            $('#solid').animate({ height:280, top:'48%' }, {
             		queue: false,
                     duration: 2400,
                     easing: 'easeOutBounce',
@@ -597,40 +712,163 @@ $(document).ready(function(){
 /* --------sec 9 --------------------------------------------------------------------*/
 
 
+
+var sec9Backfull = "";
+var sec9Backcut = "";
+var sec9hair = "";
+var helper = 0;
+var sec9_imageHasChanged = 0;
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if (scrollPercent > 0){
+			if(sec9_imageHasChanged == 0){
+				$('#sec9').css("background-position-y", "79%");
+				$('#B_no').css("top", "50%");
+				$('#B_yes').css("top", "50%");
+				$('#B_no').css("opacity", "1");
+				$('#B_yes').css("opacity", "1");
+				$('#hair').css("display", "none");
+				$('#hair').css("top", "15.3%");
+				$('#crown').css("display", "none");
+				$('#crown_info').css("display", "none");
+				$('#pull_info').css("display", "none");
+				$('#scissors').css("left", "66%");
+				
+				if(sexOfUser == "male"){
+					if(ageOfUser < 23){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Boy_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Boy_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 1;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Man_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Man_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 2;
+					}
+					if(ageOfUser > 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Oldman_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/OldMan_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 3;
+					}
+				}
+				else{
+					if(ageOfUser < 23){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Girl_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Girl_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 4;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Woman_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Woman_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 5;
+					}
+					if(ageOfUser > 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/OldWoman_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/OldWoman_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 6;
+					}
+				}
+			}
+		}
+    });
+});
+
+
 $(document).ready(function(){
 	$( "#B_no" ).click(function() {
 	  	$('#sec9').animate({
 		  'background-position-x': '50%',
-		  'background-position-y': '0%'
-		}, 2000, 'linear');
+		  'background-position-y': '-10%'
+		},
+		{
+			duration: 2000, 
+			complete: function(){
+				$("#crown").show(400);
+				$("#crown_info").show(400);
+			}
+		});
 		
 		$("#B_no").animate({
-			top: '123%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
         $("#B_yes").animate({
-			top: '103.5%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
         
+        $("#sec9_header").text("!כל הכבוד, לא משכת");
 	});
 	
 	$( "#B_yes" ).click(function() {
 	  	$('#sec9').animate({
 		  'background-position-x': '50%',
-		  'background-position-y': '0%'
-		}, 2000, 'linear');
+		  'background-position-y': '-10%'
+		},
+		{
+			duration: 2000, 
+			complete: function(){
+				if(helper <= 1){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Boy_Box_cut.png")');
+				}
+				if(helper == 2){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Man_Box_cut.png")');
+				}
+				if(helper == 3){
+					$('#sec9').css('background-image', 'url("images/Screen 9/OldMan_Box_cut.png")');
+				}
+				if(helper == 4){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Girl_Box_cut.png")');
+				}
+				if(helper == 5){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Woman_Box_cut.png")');
+				}
+				if(helper == 6){
+					$('#sec9').css('background-image', 'url("images/Screen 9/OldWoman_Box_cut.png")');
+				}
+				$("#pull_info").show(400);
+				$("#hair").show(0);
+				$("#haircut_line").show(400);
+				$("#scissors").show(400);
+				$('#scissors').animate({
+					left: "-=600"
+					}, {
+					complete: function(){
+						$("#scissors").hide(400);
+						$('#hair').animate({
+							top: "-=30"
+						});
+						$("#haircut_line").hide(400);
+					}
+				});
+			}
+		});
 		
 		$("#B_no").animate({
-			top: '123%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
         $("#B_yes").animate({
-			top: '103.5%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
+		
+		$("#sec9_header").text("!משכת, חבל");
 	});
-	
+		
 });
 
 

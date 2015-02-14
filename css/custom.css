@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'aduma';
-    src: url('../fonts/Aduma_webfont/aduma-medium-webfont.eot');
-    src: url('../fonts/Aduma_webfont/aduma-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Aduma_webfont/aduma-medium-webfont.woff') format('woff'),
-         url('../fonts/Aduma_webfont/aduma-medium-webfont.ttf') format('truetype'),
-         url('../fonts/Aduma_webfont/aduma-medium-webfont.svg#adumamedium') format('svg');
-    font-weight: 500;
+    src: url('../fonts/Aduma_webfont/aduma-regular-webfont.eot');
+    src: url('../fonts/Aduma_webfont/aduma-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aduma_webfont/aduma-regular-webfont.woff') format('woff'),
+         url('../fonts/Aduma_webfont/aduma-regular-webfont.ttf') format('truetype'),
+         url('../fonts/Aduma_webfont/aduma-regular-webfont.svg#adumamedium') format('svg');
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {   
@@ -15,7 +15,7 @@
          url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.woff') format('woff'),
          url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.ttf') format('truetype'),
          url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont') format('svg');
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -134,6 +134,7 @@ main{
 #slider {
  border:none;
  position:relative;
+ top:44%;
  left:-170%;
  height:100px;
  width:30px;
@@ -183,6 +184,16 @@ main{
 	right: 40px;
 	font-weight: lighter;
 }
+#sec2_info{
+	position:absolute;
+	top:15%;
+	left:1%;
+	width:245px;
+	height:277px;
+	background-image: url("../images/Screen 2/info.png");
+	display:none;
+}	
+
 
 /* --------sec 3 --------------------------------------------------------------------*/
 
@@ -489,6 +500,7 @@ main{
 #Phoenix {background-image: url("../images/Screen_5/Box_Phoenix.png");}
 
 
+
 /* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
 	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 45.5% 97%;
@@ -525,45 +537,41 @@ main{
 }
 
 #no_idea{
-	position:relative;
+	position:absolute;
 	left:20%;
 	top:85%;
 	margin-top:6%;
 	z-index:0;
 	height:0px;
-	display:inline-block;
 }
 
 #medium{
-	position:relative;
-	left:8.5%;
-	top:85%;
+	position:absolute;
+	left:33.5%;
+	top:140%;
 	z-index:1;
 	height:0px;
-	display:inline-block;
 }
 
 #solid{
-	position:relative;
-	left:1%;
+	position:absolute;
+	left:45%;
 	top:85%;
 	z-index:2;
 	height:0px;
-	display:inline-block;
 }
 
 #danger{
-	position:relative;
-	right:20%;
+	position:absolute;
+	right:27%;
 	top:85%;
 	z-index:0;
-	height:0px;
-	display:inline-block;	
+	height:0px;	
 }
 
 #p1{
-	position:relative;
-	bottom:39%;
+	position:absolute;
+	bottom:49%;
 	right:83%;
 	outline: 0;
 	opacity:0;
@@ -574,9 +582,9 @@ main{
 }
 
 #p2{
-	position:relative;
-	bottom:99%;
-	right:35%;
+	position:absolute;
+	bottom:105%;
+	right:28%;
 	outline: 0;
 	opacity:0;
 	width:42px;
@@ -585,9 +593,9 @@ main{
 	button { outline: 0; }
 }
 #p3{
-	position:relative;
-	bottom:107%;
-	right:73%;
+	position:absolute;
+	bottom:104%;
+	right:62%;
 	outline: 0;
 	opacity:0;
 	width:42px;
@@ -596,8 +604,8 @@ main{
 	button { outline: 0; }
 }
 #p4{
-	position:relative;
-	bottom:82%;
+	position:absolute;
+	bottom:88%;
 	right:11%;
 	outline: 0;
 	opacity:0;
@@ -635,7 +643,7 @@ main{
 	}
 #plus3 {
 	position:absolute;
-	top:20%;
+	top:50%;
 	left:56%;
 	width: 200px;
 	height: 150px;
@@ -657,7 +665,9 @@ main{
 	color:#FFFFFF;
 	border-radius:5px;
 	}
+
 /* --------sec 7 --------------------------------------------------------------------*/
+
 #sec7{	
 	background:#dddddd;
 	height:100vh;
@@ -709,10 +719,11 @@ main{
 	height: 520px;
 	top: 1%;
 }
+
 /* --------sec 9 --------------------------------------------------------------------*/
 
 #sec9{	
-	background: #b5b5b5 url("../images/Screen 9/Man_Box_cut.png") no-repeat 50% 79%;
+	background: #b5b5b5 url("../images/Screen 9/Man_Box_full.png") no-repeat 50% 79%;
 	position:relative;
 	height:100vh;
 	width:100%;
@@ -732,16 +743,61 @@ main{
 #hair{
 	width:613px;
 	height:101px;
-	position:relative;
-	top:1.5%;
-	left:23.78%;
+	position:absolute;
+	top:15.3%;
+	left:26.2%;
 	background: transparent url("../images/Screen 9/Man_Box (1).png") no-repeat;
 	display:none;
 }
 
+#crown{
+	width:320px;
+	height:219px;
+	position:absolute;
+	top:0%;
+	left:45%;
+	background: transparent url("../images/Screen 9/king.png") no-repeat;
+	display:none;
+}
+#crown_info{
+	width:320px;
+	height:219px;
+	position:absolute;
+	top:25%;
+	left:3%;
+	background: transparent url("../images/Screen 9/crown_info.png") no-repeat;
+	display:none;
+}
+#pull_info{
+	width:305px;
+	height:316px;
+	position:absolute;
+	top:25%;
+	left:3%;
+	background: transparent url("../images/Screen 9/pull_info.png") no-repeat;
+	display:none;
+}
+#haircut_line{
+	width:485px;
+	height:2px;
+	position:absolute;
+	top:31%;
+	left:29%;
+	background: transparent url("../images/Screen 9/Line_Haircut.png") no-repeat;
+	display:none;
+}
+#scissors{
+	width:305px;
+	height:316px;
+	position:absolute;
+	top:12%;
+	left:66%;
+	background: transparent url("../images/Screen 9/Scissors.png") no-repeat;
+	display:none;
+}
 
 #B_no{
-	position:relative;
+	position:absolute;
 	top:50%;
 	left:36%;
 	width:163px;
@@ -750,8 +806,8 @@ main{
 }
 
 #B_yes{
-	position:relative;
-	top:30.8%;
+	position:absolute;
+	top:50%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -769,7 +825,7 @@ main{
 
 #B_yes:hover{
 	position:relative;
-	top:30.8%;
+	top:50%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -797,8 +853,8 @@ main{
 
 
 #boss_face{
-	position:relative;
-	top:18.5%;
+	position:absolute;
+	top:17.3%;
 	left:44.8%;
 	width:115px;
 	height:115px;
@@ -806,8 +862,8 @@ main{
 }
 
 #boss_talk{
-	position:relative;
-	bottom:30%;
+	position:absolute;
+	top:22%;
 	left:58%;
 	width:145px;
 	height:140px;
@@ -818,8 +874,8 @@ main{
  background-color:#e69601;
  width: 30px;
  height: 215px;
- position: relative;
- top:2%;
+ position: absolute;
+ top:20%;
  left:15%;
  border-radius: 25px;
 }
