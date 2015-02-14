@@ -78,16 +78,16 @@ aside div{
 	background: url("../images/Frame/PensionBag.png") no-repeat center 50%;
 }
 header{
-	height:50px;
+	height:70px;
 	width:100%;
     top:0%;
     left:0%;
 	position:fixed;
 	z-index: 10;
-	padding: 5px;
+	padding: 20px;
 }
 header a{
-	margin-left: 12px;
+	margin-right: 12px;
 	display: inline-block;
 	position: relative;
 	height: 40px;
@@ -116,7 +116,7 @@ header a{
 	font-family: EzerBlock,arial;
 	font-size: 16px;
 	color: #FFFFFF;
-	top: 3%;
+	top: 5%;
 	left: 16%;
 }
 main{
