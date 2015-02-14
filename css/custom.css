@@ -784,7 +784,7 @@ main{
 	width:320px;
 	height:219px;
 	position:absolute;
-	top:25%;
+	top:15%;
 	left:3%;
 	background: transparent url("../images/Screen 9/crown_info.png") no-repeat;
 	display:none;
@@ -793,7 +793,7 @@ main{
 	width:305px;
 	height:316px;
 	position:absolute;
-	top:25%;
+	top:15%;
 	left:3%;
 	background: transparent url("../images/Screen 9/pull_info.png") no-repeat;
 	display:none;
