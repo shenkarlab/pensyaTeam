@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'aduma';
-    src: url('../fonts/Aduma_webfont/aduma-medium-webfont.eot');
-    src: url('../fonts/Aduma_webfont/aduma-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Aduma_webfont/aduma-medium-webfont.woff') format('woff'),
-         url('../fonts/Aduma_webfont/aduma-medium-webfont.ttf') format('truetype'),
-         url('../fonts/Aduma_webfont/aduma-medium-webfont.svg#adumamedium') format('svg');
+    src: url('../fonts/Aduma_webfont/aduma-regular-webfont.eot');
+    src: url('../fonts/Aduma_webfont/aduma-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aduma_webfont/aduma-regular-webfont.woff') format('woff'),
+         url('../fonts/Aduma_webfont/aduma-regular-webfont.ttf') format('truetype'),
+         url('../fonts/Aduma_webfont/aduma-regular-webfont.svg#adumamedium') format('svg');
     font-weight: 500;
     font-style: normal;
 }

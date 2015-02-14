@@ -265,7 +265,6 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Boy_Up.png";
 						officeImg = "images/Screen 2/Office_Boy.png";
 						sofaImg = "images/Screen 2/Sofa_Boy.png";
-						$('#sofa').attr("src", sofaImg);
 						imageHasChanged = 1;
 					}
 					if(ageOfUser > 23 && ageOfUser < 50){
@@ -273,7 +272,6 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Man_Up.png";
 						officeImg = "images/Screen 2/Office_Man.png";
 						sofaImg = "images/Screen 2/Sofa_Man.png";
-						$('#sofa').attr("src", sofaImg);
 						imageHasChanged = 1;
 					}
 					if(ageOfUser > 50){
@@ -281,7 +279,6 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Oldman_Up.png";
 						officeImg = "images/Screen 2/Office_Oldman.png";
 						sofaImg = "images/Screen 2/Sofa_Oldman.png";
-						$('#sofa').attr("src", sofaImg);
 						imageHasChanged = 1;
 					}
 				}
@@ -291,7 +288,6 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Girl_Up.png";
 						officeImg = "images/Screen 2/Office_Girl.png";
 						sofaImg = "images/Screen 2/Sofa_Girl.png";
-						$('#sofa').attr("src", sofaImg);
 						imageHasChanged = 1;
 					}
 					if(ageOfUser > 23 && ageOfUser < 50){
@@ -299,7 +295,6 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Woman_Up.png";
 						officeImg = "images/Screen 2/Office_Woman.png";
 						sofaImg = "images/Screen 2/Sofa_Woman.png";
-						$('#sofa').attr("src", sofaImg);
 						imageHasChanged = 1;
 					}
 					if(ageOfUser > 50){
@@ -307,10 +302,12 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Oldwoman_Up.png";
 						officeImg = "images/Screen 2/Office_Oldwoman.png";
 						sofaImg = "images/Screen 2/Sofa_Oldwoman.png";
-						$('#sofa').attr("src", sofaImg);
 						imageHasChanged = 1;
 					}
 				}
+				
+				$('#sofa').attr("src", sofaImg);
+				$('#office').attr("src", "images/Screen 2/Office_Empty.png");
 			}
 		}
     });
