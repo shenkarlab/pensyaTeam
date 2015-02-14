@@ -498,45 +498,41 @@ main{
 }
 
 #no_idea{
-	position:relative;
+	position:absolute;
 	left:20%;
 	top:85%;
 	margin-top:6%;
 	z-index:0;
 	height:0px;
-	display:inline-block;
 }
 
 #medium{
-	position:relative;
-	left:8.5%;
-	top:85%;
+	position:absolute;
+	left:33.5%;
+	top:140%;
 	z-index:1;
 	height:0px;
-	display:inline-block;
 }
 
 #solid{
-	position:relative;
-	left:1%;
+	position:absolute;
+	left:45%;
 	top:85%;
 	z-index:2;
 	height:0px;
-	display:inline-block;
 }
 
 #danger{
-	position:relative;
-	right:20%;
+	position:absolute;
+	right:27%;
 	top:85%;
 	z-index:0;
-	height:0px;
-	display:inline-block;	
+	height:0px;	
 }
 
 #p1{
-	position:relative;
-	bottom:39%;
+	position:absolute;
+	bottom:49%;
 	right:83%;
 	outline: 0;
 	opacity:0;
@@ -547,9 +543,9 @@ main{
 }
 
 #p2{
-	position:relative;
-	bottom:99%;
-	right:35%;
+	position:absolute;
+	bottom:105%;
+	right:28%;
 	outline: 0;
 	opacity:0;
 	width:42px;
@@ -558,9 +554,9 @@ main{
 	button { outline: 0; }
 }
 #p3{
-	position:relative;
-	bottom:107%;
-	right:73%;
+	position:absolute;
+	bottom:104%;
+	right:62%;
 	outline: 0;
 	opacity:0;
 	width:42px;
@@ -569,8 +565,8 @@ main{
 	button { outline: 0; }
 }
 #p4{
-	position:relative;
-	bottom:82%;
+	position:absolute;
+	bottom:88%;
 	right:11%;
 	outline: 0;
 	opacity:0;
@@ -608,7 +604,7 @@ main{
 	}
 #plus3 {
 	position:absolute;
-	top:20%;
+	top:50%;
 	left:56%;
 	width: 200px;
 	height: 150px;

@@ -543,19 +543,19 @@ $(document).ready(function(){
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#medium').animate({ height:411, top:'0%' }, {
+            $('#medium').animate({ height:411, top:'27.5%' }, {
             		queue: false,
                     duration: 700,
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#danger').animate({ height:543, top:'0%' }, {
+            $('#danger').animate({ height:543, top:'6%' }, {
             		queue: false,
                     duration: 800,
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#solid').animate({ height:280, top:'0%' }, {
+            $('#solid').animate({ height:280, top:'48%' }, {
             		queue: false,
                     duration: 2400,
                     easing: 'easeOutBounce',
