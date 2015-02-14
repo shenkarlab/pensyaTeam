@@ -67,9 +67,15 @@ aside{
 	position:fixed;
 	top: 70px;
 	left:0;
-	background: url("../images/Frame/PensionBag.png") no-repeat center 65%;
-	background-size : 150px 150px;
 	display:none;
+}
+aside div{
+	position: absolute;
+	top: 52%;
+	left: 5%;
+	height: 165px;
+	width: 167px;
+	background: url("../images/Frame/PensionBag.png") no-repeat center 50%;
 }
 header{
 	background:url("../images/Frame/Social_Twitter_S.png") no-repeat 1% 45%,
