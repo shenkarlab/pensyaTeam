@@ -126,6 +126,7 @@ main{
 #slider {
  border:none;
  position:relative;
+ top:44%;
  left:-170%;
  height:100px;
  width:30px;
@@ -714,7 +715,7 @@ main{
 
 #B_yes{
 	position:relative;
-	top:30.8%;
+	top:30.77%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -732,7 +733,7 @@ main{
 
 #B_yes:hover{
 	position:relative;
-	top:30.8%;
+	top:30.77%;
 	left:51%;
 	width:163px;
 	height:121px;

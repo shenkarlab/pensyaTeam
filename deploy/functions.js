@@ -1,11 +1,25 @@
+//Variables...
+
+var sexOfUser;
+var ageOfUser;
+
+
+
+
+
+
+
+
+
+//End Variables
+
+
 $(document).ready(function() { 
+	$(".gallery_li").click(function() {
 
-
-$(".gallery_li").click(function() {
-
-	$(this).addClass('current').siblings().removeClass('current');
-	$(".gallery_page").addClass('hide').eq($(this).index()).removeClass('hide');
-});
+		$(this).addClass('current').siblings().removeClass('current');
+		$(".gallery_page").addClass('hide').eq($(this).index()).removeClass('hide');
+	});
 
 function scrollTo(elementId){
       $('html, body').animate({
@@ -151,40 +165,41 @@ $(document).ready(function(){
 /* --------sec 1 --------------------------------------------------------------------*/
 
 var male = 0;
-var relativeY = 0;
+var relativeY = -150;
 
 $(document).ready(function() {
  $(function() {
     $( "#slider" ).draggable({
   	  axis: "y",
       drag: function() {
-        relativeY = $("#slider").offset().top - $("#slider_wrapper").offset().top;
+        relativeY = $("#slider_wrapper").offset().top - $("#slider").offset().top;
   	  	console.log(relativeY);
   	  	
   	  	if (male == 1){
-  	  		if (relativeY < 96){
+  	  		if (relativeY < -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_boy_Hey.png");
   	  		}
-  	  		if (relativeY < 190 && relativeY > 96){
+  	  		if (relativeY < -85 && relativeY > -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
   	  		}
-  	  		if (relativeY > 190){
+  	  		if (relativeY > -85){
   	  			$("#user").attr("src", "images/Screen 1/Age_oldman_Hey.png");
   	  		}
   	  	}
   	  	else if (male == 2){
-  	  		if (relativeY < 96){
+  	  		if (relativeY < -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_girl_Hey.png");
   	  		}
-  	  		if (relativeY < 190 && relativeY > 96){
+  	  		if (relativeY < -85 && relativeY > -190){
   	  			$("#user").attr("src", "images/Screen 1/Age_woman_Hey.png");
   	  		}
-  	  		if (relativeY > 190){
+  	  		if (relativeY > -85){
   	  			$("#user").attr("src", "images/Screen 1/Age_oldwoman_Hey.png");
   	  		}
   	  	}
   	  	
-  	  	$('#slider_num').text(Math.round(relativeY/4));
+  	  	$('#slider_num').text(Math.round(relativeY/4) + 71);
+  	  	ageOfUser = Math.round(relativeY/4) + 71;
       }
     });
     $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
@@ -197,16 +212,17 @@ $(document).ready(function(){
 		$("#female").attr("src", "images/Screen 1/Girl.png");
 		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
 		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
-		if (relativeY < 96){
+		if (relativeY < -190){
 			$("#user").attr("src", "images/Screen 1/Age_boy_Hey.png");
 		}
-		if (relativeY < 190 && relativeY > 96){
+		if (relativeY < -85 && relativeY > -190){
 			$("#user").attr("src", "images/Screen 1/Age_Man_Hey.png");
 		}
-		if (relativeY > 190){
+		if (relativeY > -85){
 			$("#user").attr("src", "images/Screen 1/Age_oldman_Hey.png");
 		}
 		male = 1;
+		sexOfUser = "male";
 	});
 });
 $(document).ready(function(){
@@ -215,26 +231,56 @@ $(document).ready(function(){
 		$("#male").attr("src", "images/Screen 1/Boy.png");
 		$("#slider").css('background-image', 'url("images/Screen 1/Age_Button.png")');
 		$("#slider_wrapper").css('background-image', 'url("images/Screen 1/Age_line.png")');
-		if (relativeY < 96){
+		if (relativeY < -190){
 			$("#user").attr("src", "images/Screen 1/Age_girl_Hey.png");
 		}
-		if (relativeY < 190 && relativeY > 96){
+		if (relativeY < -85 && relativeY > -190){
 			$("#user").attr("src", "images/Screen 1/Age_woman_Hey.png");
 		}
-		if (relativeY > 190){
+		if (relativeY > -85){
 			$("#user").attr("src", "images/Screen 1/Age_oldwoman_Hey.png");
 		}
 		male = 2;
+		sexOfUser = "female";
 	});
 	
 });
 /* --------sec 2 --------------------------------------------------------------------*/
 
-$(document).ready(function(){
-	$("#sec2").click(function(){
-	
-	});
-});
+var dragimg = document.createElement("img");
+console.log('changing image');
+dragimg.src = "images/Screen 2/Man_Up.png";
+
+function dragStart(ev) {
+   ev.dataTransfer.effectAllowed='move';
+   ev.dataTransfer.setDragImage(dragimg, 100, 100);
+   $('#office').attr("src", "images/Screen 2/Office_Empty.png");
+   $('#sofa').attr("src", "images/Screen 2/Sofa_Empty.png");
+   return true;
+}
+
+function dragEnter(ev) {
+   ev.preventDefault();
+   console.log("dragEnter");
+   return true;
+}
+
+function dragOver(ev) {
+	ev.preventDefault();
+	console.log("dragOver");
+	return false;
+}
+
+function dragDrop(ev) {
+	if (ev.target.id == "office"){
+		$('#office').attr("src", "images/Screen 2/Office_Man.png");
+		$('aside').show();
+	}
+	else{
+		$('#sofa').attr("src", "images/Screen 2/Sofa_Man.png");
+	}
+   return false;
+}
 
 /* --------sec 3 --------------------------------------------------------------------*/
 
