@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -12,6 +13,7 @@
 	<script type="text/javascript" src="deploy/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="deploy/functions.js"></script>
 	<script type="text/javascript" src="deploy/jquery.color-2.1.2.js"></script>
+	<script type="text/javascript" src="deploy/dragable.js"> </script>
 	<script type="text/javascript" src="deploy/jquery-ui.js"> </script>
 	<script type="text/javascript" src="deploy/jquery.easing.1.3.js"> </script>
 	<script type="text/javascript" src="deploy/jquery.backgroundpos.js"> </script>
@@ -25,8 +27,10 @@
 		<section id="title">
 		</section>
 		<main>
+			<section id="sec0">
+			</section>
 			<section id="sec1">
-				<h1> ..היי, כדאי שנכיר מעט קודם </h1>
+				<h1> היי, כדאי שנכיר מעט קודם.. </h1>
 				<div id="slider_wrapper">
 					<div id="slider" class="draggable ui-widget-content">
 						<p id="slider_num"> 27 </p>
@@ -36,26 +40,25 @@
 				<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
 				<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
 			</section>
-			
-			
 			<section id="sec2" ondragstart="dragStart(event)" ondragenter="dragEnter(event)" ondrop="dragDrop(event)" ondragover="dragOver(event)">
 				<h1> אל תתבטל, גרור את עצמך לעבודה </h1>
 				<img id="office" src="images/Screen 2/Office_Empty.png">	
 				<img id="sofa"   src="images/Screen 2/Sofa_Man.png">
-				<div id="sec2_info"></div>
 			</section>
-			
-			
 			
 			<section id="sec3">
 				<h1> ?מהי ההכנסה החודשית שלך </h1>
 				<div id="paycheck">
 					<img src="images/Screen 3/Salary.png ">
-					<input id="check" name="paycheck" value="" type="text" placeholder="הכנס/י את המשכורת שלך" size="30">
+					<input id="check" name="paycheck" value="" type="text" placeholder="הקלד את המשכורת שלך" size="30">
 				</div>
+				<p>
+					!אנחנו ממש לא שומרים את המידע שלכם, זה רק סימולטור
+				</p>
 			</section>
+			
 			<section id="sec4">	 
-					<h1> אחוז חיסכון חודשי	</h1>
+					<h1>איזה אחוז מהמשכורת<br>?אתה חוסך בכל חודש לפנסיה</h1>
 					<div id="little_check">
 						<input id="check_no_changed" value="" type="text" readonly> </input>
 					</div>
@@ -65,33 +68,27 @@
 						<p class="perButton" id="per6"> <br>	6%	 </p>
 						<p class="perButton" id="per5"> <br>	5%	 </p>
 					</article>
-					<section id="percentages">
-							<article id="percentage_first">
-									<p class="first_msg"> מה אחוז ההפקדה החודשי</p> <br>
-									<p class="first_msg"> ?לקרן הפנסיה שלך </p>
-								</article>
-
-								<article id="percentage_second">	
-									<p> <label> בכל חודש אתה מפקיד
-											<input id="perMonth" type="text" name="monthly_secretion" value="450" readonly> </label>
-									</p>
-									<br> 
-									<p> <label>ובעוד 40 שנה יהיה לך
-											<input id="totalAmout" type="text" name="total_amount_after_40years" value="581,674" readonly> </label> 
-									</p> 
-								</article>
-						</section>
+					<article id="percentage_second">	
+									<p class="text_sec4"> כלומר </p>
+									<p id="perMonth"> </label>
+									<p class="text_sec4">    בכל חודש, שבעוד</p>
+									<br>
+									<p class="text_sec4"> 40 שנה יהיה שווה       </p>
+									<p id="totalAmout"> </label> 
+									<input id="perMonth_in" type="text" name="monthly_secretion" value="450"> </label>	
+					</section>
 			</section>
-			<section id="sec5" ondragstart="dragStart(event)" ondragenter="dragEnter(event)" ondrop="dragDrop(event)" ondragover="dragOver(event)">	 
+			<section id="sec5">	 
+					<h1> ?באיזו קרן פנסיה אתם חוסכים </h1>
 					<div id="slider-wrapper5">
-							<img id="drag_env" src="images/Screen_5/mini_env.png"> 
+							<img id="drag_env" src="images/Screen_5/mini_env.png">
 							<div id="slider5">
-								<div class="sp"> </div>
-								<div class="sp"> </div>
-								<div class="sp"> </div>
-								<div class="sp"> </div>
-								<div class="sp"> </div>
-								<div class="sp"> </div>
+								<div class="sp" id="Ayalon"> </div>
+								<div class="sp" id="Klal"> </div>
+								<div class="sp" id="Harel"> </div>
+								<div class="sp" id="Menorah"> </div>
+								<div class="sp" id="Migdal"> </div>
+								<div class="sp" id="Phoenix"> </div>
 							</div>
 							<div id="button-previous">  </div>
 							<div id="button-next">  </div>
@@ -154,16 +151,11 @@
 				<div id="envelope_down"> </div>
 			</section>
 			<section id="sec9">
-				<h1 id="sec9_header"> ?משכת דמי פיצויים </h1>
+				<h1> ?משכת דמי פיצויים </h1>
 				<div id="hair"></div>
 				<div id="sec9_text"></div>
 				<div id="B_no"></div>
 				<div id="B_yes"></div>
-				<div id="crown"></div>
-				<div id="crown_info"></div> 
-				<div id="pull_info"></div> 
-				<div id="haircut_line"></div>
-				<div id="scissors"></div>
 			</section>
 			<section id="sec10"> 
 				<h1> במשא ומתן על השכר, אפשר ללחוץ על הבוס <br>
@@ -183,7 +175,8 @@
 		<nav>
 			<div class="dotstyle dotstyle-scaleup">
 				<ul id="nav">
-					<li data-sec="1" class="current navs" ><a href="#">Home</a></li>
+					<li data-sec="0" class="current navs" ><a href="#">Home</a></li>
+					<li data-sec="1" class="navs" ><a href="#">Home</a></li>
 					<li data-sec="2" class="navs"><a href="#">About</a></li>
 					<li data-sec="3" class="navs"><a href="#">Products</a></li>
 					<li data-sec="4" class="navs"><a href="#">Portfolio</a></li>
