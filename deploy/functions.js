@@ -448,8 +448,8 @@ $(document).ready(function(){
 
 	$("#per5,#per6,#per7").click(function(){
 		$("#percentage_second").css("visibility","visible");
-		$("#img_per").attr("width","15%");
-		$("#img_per").attr("height","20%");
+//		$("#img_per").attr("width","15%");
+//		$("#img_per").attr("height","20%");
 	});
 	
 	$("#per5").click(function(){
