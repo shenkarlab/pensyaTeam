@@ -1,7 +1,7 @@
 //Variables...
 
-var sexOfUser;
-var ageOfUser;
+var sexOfUser = "male";		// sex of the user with default value 
+var ageOfUser = 27;			// age of the user with default value
 
 
 
@@ -200,6 +200,7 @@ $(document).ready(function() {
   	  	
   	  	$('#slider_num').text(Math.round(relativeY/4) + 71);
   	  	ageOfUser = Math.round(relativeY/4) + 71;
+  	  	imageHasChanged = 0;
       }
     });
     $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
@@ -223,6 +224,7 @@ $(document).ready(function(){
 		}
 		male = 1;
 		sexOfUser = "male";
+		imageHasChanged = 0;
 	});
 });
 $(document).ready(function(){
@@ -242,14 +244,78 @@ $(document).ready(function(){
 		}
 		male = 2;
 		sexOfUser = "female";
+		imageHasChanged = 0;
 	});
 	
 });
 /* --------sec 2 --------------------------------------------------------------------*/
 
 var dragimg = document.createElement("img");
-console.log('changing image');
-dragimg.src = "images/Screen 2/Man_Up.png";
+var officeImg = "images/Screen 2/Office_Man.png";
+var sofaImg = "images/Screen 2/Sofa_Man.png";
+var imageHasChanged = 0;
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if (scrollPercent > 0){
+			if(imageHasChanged == 0){
+				if(sexOfUser == "male"){
+					if(ageOfUser < 23){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Boy_Up.png";
+						officeImg = "images/Screen 2/Office_Boy.png";
+						sofaImg = "images/Screen 2/Sofa_Boy.png";
+						$('#sofa').attr("src", sofaImg);
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Man_Up.png";
+						officeImg = "images/Screen 2/Office_Man.png";
+						sofaImg = "images/Screen 2/Sofa_Man.png";
+						$('#sofa').attr("src", sofaImg);
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Oldman_Up.png";
+						officeImg = "images/Screen 2/Office_Oldman.png";
+						sofaImg = "images/Screen 2/Sofa_Oldman.png";
+						$('#sofa').attr("src", sofaImg);
+						imageHasChanged = 1;
+					}
+				}
+				else{
+					if(ageOfUser < 23){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Girl_Up.png";
+						officeImg = "images/Screen 2/Office_Girl.png";
+						sofaImg = "images/Screen 2/Sofa_Girl.png";
+						$('#sofa').attr("src", sofaImg);
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Woman_Up.png";
+						officeImg = "images/Screen 2/Office_Woman.png";
+						sofaImg = "images/Screen 2/Sofa_Woman.png";
+						$('#sofa').attr("src", sofaImg);
+						imageHasChanged = 1;
+					}
+					if(ageOfUser > 50){
+						console.log('changing image');
+						dragimg.src = "images/Screen 2/Oldwoman_Up.png";
+						officeImg = "images/Screen 2/Office_Oldwoman.png";
+						sofaImg = "images/Screen 2/Sofa_Oldwoman.png";
+						$('#sofa').attr("src", sofaImg);
+						imageHasChanged = 1;
+					}
+				}
+			}
+		}
+    });
+});
+
 
 function dragStart(ev) {
    ev.dataTransfer.effectAllowed='move';
@@ -273,11 +339,11 @@ function dragOver(ev) {
 
 function dragDrop(ev) {
 	if (ev.target.id == "office"){
-		$('#office').attr("src", "images/Screen 2/Office_Man.png");
+		$('#office').attr("src", officeImg);
 		$('aside').show();
 	}
 	else{
-		$('#sofa').attr("src", "images/Screen 2/Sofa_Man.png");
+		$('#sofa').attr("src", sofaImg);
 	}
    return false;
 }
