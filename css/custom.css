@@ -66,7 +66,7 @@ aside{
 	position:fixed;
 	top: 70px;
 	left:0;
-	background: url("../images/Frame/PensionBag.png") no-repeat center 350px;
+	background: url("../images/Frame/PensionBag.png") no-repeat center 65%;
 	background-size : 150px 150px;
 	display:none;
 }
