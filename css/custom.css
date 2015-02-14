@@ -387,10 +387,8 @@ main{
 }
 #img_per{
 	position: absolute;
-	width: 20%
-	height: 20%;
 	top: 67%;
-	right: 12%;
+	right: 15%;
 }
 #sec4>h4{ 
 	position:absolute;
