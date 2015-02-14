@@ -340,6 +340,19 @@ function dragOver(ev) {
 function dragDrop(ev) {
 	if (ev.target.id == "office"){
 		$('#office').attr("src", officeImg);
+		$('#gift').show();
+		$('#gift_top').show();
+		$('#gift_top').animate({
+		  'top': '50%'
+		},
+		{
+			duration: 500, 
+			complete: function(){
+				$("#gift").hide(400);
+				$("#gift_top").hide(400);
+				$("#gift_top").css('top', '63.35%');
+			}
+		});
 		$('aside').show();
 		$('#sec2_info').show(400);
 	}

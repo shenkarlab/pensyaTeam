@@ -194,7 +194,27 @@ main{
 	background-image: url("../images/Screen 2/info.png");
 	display:none;
 }	
+#gift{
+	position:absolute;
+	top:77%;
+	left:0.7%;
+	width:161px;
+	height:103px;
+	background-image: url("../images/Screen 2/Gift_Bottom.png");
+	z-index:99;
+	display:none;
+}
 
+#gift_top{
+	position:absolute;
+	top:63.35%;
+	left:0.4%;
+	width:169px;
+	height:85px;
+	background-image: url("../images/Screen 2/Gift_Top.png");
+	z-index:99;
+	display:none;
+}
 
 /* --------sec 3 --------------------------------------------------------------------*/
 
