@@ -43,6 +43,7 @@ html{
 }
 body {
   min-height: 100%;
+  overflow:hidden;
 }
 
 #wrapper{
@@ -171,7 +172,7 @@ main{
 }
 #sec2>img:nth-child(2){
 	margin-top:5%;
-	margin-left:17%;
+	margin-left:21%;
 }
 
 #sec2>h1 {
@@ -186,7 +187,7 @@ main{
 }
 #sec2_info{
 	position:absolute;
-	top:15%;
+	top:12%;
 	left:1%;
 	width:245px;
 	height:277px;
