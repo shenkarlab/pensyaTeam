@@ -176,6 +176,15 @@ main{
 	right: 40px;
 	letter-spacing: 1px;
 }
+#sec2_info{
+	position:absolute;
+	top:15%;
+	left:1%;
+	width:245px;
+	height:277px;
+	background-image: url("../images/Screen 2/info.png");
+	display:none;
+}	
 
 /* --------sec 3 --------------------------------------------------------------------*/
 
@@ -697,8 +706,8 @@ main{
 	width:613px;
 	height:101px;
 	position:absolute;
-	top:16%;
-	left:23.78%;
+	top:15.3%;
+	left:26.2%;
 	background: transparent url("../images/Screen 9/Man_Box (1).png") no-repeat;
 	display:none;
 }
@@ -734,7 +743,7 @@ main{
 	width:485px;
 	height:2px;
 	position:absolute;
-	top:32%;
+	top:31%;
 	left:29%;
 	background: transparent url("../images/Screen 9/Line_Haircut.png") no-repeat;
 	display:none;

@@ -201,6 +201,7 @@ $(document).ready(function() {
   	  	$('#slider_num').text(Math.round(relativeY/4) + 71);
   	  	ageOfUser = Math.round(relativeY/4) + 71;
   	  	imageHasChanged = 0;
+  	  	sec9_imageHasChanged = 0;
       }
     });
     $( "#slider" ).draggable({ containment: "#slider_wrapper", scroll: false });
@@ -225,6 +226,7 @@ $(document).ready(function(){
 		male = 1;
 		sexOfUser = "male";
 		imageHasChanged = 0;
+		sec9_imageHasChanged = 0;
 	});
 });
 $(document).ready(function(){
@@ -245,6 +247,7 @@ $(document).ready(function(){
 		male = 2;
 		sexOfUser = "female";
 		imageHasChanged = 0;
+		sec9_imageHasChanged = 0;
 	});
 	
 });
@@ -338,6 +341,7 @@ function dragDrop(ev) {
 	if (ev.target.id == "office"){
 		$('#office').attr("src", officeImg);
 		$('aside').show();
+		$('#sec2_info').show(400);
 	}
 	else{
 		$('#sofa').attr("src", sofaImg);
@@ -606,6 +610,81 @@ $(document).ready(function(){
 /* --------sec 9 --------------------------------------------------------------------*/
 
 
+
+var sec9Backfull = "";
+var sec9Backcut = "";
+var sec9hair = "";
+var helper = 0;
+var sec9_imageHasChanged = 0;
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if (scrollPercent > 0){
+			if(sec9_imageHasChanged == 0){
+				$('#sec9').css("background-position-y", "79%");
+				$('#B_no').css("top", "50%");
+				$('#B_yes').css("top", "50%");
+				$('#B_no').css("opacity", "1");
+				$('#B_yes').css("opacity", "1");
+				$('#hair').css("display", "none");
+				$('#hair').css("top", "15.3%");
+				$('#crown').css("display", "none");
+				$('#crown_info').css("display", "none");
+				$('#pull_info').css("display", "none");
+				$('#scissors').css("left", "66%");
+				
+				if(sexOfUser == "male"){
+					if(ageOfUser < 23){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Boy_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Boy_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 1;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Man_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Man_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 2;
+					}
+					if(ageOfUser > 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Oldman_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/OldMan_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 3;
+					}
+				}
+				else{
+					if(ageOfUser < 23){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Girl_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Girl_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 4;
+					}
+					if(ageOfUser > 23 && ageOfUser < 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/Woman_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/Woman_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 5;
+					}
+					if(ageOfUser > 50){
+						console.log('sec_9_changing image');
+						$('#sec9').css('background-image','url("images/Screen 9/OldWoman_Box_full.png")');
+						$('#hair').css('background-image','url("images/Screen 9/OldWoman_Box.png")');
+						sec9_imageHasChanged = 1;
+						helper = 6;
+					}
+				}
+			}
+		}
+    });
+});
+
+
 $(document).ready(function(){
 	$( "#B_no" ).click(function() {
 	  	$('#sec9').animate({
@@ -640,7 +719,24 @@ $(document).ready(function(){
 		{
 			duration: 2000, 
 			complete: function(){
-				$('#sec9').css('background-image','url("images/Screen 9/Man_Box_cut.png")');
+				if(helper <= 1){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Boy_Box_cut.png")');
+				}
+				if(helper == 2){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Man_Box_cut.png")');
+				}
+				if(helper == 3){
+					$('#sec9').css('background-image', 'url("images/Screen 9/OldMan_Box_cut.png")');
+				}
+				if(helper == 4){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Girl_Box_cut.png")');
+				}
+				if(helper == 5){
+					$('#sec9').css('background-image', 'url("images/Screen 9/Woman_Box_cut.png")');
+				}
+				if(helper == 6){
+					$('#sec9').css('background-image', 'url("images/Screen 9/OldWoman_Box_cut.png")');
+				}
 				$("#pull_info").show(400);
 				$("#hair").show(0);
 				$("#haircut_line").show(400);
