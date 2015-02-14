@@ -448,11 +448,13 @@ $(document).ready(function(){
 
 	$("#per5,#per6,#per7").click(function(){
 		$("#percentage_second").css("visibility","visible");
+		$("#img_per").attr("width","20%");
+		$("#img_per").attr("height","25%");
 	});
-
+	
 	$("#per5").click(function(){
 		calcIt($("#check").val(),5);
-		$("#img_per").attr("src","images/Screen_4/money5per.png")
+		$("#img_per").attr("src","images/Screen_4/money5per.png");
 		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
 		$(this).css("background-size","25%");
 		$("#per6,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
@@ -460,7 +462,7 @@ $(document).ready(function(){
 	});	
 	$("#per6").click(function(){
 		calcIt($("#check").val(),6);
-		$("#img_per").attr("src","images/Screen_4/money6per.png")
+		$("#img_per").attr("src","images/Screen_4/money6per.png");
 		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
 		$(this).css("background-size","25%");	
 		$("#per5,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
@@ -468,7 +470,7 @@ $(document).ready(function(){
 	});	
 	$("#per7").click(function(){
 		calcIt($("#check").val(),7);
-		$("#img_per").attr("src","images/Screen_4/money7per.png")
+		$("#img_per").attr("src","images/Screen_4/money7per.png");
 		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
 		$(this).css("background-size","25%");	
 		$("#per5,#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");

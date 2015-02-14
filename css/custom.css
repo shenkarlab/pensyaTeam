@@ -387,8 +387,10 @@ main{
 }
 #img_per{
 	position: absolute;
-	top: 57%;
-	right: 8%;
+	width: 20%
+	height: 20%;
+	top: 67%;
+	right: 12%;
 }
 #sec4>h4{ 
 	position:absolute;
@@ -460,12 +462,12 @@ main{
 }
 #env_up{
 	position: absolute;
-	top: 24%;
+	top: 23%;
 	left: 20%;
 	background: url("../images/Screen_5/env_up.png") no-repeat center top;
 	background-size: 60%; 
 	width: 60%;
-	height: 50%;
+	height: 52%;
 	z-index: 1;
 }
 #env_down{
