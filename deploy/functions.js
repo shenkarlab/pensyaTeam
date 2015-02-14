@@ -307,7 +307,7 @@ $(document).ready(function(){
 				console.log("Sec 4 reached");
 		//		$('#little_check').slideDown('100','linear');
 				$('#little_check').css("display","block");
-				$('#little_check').animate({ top:'-7%' }, {
+				$('#little_check').animate({ top:'0%' }, {
             		queue: false,
                     duration: 1000,
                     easing: 'easeOutCubic',
@@ -363,8 +363,10 @@ $(document).ready(function(){
 			var flagPage5 = 0;	  	
 			if(scrollPercent >= 33 && flagPage5 == 0){
 				console.log("Sec 5 reached");
-
-				$('#little_check2').animate({ top:'12%' }, {
+			//	$('#little_check2').css("display","block");
+				$('#little_check2').fadeIn("1000","linear");				
+			
+				$('#little_check2').animate({ top:'36%' }, {
             		queue: false,
                     duration: 3000,
                     easing: 'easeOutCubic',
