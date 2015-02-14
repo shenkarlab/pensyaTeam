@@ -5,7 +5,7 @@
          url('../fonts/Aduma_webfont/aduma-regular-webfont.woff') format('woff'),
          url('../fonts/Aduma_webfont/aduma-regular-webfont.ttf') format('truetype'),
          url('../fonts/Aduma_webfont/aduma-regular-webfont.svg#adumamedium') format('svg');
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {   
@@ -15,7 +15,7 @@
          url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.woff') format('woff'),
          url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont.ttf') format('truetype'),
          url('../fonts/EzerBlock_webfont/ezer-block_oepro-regular-webfont') format('svg');
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -676,7 +676,7 @@ main{
 /* --------sec 9 --------------------------------------------------------------------*/
 
 #sec9{	
-	background: #b5b5b5 url("../images/Screen 9/Man_Box_cut.png") no-repeat 50% 79%;
+	background: #b5b5b5 url("../images/Screen 9/Man_Box_full.png") no-repeat 50% 79%;
 	position:relative;
 	height:100vh;
 	width:100%;
@@ -696,16 +696,61 @@ main{
 #hair{
 	width:613px;
 	height:101px;
-	position:relative;
-	top:1.5%;
+	position:absolute;
+	top:16%;
 	left:23.78%;
 	background: transparent url("../images/Screen 9/Man_Box (1).png") no-repeat;
 	display:none;
 }
 
+#crown{
+	width:320px;
+	height:219px;
+	position:absolute;
+	top:0%;
+	left:45%;
+	background: transparent url("../images/Screen 9/king.png") no-repeat;
+	display:none;
+}
+#crown_info{
+	width:320px;
+	height:219px;
+	position:absolute;
+	top:25%;
+	left:3%;
+	background: transparent url("../images/Screen 9/crown_info.png") no-repeat;
+	display:none;
+}
+#pull_info{
+	width:305px;
+	height:316px;
+	position:absolute;
+	top:25%;
+	left:3%;
+	background: transparent url("../images/Screen 9/pull_info.png") no-repeat;
+	display:none;
+}
+#haircut_line{
+	width:485px;
+	height:2px;
+	position:absolute;
+	top:32%;
+	left:29%;
+	background: transparent url("../images/Screen 9/Line_Haircut.png") no-repeat;
+	display:none;
+}
+#scissors{
+	width:305px;
+	height:316px;
+	position:absolute;
+	top:12%;
+	left:66%;
+	background: transparent url("../images/Screen 9/Scissors.png") no-repeat;
+	display:none;
+}
 
 #B_no{
-	position:relative;
+	position:absolute;
 	top:50%;
 	left:36%;
 	width:163px;
@@ -714,8 +759,8 @@ main{
 }
 
 #B_yes{
-	position:relative;
-	top:30.77%;
+	position:absolute;
+	top:50%;
 	left:51%;
 	width:163px;
 	height:121px;
@@ -733,7 +778,7 @@ main{
 
 #B_yes:hover{
 	position:relative;
-	top:30.77%;
+	top:50%;
 	left:51%;
 	width:163px;
 	height:121px;

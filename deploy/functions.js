@@ -610,36 +610,67 @@ $(document).ready(function(){
 	$( "#B_no" ).click(function() {
 	  	$('#sec9').animate({
 		  'background-position-x': '50%',
-		  'background-position-y': '0%'
-		}, 2000, 'linear');
+		  'background-position-y': '-10%'
+		},
+		{
+			duration: 2000, 
+			complete: function(){
+				$("#crown").show(400);
+				$("#crown_info").show(400);
+			}
+		});
 		
 		$("#B_no").animate({
-			top: '123%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
         $("#B_yes").animate({
-			top: '103.5%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
         
+        $("#sec9_header").text("!כל הכבוד, לא משכת");
 	});
 	
 	$( "#B_yes" ).click(function() {
 	  	$('#sec9').animate({
 		  'background-position-x': '50%',
-		  'background-position-y': '0%'
-		}, 2000, 'linear');
+		  'background-position-y': '-10%'
+		},
+		{
+			duration: 2000, 
+			complete: function(){
+				$('#sec9').css('background-image','url("images/Screen 9/Man_Box_cut.png")');
+				$("#pull_info").show(400);
+				$("#hair").show(0);
+				$("#haircut_line").show(400);
+				$("#scissors").show(400);
+				$('#scissors').animate({
+					left: "-=600"
+					}, {
+					complete: function(){
+						$("#scissors").hide(400);
+						$('#hair').animate({
+							top: "-=30"
+						});
+						$("#haircut_line").hide(400);
+					}
+				});
+			}
+		});
 		
 		$("#B_no").animate({
-			top: '123%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
         $("#B_yes").animate({
-			top: '103.5%',
+			top: '163%',
 			opacity: '0'
-        }, 2250);
+        }, 1800);
+		
+		$("#sec9_header").text("!משכת, חבל");
 	});
-	
+		
 });
 
 
