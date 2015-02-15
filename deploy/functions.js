@@ -253,18 +253,21 @@ $(document).ready(function(){
 var dragimg = document.createElement("img");
 var officeImg = "images/Screen 2/Office_Man.png";
 var sofaImg = "images/Screen 2/Sofa_Man.png";
+var emptySofa = "images/Screen 2/Sofa_Empty.png";
 var imageHasChanged = 0;
 
 $(document).ready(function(){
 	$(window).scroll(function(){
 		if (scrollPercent > 0){
 			if(imageHasChanged == 0){
+				emptySofa = "images/Screen 2/Sofa_Empty.png";
 				if(sexOfUser == "male"){
 					if(ageOfUser < 23){
 						console.log('changing image');
 						dragimg.src = "images/Screen 2/Boy_Up.png";
 						officeImg = "images/Screen 2/Office_Boy.png";
 						sofaImg = "images/Screen 2/Sofa_Boy.png";
+						emptySofa = "images/Screen 2/Sofa_boyandgirl_Empty.png";
 						imageHasChanged = 1;
 					}
 					if(ageOfUser > 23 && ageOfUser < 50){
@@ -288,6 +291,7 @@ $(document).ready(function(){
 						dragimg.src = "images/Screen 2/Girl_Up.png";
 						officeImg = "images/Screen 2/Office_Girl.png";
 						sofaImg = "images/Screen 2/Sofa_Girl.png";
+						emptySofa = "images/Screen 2/Sofa_boyandgirl_Empty.png";
 						imageHasChanged = 1;
 					}
 					if(ageOfUser > 23 && ageOfUser < 50){
@@ -318,7 +322,7 @@ function dragStart(ev) {
    ev.dataTransfer.effectAllowed='move';
    ev.dataTransfer.setDragImage(dragimg, 100, 100);
    $('#office').attr("src", "images/Screen 2/Office_Empty.png");
-   $('#sofa').attr("src", "images/Screen 2/Sofa_Empty.png");
+   $('#sofa').attr("src", emptySofa);
    return true;
 }
 
@@ -816,6 +820,7 @@ $(document).ready(function(){
 	  $(window).scroll(function()
 	  {
 		if(scrollPercent >= 49 && Animation_happend == 0){
+
 			console.log("Sec 6 reached");
 			$('#no_idea').animate({ height:507, top:'0%' }, {
 					queue: false,
