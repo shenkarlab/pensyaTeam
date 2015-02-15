@@ -62,8 +62,8 @@ function scrollTo(elementId){
     
     $(document).keydown(function(e) {
     switch(e.which) {
-        case 37: // left
-        break;
+// 	      case 37: // left
+//		   	  break;
 
         case 38: // up
         	var element = $(".current");
@@ -78,8 +78,8 @@ function scrollTo(elementId){
 			}
         break;
 
-        case 39: // right
-        break;
+ //   	   case 39: // right
+//	      break;
 
         case 40: // down
         	var element = $(".current");
@@ -448,11 +448,13 @@ $(document).ready(function(){
 
 	$("#per5,#per6,#per7").click(function(){
 		$("#percentage_second").css("visibility","visible");
+//		$("#img_per").attr("width","15%");
+//		$("#img_per").attr("height","20%");
 	});
-
+	
 	$("#per5").click(function(){
 		calcIt($("#check").val(),5);
-		$("#img_per").attr("src","images/Screen_4/money5per.png")
+		$("#img_per").attr("src","images/Screen_4/money5per.png");
 		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
 		$(this).css("background-size","25%");
 		$("#per6,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
@@ -460,7 +462,7 @@ $(document).ready(function(){
 	});	
 	$("#per6").click(function(){
 		calcIt($("#check").val(),6);
-		$("#img_per").attr("src","images/Screen_4/money6per.png")
+		$("#img_per").attr("src","images/Screen_4/money6per.png");
 		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
 		$(this).css("background-size","25%");	
 		$("#per5,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
@@ -468,7 +470,7 @@ $(document).ready(function(){
 	});	
 	$("#per7").click(function(){
 		calcIt($("#check").val(),7);
-		$("#img_per").attr("src","images/Screen_4/money7per.png")
+		$("#img_per").attr("src","images/Screen_4/money7per.png");
 		$(this).css("background","url(images/Screen_4/Selection_Active.png) no-repeat center top");
 		$(this).css("background-size","25%");	
 		$("#per5,#per6").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
@@ -518,38 +520,286 @@ $(document).ready(function(){
 			$("#button-previous").css("background-image","url(images/Screen_5/button-arrow-left.png)");
 		});
 		
+		dbl = 0;
+		$("#Harel2").dblclick(function(){
+			$('#drag_env').animate({ top:'45%'}, {
+            		queue: false,
+                    duration: 2000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            dbl = 1;
+            pensionKeren = "Harel";
+		});	
+		$("#Ayalon2").dblclick(function(){
+			$('#drag_env').animate({ top:'45%'}, {
+            		queue: false,
+                    duration: 2000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            dbl = 1;
+            pensionKeren = "Ayalon";
+		});		
+		$("#Klal2").dblclick(function(){
+			$('#drag_env').animate({ top:'45%'}, {
+            		queue: false,
+                    duration: 2000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            dbl = 1;
+            pensionKeren = "Klal";
+		});		
+		$("#Menorah2").dblclick(function(){
+			$('#drag_env').animate({ top:'45%'}, {
+            		queue: false,
+                    duration: 2000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            dbl = 1;
+            pensionKeren = "Menorah";
+		});		
+		$("#Migdal2").dblclick(function(){
+			$('#drag_env').animate({ top:'45%'}, {
+            		queue: false,
+                    duration: 2000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            dbl = 1;
+            pensionKeren = "Migdal";
+		});		
+		$("#Phoenix2").dblclick(function(){
+			$('#drag_env').animate({ top:'45%'}, {
+            		queue: false,
+                    duration: 2000,
+                    easing: 'easeOutCubic',
+                    complete: function() { /* Animation complete */ }
+                });
+            dbl = 1;
+            pensionKeren = "Phoenix";
+		});		
+
+
+
 	$('.sp').first().addClass('active');
 	$('.sp').hide();    
 	$('.active').show();
+	
+	$('.sp2').first().addClass('active2');
+	$('.sp2').hide();    
+	$('.active2').show();
 
+	$(document).keydown(function(key){ 
+		switch(key.which) {
+        		case 37: // left
+        				$('.active').removeClass('active').addClass('oldActive');    
+					     if ( $('.oldActive').is(':first-child')) {
+					      	   $('.sp').last().addClass('active');
+					     }
+					     else{
+					    		$('.oldActive').prev().prev().addClass('active');
+					     }
+					    $('.oldActive').removeClass('oldActive');
+
+					     $('.active2').removeClass('active2').addClass('oldActive2');    
+					     if ( $('.oldActive2').prev().is(':first-child')) {
+					      	   $('.sp2').last().addClass('active2');
+					     }
+					     else{
+					    		$('.oldActive2').prev().prev().addClass('active2');
+					     }
+					    $('.oldActive2').removeClass('oldActive2');
+					    
+					    $('.sp').fadeOut();
+					    $('.sp2').fadeOut();
+					    $('.active').fadeIn();
+					    $('.active2').fadeIn();
+					 	
+					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+								$("#drag_env").fadeIn();
+					    }
+					     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
+								$("#drag_env").fadeIn();
+					    }
+					    else {
+					    	$("#drag_env").fadeOut();
+					    }   
+        		
+        		break;
+        	
+        		case 39: //right
+						$('.active').removeClass('active').addClass('oldActive');    
+				        if ( $('.oldActive').next().is(':last-child')) {
+				        		$('.sp').first().addClass('active');
+				         }
+				        else{
+				       			$('.oldActive').next().next().addClass('active');
+				        }
+				    	$('.oldActive').removeClass('oldActive');
+			
+			
+						$('.active2').removeClass('active2').addClass('oldActive2');    
+					     if ( $('.oldActive2').is(':last-child')) {
+				        		$('.sp2').first().addClass('active2');
+				         }
+				        else{
+				       			$('.oldActive2').next().next().addClass('active2');
+				        }
+				    	$('.oldActive2').removeClass('oldActive2');
+					    
+					    $('.sp').fadeOut();
+					    $('.sp2').fadeOut();
+					    $('.active').fadeIn();
+					    $('.active2').fadeIn();
+					    
+					    //alert(pensionKeren+"  "+$('.sp.active').attr('id'));
+						
+					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+								$("#drag_env").fadeIn();
+					    }
+					     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
+								$("#drag_env").fadeIn();
+					    }
+					      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
+								$("#drag_env").fadeIn();
+					    }
+					    else {
+					    	$("#drag_env").fadeOut();
+					    }
+				break;
+				default: return; // exit this handler for other keys
+			}
+	});
+	
     $("#button-next").click(function(){
+
 		    $('.active').removeClass('active').addClass('oldActive');    
-		                   if ( $('.oldActive').is(':last-child')) {
-		        $('.sp').first().addClass('active');
-		        }
-		        else{
-		        $('.oldActive').next().addClass('active');
-		        }
-		    $('.oldActive').removeClass('oldActive');
+	        if ( $('.oldActive').next().is(':last-child')) {
+	        		$('.sp').first().addClass('active');
+	         }
+	        else{
+	       			$('.oldActive').next().next().addClass('active');
+	        }
+	    	$('.oldActive').removeClass('oldActive');
+
+
+			$('.active2').removeClass('active2').addClass('oldActive2');    
+		     if ( $('.oldActive2').is(':last-child')) {
+	        		$('.sp2').first().addClass('active2');
+	         }
+	        else{
+	       			$('.oldActive2').next().next().addClass('active2');
+	        }
+	    	$('.oldActive2').removeClass('oldActive2');
+		    
 		    $('.sp').fadeOut();
+		    $('.sp2').fadeOut();
 		    $('.active').fadeIn();
+		    $('.active2').fadeIn();
+		    
+		    //alert(pensionKeren+"  "+$('.sp.active').attr('id'));
+			
+		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+					$("#drag_env").fadeIn();
+		    }
+		     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
+					$("#drag_env").fadeIn();
+		    }
+		    else {
+		    	$("#drag_env").fadeOut();
+		    }
+		    
     });
     
        $('#button-previous').click(function(){
-			    $('.active').removeClass('active').addClass('oldActive');    
-			           if ( $('.oldActive').is(':first-child')) {
-			        $('.sp').last().addClass('active');
-			        }
-			           else{
-			    $('.oldActive').prev().addClass('active');
-			           }
-			    $('.oldActive').removeClass('oldActive');
-			    $('.sp').fadeOut();
-			    $('.active').fadeIn();
+  	
+//			alert(pensionKeren+"  "+$('.sp.active').attr('id'));
+			
+		    $('.active').removeClass('active').addClass('oldActive');    
+		     if ( $('.oldActive').is(':first-child')) {
+		      	   $('.sp').last().addClass('active');
+		     }
+		     else{
+		    		$('.oldActive').prev().prev().addClass('active');
+		     }
+		    $('.oldActive').removeClass('oldActive');
+		    
+		    
+		     $('.active2').removeClass('active2').addClass('oldActive2');    
+		     if ( $('.oldActive2').prev().is(':first-child')) {
+		      	   $('.sp2').last().addClass('active2');
+		     }
+		     else{
+		    		$('.oldActive2').prev().prev().addClass('active2');
+		     }
+		    $('.oldActive2').removeClass('oldActive2');
+		    
+		    $('.sp').fadeOut();
+		    $('.sp2').fadeOut();
+		    $('.active').fadeIn();
+		    $('.active2').fadeIn();
+		 	
+		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+					$("#drag_env").fadeIn();
+		    }
+		     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
+					$("#drag_env").fadeIn();
+		    }
+		      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
+					$("#drag_env").fadeIn();
+		    }
+		    else {
+		    	$("#drag_env").fadeOut();
+		    }   
     });
 
 });
-
+/*
 
 $(document).ready(function(){
 
@@ -642,7 +892,7 @@ $(document).ready(function(){
 	
   
 });
-
+*/
 
 /* --------sec 6 --------------------------------------------------------------------*/
 
@@ -725,7 +975,6 @@ $(document).ready(function(){
 /* --------sec 9 --------------------------------------------------------------------*/
 
 
-
 var sec9Backfull = "";
 var sec9Backcut = "";
 var sec9hair = "";
@@ -798,6 +1047,8 @@ $(document).ready(function(){
 		}
     });
 });
+
+
 
 
 $(document).ready(function(){

@@ -78,14 +78,47 @@ aside div{
 	background: url("../images/Frame/PensionBag.png") no-repeat center 50%;
 }
 header{
-	background:url("../images/Frame/Social_Twitter_S.png") no-repeat 1% 45%,
-			   url("../images/Frame/Social_Facebook.png") no-repeat 5% 45%;
-	height:8%;
-	width:100%;
+	height: 7%;
+	width: 100%;
     top:0%;
     left:0%;
 	position:fixed;
 	z-index: 10;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+header a{
+	margin-right: 12px;
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	width: 40px;
+}
+#facebook{
+	background: url("../images/Frame/Social_Facebook.png") no-repeat;
+}
+#facebook:hover{
+	background-image: url("../images/Frame/Social_Facebook_S.png");
+}
+#twitter{
+	background:url("../images/Frame/Social_Twitter.png") no-repeat;
+}
+#twitter:hover{
+	background:url("../images/Frame/Social_Twitter_S.png") no-repeat;
+}
+#mail{
+	background:url("../images/Frame/Social_Mail.png") no-repeat;
+}
+#mail:hover{
+	background:url("../images/Frame/Social_Mail_S.png") no-repeat;
+}
+#about{
+	position: fixed;
+	font-family: EzerBlock,arial;
+	font-size: 16px;
+	color: #FFFFFF;
+	top: 5%;
+	left: 16%;
 }
 main{
 	height:100%;
@@ -271,9 +304,9 @@ main{
 #sec3 p{
 	position: absolute;
 	top: 85%;
-	left: 38%;
+	left: 29%;
 	font-family: EzerBlock,arial;
-	size: 30px;
+	font-size: 26px;
 	color: #FFFFFF;
 }
 #check::-webkit-input-placeholder { /* WebKit browsers */
@@ -353,19 +386,19 @@ main{
 	border: none;
 	outline: none;
 }
-/*
-#percentages{
-	border: 1px solid green;
-	position: absolute;
-	width: 64%;
-	height: 20%;
-	top: 62%;
-	left: 18%;
-}*/
 #img_per{
 	position: absolute;
 	top: 57%;
 	right: 8%;
+}
+#sec4>h4{ 
+	position:absolute;
+	font-family: EzerBlock,arial;
+	font-size: 20px;
+	color: #FFFFFF;
+	top: 58%;
+	right: 27%;
+	font-weight: lighter;
 }
 #percentage_second{
 	position: absolute;
@@ -410,7 +443,8 @@ main{
 	text-align: right;	
 	top: 40px;
 	right: 40px;
-	font-weight: lighter;	
+	font-weight: lighter;
+	outline: none;	
 }
 /* opening animation to sec 5 */
 
@@ -422,12 +456,12 @@ main{
 }
 #env_up{
 	position: absolute;
-	top: 24%;
+	top: 23%;
 	left: 20%;
 	background: url("../images/Screen_5/env_up.png") no-repeat center top;
 	background-size: 60%; 
 	width: 60%;
-	height: 50%;
+	height: 52%;
 	z-index: 1;
 }
 #env_down{
@@ -450,6 +484,7 @@ main{
 	left: 34%;
 	top: -15%;
 	z-index: 2;	
+	
 }
 #check_no_changed2{
 	background: url("../images/Screen_4/shekel.png") no-repeat 25% center;
@@ -469,21 +504,20 @@ main{
 /* actually sec 5 */
 
 #slider-wrapper5 {
-/*	background: #ffbf47	url("../images/Screen_5/mini_env.png") no-repeat center top;
-	background-size: 11%; */  
 	display: none;
 	position: relative;
 	width: 60%;
 	margin: auto;
 	height: 72%; 
 	top: 0%;
+	outline: none;
 }
 #slider5 {
 	position: relative;
 	height: 78%;
 	width: 40%;
 	left: 30%;
-	top: 12%;
+	top: 30%;
 }
 #button-previous {
 	position: absolute;
@@ -503,25 +537,37 @@ main{
 	width: 82px;
 	height: 82px;
 }
+#drag_env{
+	position: absolute;
+	top: 0%;
+	left: 46%;
+	background: url("../images/Screen_5/drag_env.png") no-repeat;
+	background-size: 70%;
+	margin: auto;
+	height: 28%;
+	width: 10%;
+	z-index: 2;
+}
 .sp {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-size: 90% 100%;	
+	background-size: 100% 100%;	
 	background-position: 50%;
 	background-repeat: no-repeat;
 }
-#drag_env{
-	display: block;
-	margin: auto;
-	height: 14%;
-	width: 10%;
- 	outline: none;
+.sp2 {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: 100% 100%;	
+	background-position: 50%;
+	background-repeat: no-repeat;
 }
-
 #Ayalon {background-image: url("../images/Screen_5/Box_Ayalon.png"); }
 #Klal {background-image: url("../images/Screen_5/Box_Klal.png") ;}
-#Harel {background-image	: url("../images/Screen_5/Box_Harel.png"); }
+#Harel {background-image	: url("../images/Screen_5/Box_Harel.png"); z-index: 1;  }
+#Harel2 {background-image: url("../images/Screen_5/Box_Harel2.png");	height: 335px;	width: 307px; 	z-index: 3; }
 #Menorah {background-image: url("../images/Screen_5/Box_Menorah.png"); }
 #Migdal {background-image: url("../images/Screen_5/Box_Migdal.png"); }
 #Phoenix {background-image: url("../images/Screen_5/Box_Phoenix.png");}
@@ -948,10 +994,24 @@ main{
 /* --------sec 12 --------------------------------------------------------------------*/
 
 #sec12{	
-	background: #3a5f8d;
+	background: #84c560 url("../images/Screen_12/final.png") no-repeat center center;
+	background-size: 40%;
 	height:100vh;
 	width:100%;
+	position: relative;
 }
+#sec12>h1 {
+	position: absolute;
+	font-family: aduma;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: right;	
+	top: 28px;
+	right: 40px;
+	font-weight: lighter;
+}
+
+
 
 
 /* Common styles and resets */
