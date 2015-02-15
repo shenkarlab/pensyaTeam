@@ -197,6 +197,17 @@ main{
 	color:#FFFFFF;
 }
 
+#or{
+	position:absolute;
+	font-family: aduma;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: right;	
+	top: 59%;
+	left: 66.8%;
+	font-weight: lighter;
+}
+
 /* --------sec 2 --------------------------------------------------------------------*/
 
 #sec2{	
