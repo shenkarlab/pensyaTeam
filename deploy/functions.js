@@ -224,6 +224,7 @@ $(document).ready(function(){
 		sexOfUser = "male";
 		imageHasChanged = 0;
 		sec9_imageHasChanged = 0;
+		$('#slider_num').show();
 	});
 });
 $(document).ready(function(){
@@ -245,6 +246,7 @@ $(document).ready(function(){
 		sexOfUser = "female";
 		imageHasChanged = 0;
 		sec9_imageHasChanged = 0;
+		$('#slider_num').show();
 	});
 	
 });
