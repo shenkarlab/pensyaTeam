@@ -4,10 +4,7 @@ var sexOfUser = "male";		// sex of the user with default value
 var ageOfUser = 27;			// age of the user with default value
 
 
-
-
-
-
+var checkChanged = 1;
 
 
 
@@ -369,12 +366,22 @@ $(document).ready(function(){
 
 	$('#paycheck').on('change',function(){
 	    $('#paycheck').animate({opacity:"0.7", zoom: '70%'}, 'slow');
+	    $("#percentage_second").css("visibility","hidden");
+	    $("#per5,#per6,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
+		$("#per5,#per6,#per7").css("background-size","25%");
+		$('#check_no_changed').val($('#check').val());
+		
+		$('#slider-wrapper5').css("display","none");	
+		$('#envelope5_part').css("display","block");	
+		$('#little_check2').css("top","-15%");
+		$('#little_check2').css("display","none");	
+		checkChanged = 1;
 	});
 	$('#paycheck').on('click',function(){
 	    $('#paycheck').animate({opacity:"1", zoom: '100%'}, 'slow');
 	});
+	
 });
-
 /* --------sec 4 --------------------------------------------------------------------*/
 
 /*
@@ -382,6 +389,9 @@ $(document).ready(function(){
  */
 var sal = 9000;		 // salary
 var per = 5;			// 5% 
+
+
+$(document).ready(function(){
 
 var calculateContribution = function() {
 	// getting data from user
@@ -429,11 +439,10 @@ function calcIt(valX,valPer) {
     	$('#check_no_changed2').val(commaSeparateNumber(sal*valPer/100));
 	}
 	
-$(document).ready(function(){
 
 	 $(window).scroll(function()
 	  {
-			if(scrollPercent >= 33 && scrollPercent < 42 ){
+			if(scrollPercent >= 33 && scrollPercent < 41 ){
 				console.log("Sec 4 reached");
 				$('#little_check').css("display","block");
 				$('#little_check').animate({ top:'0%' }, {
@@ -442,14 +451,17 @@ $(document).ready(function(){
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-				$('#check_no_changed').val($('#check').val());
 			}
 	  });	
 
 	$("#per5,#per6,#per7").click(function(){
 		$("#percentage_second").css("visibility","visible");
-//		$("#img_per").attr("width","15%");
-//		$("#img_per").attr("height","20%");
+		
+		$('#slider-wrapper5').css("display","none");	
+		$('#envelope5_part').css("display","block");	
+		$('#little_check2').css("top","-15%");
+		$('#little_check2').css("display","none");	
+		checkChanged = 1;
 	});
 	
 	$("#per5").click(function(){
@@ -477,8 +489,7 @@ $(document).ready(function(){
 		$("#per5,#per6").css("background-size","25%");
 	});
 	
-	
-});			
+});
 
 /* --------sec 5 --------------------------------------------------------------------*/
 
@@ -486,11 +497,10 @@ $(document).ready(function(){
 
 	$(window).scroll(function()
 	  {
-			var flagPage5 = 0;	  	
-			if(scrollPercent >= 41 && flagPage5 == 0){
+			if(scrollPercent >= 41 && scrollPercent < 49 && checkChanged){
 				console.log("Sec 5 reached");
 				$('#little_check2').fadeIn("1000","linear");				
-			
+				
 				$('#little_check2').animate({ top:'36%' }, {
             		queue: false,
                     duration: 3000,
@@ -500,12 +510,11 @@ $(document).ready(function(){
 				
 				setTimeout(function(){
 					$('#envelope5_part').css("display","none");
-				//	$('#envelope5_part').fadeOut("slow");
 					$('#slider-wrapper5').fadeIn("1200","linear");					
 					}, 3020);
-				flagPage5 = 1;
-				
+				checkChanged = 0;
 			}
+		
 	  });	
 	
 	 $("#button-next").hover(function(){
@@ -520,7 +529,7 @@ $(document).ready(function(){
 			$("#button-previous").css("background-image","url(images/Screen_5/button-arrow-left.png)");
 		});
 		
-		dbl = 0;
+		
 		$("#Harel2").dblclick(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
@@ -799,100 +808,6 @@ $(document).ready(function(){
     });
 
 });
-/*
-
-$(document).ready(function(){
-
-		dragcheck = document.createElement("img");
-		console.log('changing image check page 5');
-		dragcheck.src = "images/Screen_5/drag_env.png";
-		
-		var dragi = document.getElementById('drag_env');
-		var ayalon = document.getElementById('Ayalon');
-		var klal = document.getElementById('Klal');
-		var harel = document.getElementById('Harel');
-		var menorah = document.getElementById('Menorah');
-		var migdal = document.getElementById('Migdal');
-		var phoenix = document.getElementById('Phoenix');
-		
-		dragi.addEventListener('dragstart', function(evt) {
-			   evt.dataTransfer.effectAllowed='move';
-			   evt.dataTransfer.setDragImage(dragcheck, 100, 100);
-		}, false);	
-	
-		dragi.addEventListener('dragenter',function(evt) {
-		 //  evt.preventDefault();
-		   console.log("dragEnter");
-		},true);
-		
-		dragi.addEventListener('dragover',function(evt) {
-		//	evt.preventDefault();
-			console.log("dragOver");
-		}, false);
-		
-		ayalon.addEventListener('dragover',function(evt) {
-			 evt.preventDefault();
-		});
-		ayalon.addEventListener('drop',function(evt) {
-			 evt.preventDefault();
-			 $('#drag_env').css("visibility","hidden");
-			 pensionKeren = "Ayalon";
-			 console.log("Ayalon");
-		});
-		
-		klal.addEventListener('dragover',function(evt) {
-			 evt.preventDefault();
-		});
-		klal.addEventListener('drop',function(evt) {
-			 evt.preventDefault();
-			 $('#drag_env').css("visibility","hidden");
-			 pensionKeren = "Klal";
-			 console.log("Klal");
-		});
-		
-		harel.addEventListener('dragover',function(evt) {
-			 evt.preventDefault();
-		});
-		harel.addEventListener('drop',function(evt) {
-			 evt.preventDefault();
-			 $('#drag_env').css("visibility","hidden");
-			 pensionKeren = "Harel";
-			 console.log("Harel");
-		});
-		
-		menorah.addEventListener('dragover',function(evt) {
-			 evt.preventDefault();
-		});
-		menorah.addEventListener('drop',function(evt) {
-			 evt.preventDefault();
-			 $('#drag_env').css("visibility","hidden");
-			 pensionKeren = "Menorah";
-			 console.log("Menorah");
-		});
-		
-		migdal.addEventListener('dragover',function(evt) {
-			 evt.preventDefault();
-		});
-		migdal.addEventListener('drop',function(evt) {
-			 evt.preventDefault();
-			 $('#drag_env').css("visibility","hidden");
-			 pensionKeren = "Migdal";
-			 console.log("Migdal");
-		});
-		
-		phoenix.addEventListener('dragover',function(evt) {
-			 evt.preventDefault();
-		});
-		phoenix.addEventListener('drop',function(evt) {
-			 evt.preventDefault();
-			 $('#drag_env').css("visibility","hidden");
-			 pensionKeren = "Phoenix";
-			 console.log("Phoenix");
-		});
-	
-  
-});
-*/
 
 /* --------sec 6 --------------------------------------------------------------------*/
 
@@ -900,7 +815,7 @@ $(document).ready(function(){
 	  Animation_happend = 0;
 	  $(window).scroll(function()
 	  {
-		if(scrollPercent >= 41 && Animation_happend == 0){
+		if(scrollPercent >= 49 && Animation_happend == 0){
 			console.log("Sec 6 reached");
 			$('#no_idea').animate({ height:507, top:'0%' }, {
 					queue: false,

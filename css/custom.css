@@ -226,11 +226,12 @@ main{
 }
 #sec2_info{
 	position:absolute;
-	top:12%;
-	left:1%;
+	top:15%;
+	left:3%;
 	width:245px;
 	height:277px;
-	background-image: url("../images/Screen 2/info.png");
+	background: url("../images/Screen 2/info.png") no-repeat ;
+	background-size: 80%; 
 	display:none;
 }	
 #gift{
@@ -839,6 +840,7 @@ main{
 	top:15%;
 	left:3%;
 	background: transparent url("../images/Screen 9/crown_info.png") no-repeat;
+	background-size: 80%; 
 	display:none;
 }
 #pull_info{
@@ -848,6 +850,7 @@ main{
 	top:15%;
 	left:3%;
 	background: transparent url("../images/Screen 9/pull_info.png") no-repeat;
+	background-size: 80%; 
 	display:none;
 }
 #haircut_line{
