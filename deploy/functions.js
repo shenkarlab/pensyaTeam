@@ -561,6 +561,8 @@ $(document).ready(function(){
                 });
             dbl = 1;
             pensionKeren = "Harel";
+            $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');
 		});	
 		$("#Ayalon2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
@@ -571,6 +573,8 @@ $(document).ready(function(){
                 });
             dbl = 1;
             pensionKeren = "Ayalon";
+            $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');            
 		});		
 		$("#Klal2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
@@ -581,6 +585,8 @@ $(document).ready(function(){
                 });
             dbl = 1;
             pensionKeren = "Klal";
+            $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');            
 		});		
 		$("#Menorah2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
@@ -591,6 +597,8 @@ $(document).ready(function(){
                 });
             dbl = 1;
             pensionKeren = "Menorah";
+            $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');            
 		});		
 		$("#Migdal2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
@@ -601,6 +609,8 @@ $(document).ready(function(){
                 });
             dbl = 1;
             pensionKeren = "Migdal";
+            $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');            
 		});		
 		$("#Phoenix2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
@@ -611,9 +621,9 @@ $(document).ready(function(){
                 });
             dbl = 1;
             pensionKeren = "Phoenix";
+            $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');            
 		});		
-
-
 
 	$('.sp').first().addClass('active');
 	$('.sp').hide();    
@@ -650,29 +660,11 @@ $(document).ready(function(){
 					    $('.sp2').fadeOut();
 					    $('.active').fadeIn();
 					    $('.active2').fadeIn();
-					 	
-/*					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
-								$("#drag_env").fadeIn();
-					    }
-					     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
-								$("#drag_env").fadeIn();
-					    }
-					    else {
-					    	$("#drag_env").fadeOut();
-					    }   
-  */    			}
+							
+						 pensionKeren = $('.sp.active').attr('id').toString() ;
+						 $('.column').removeClass('activeCol');
+						 $('#'+pensionKeren+'Col').addClass('activeCol');
+  	    			}
         		break;
         	
         		case 39: //right
@@ -702,30 +694,9 @@ $(document).ready(function(){
 					    $('.active').fadeIn();
 					    $('.active2').fadeIn();
 					    
-					    //alert(pensionKeren+"  "+$('.sp.active').attr('id'));
-						
-/*					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
-								$("#drag_env").fadeIn();
-					    }
-					     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
-								$("#drag_env").fadeIn();
-					    }
-					      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
-								$("#drag_env").fadeIn();
-					    }
-					    else {
-					    	$("#drag_env").fadeOut();
-					    }
-*/
+						 pensionKeren = $('.sp.active').attr('id').toString() ;		
+						 $('.column').removeClass('activeCol');
+						 $('#'+pensionKeren+'Col').addClass('activeCol');			    
 					}
 				break;
 				default: return; // exit this handler for other keys
@@ -758,35 +729,14 @@ $(document).ready(function(){
 		    $('.active').fadeIn();
 		    $('.active2').fadeIn();
 		    
-		    //alert(pensionKeren+"  "+$('.sp.active').attr('id'));
-			
-/*		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
-					$("#drag_env").fadeIn();
-		    }
-		     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
-					$("#drag_env").fadeIn();
-		    }
-		    else {
-		    	$("#drag_env").fadeOut();
-		    }
-*/		    
+		    pensionKeren = $('.sp.active').attr('id').toString() ;
+		    $('.column').removeClass('activeCol');
+			$('#'+pensionKeren+'Col').addClass('activeCol');
+		    
     });
     
        $('#button-previous').click(function(){
-  	
-//			alert(pensionKeren+"  "+$('.sp.active').attr('id'));
+		//	alert(pensionKeren+"  "+$('.sp.active').attr('id'));
 			
 		    $('.active').removeClass('active').addClass('oldActive');    
 		     if ( $('.oldActive').is(':first-child')) {
@@ -811,29 +761,10 @@ $(document).ready(function(){
 		    $('.sp2').fadeOut();
 		    $('.active').fadeIn();
 		    $('.active2').fadeIn();
-		 	
-/*		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
-					$("#drag_env").fadeIn();
-		    }
-		     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if(  $('.sp.active').attr('id') == "Klal" && (pensionKeren == "Klal")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if(  $('.sp.active').attr('id') == "Menorah" && (pensionKeren == "Menorah")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if(  $('.sp.active').attr('id') == "Migdal" && (pensionKeren == "Migdal")) {
-					$("#drag_env").fadeIn();
-		    }
-		      else if( $('.sp.active').attr('id') == "Phoenix"  && (pensionKeren == "Phoenix")) {
-					$("#drag_env").fadeIn();
-		    }
-		    else {
-		    	$("#drag_env").fadeOut();
-		    }   
-    */
+		    
+		      pensionKeren = $('.sp.active').attr('id').toString() ;
+		      $('.column').removeClass('activeCol');
+			  $('#'+pensionKeren+'Col').addClass('activeCol');
     });
 
 });

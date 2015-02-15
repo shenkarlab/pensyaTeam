@@ -804,7 +804,31 @@ main{
 	top: 82%;
 	left: 18%;
 }
+#graph{
+	position:absolute;
+	width: 46%;
+	height: 48%;
+	top: 20%;
+	left: 27%;
+}
+.column{
+	display: inline-block;
+	position: relative;
+	width: 7%;
+	margin-left: 7%;
+	background: #ffc75f;
+	top: 14%;
+}
+#KlalCol{    height: 86%;}
+#MenorahCol{   height: 74%;}
+#HarelCol{	height: 84%;}
+#MigdalCol{	height: 77%;}
+#AyalonCol{	height: 61%;}
+#PhoenixCol{	height: 55%;}
 
+.activeCol{
+	background: #82c45e;
+}
 
 /* --------sec 8 --------------------------------------------------------------------*/
 
