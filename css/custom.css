@@ -760,28 +760,38 @@ main{
 /* --------sec 7 --------------------------------------------------------------------*/
 
 #sec7{	
-	background: #3a5f8d url("../images/Screen_7/graph.png") no-repeat center 40%;
+	background: #3a5f8d url("../images/Screen_7/graph.png") no-repeat 45% 46%;
 	background-size: 55%;
 	height:100vh;
 	width:100%;
 	position: relative;
 }
-#sec7>article:nth-child(1){
+#sec7>h1 {
+	position: absolute;
+	font-family: aduma;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: right;	
+	top: 28px;
+	right: 40px;
+	font-weight: lighter;
+}
+#sec7>article:nth-child(2){
 	background: url("../images/Screen_7/info.png") no-repeat 45% top;
-	background-size: 70%;
+	background-size: 66%;
 	position: absolute;
 	width: 745px;
 	height: 136px;
-	top: 80%;
+	top: 82%;
 	right: 0%;
 }
-#sec7>article:nth-child(2){
+#sec7>article:nth-child(3){
 	background: url("../images/Screen_7/mikra.png") no-repeat;
 	background-size: 80%;
 	position: absolute;
 	width: 172px;
 	height: 101px;
-	top: 80%;
+	top: 82%;
 	left: 18%;
 }
 
