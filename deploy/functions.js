@@ -900,7 +900,7 @@ $(document).ready(function(){
 	  Animation_happend = 0;
 	  $(window).scroll(function()
 	  {
-		if(scrollPercent >= 41 && Animation_happend == 0){
+		if(scrollPercent >= 42 && Animation_happend == 0){
 			console.log("Sec 6 reached");
 			$('#no_idea').animate({ height:507, top:'0%' }, {
 					queue: false,
