@@ -812,7 +812,6 @@ main{
 	height: 48%;
 	top: 26%;
 	left: 30%;
-	z-index: 3;
 }
 #graph{
 	position:absolute;
@@ -828,6 +827,7 @@ main{
 	margin-left: 7%;
 	background: #ffc75f;
 	top: 14%;
+	opacity: 0.8; 
 }
 #KlalCol{    height: 86%;}
 #MenorahCol{   height: 74%;}
@@ -842,14 +842,13 @@ main{
 
 .bubble{
 	position: absolute;
-/*	display: none; */
+	display: none; 
 	background: url("../images/Screen_7/bubble.png") no-repeat;
 	background-size: 100%;
 	position: absolute;
 	width: 126px;
 	height: 120px;
 	top: 5%;
-	left: 27%;
 	font-family: EzerBlock,arial;
 	font-size: 14px;
 	color: #FFFFFF;
@@ -866,7 +865,12 @@ main{
 	font-size: 16px;
 	font-weight: bold;
 }
-
+#KlalCol_info{ left: 344px; }
+#MenorahCol_info{left: 430px; }
+#HarelCol_info{left: 516px; }
+#MigdalCol_info {	left: 602px; }
+#AyalonCol_info{left: 688px; }
+#PhoenixCol_info{left: 774px; }
 
 /* --------sec 8 --------------------------------------------------------------------*/
 
@@ -1042,11 +1046,10 @@ main{
 	font-size: 40px;
 	color: #FFFFFF;
 	text-align: right;	
-	top: 28px;
+	top: 20px;
 	right: 40px;
 	font-weight: lighter;
 }
-
 
 #boss_face{
 	position:absolute;

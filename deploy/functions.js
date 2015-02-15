@@ -831,12 +831,16 @@ $(document).ready(function(){
 
 /* --------sec 7 --------------------------------------------------------------------*/
 
+$(document).ready(function(){
+ 
+	 $(".column").hover(function(){
+			id = $(this).attr('id').toString() ;
+			$('#'+id+'_info').fadeIn("fast");
+		},function() {
+			$('#'+id+'_info').fadeOut("fast");
+		});
 
-
-
-
-
-
+});
 
 
 /* --------sec 8 --------------------------------------------------------------------*/
