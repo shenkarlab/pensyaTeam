@@ -804,6 +804,16 @@ main{
 	top: 82%;
 	left: 18%;
 }
+#sec7>article:nth-child(4){
+	background: url("../images/Screen_7/line_per.png") no-repeat;
+	background-size: 90%;
+	position: absolute;
+	width: 42%;
+	height: 48%;
+	top: 26%;
+	left: 30%;
+	z-index: 3;
+}
 #graph{
 	position:absolute;
 	width: 46%;
@@ -827,8 +837,36 @@ main{
 #PhoenixCol{	height: 55%;}
 
 .activeCol{
-	background: #82c45e;
+	background: #E69400;
 }
+
+.bubble{
+	position: absolute;
+/*	display: none; */
+	background: url("../images/Screen_7/bubble.png") no-repeat;
+	background-size: 100%;
+	position: absolute;
+	width: 126px;
+	height: 120px;
+	top: 5%;
+	left: 27%;
+	font-family: EzerBlock,arial;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: right;
+}
+.bubbleFrame{
+	position: relative;
+	top: 10px;
+	right: 10px;
+	width: 100px;
+	height: 100px;
+}
+.bubbleTitel{
+	font-size: 16px;
+	font-weight: bold;
+}
+
 
 /* --------sec 8 --------------------------------------------------------------------*/
 
