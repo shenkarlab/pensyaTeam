@@ -58,15 +58,15 @@ nav{
 	height:711px;
 	width:91px;
 	top: 10%;
-	right: 0px;
+	right: 0%;
 	position:fixed;
 }
 aside{
 	height:700px;
 	width:180px;
 	position:fixed;
-	top: 70px;
-	left:0;
+	top: 7.2%;
+	left:0%;
 	display:none;
 }
 aside div{
@@ -773,7 +773,7 @@ main{
 	position:absolute;
 	top:15.3%;
 	left:26.2%;
-	background: transparent url("../images/Screen 9/Man_Box (1).png") no-repeat;
+	background: transparent url("../images/Screen 9/Man_Box.png") no-repeat;
 	display:none;
 }
 
