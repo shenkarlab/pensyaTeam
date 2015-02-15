@@ -353,9 +353,9 @@ main{
 	top: -40%;
 }
 #check_no_changed{
-	background: url("../images/Screen_4/shekel.png") no-repeat 25% center;
+/*	background: url("../images/Screen_4/shekel.png") no-repeat 25% center;
 	background-size: 6%;
-	position: absolute;
+*/	position: absolute;
 	width: 140px;
 	top: 11%;
 	left: 50%;
@@ -499,9 +499,9 @@ main{
 	
 }
 #check_no_changed2{
-	background: url("../images/Screen_4/shekel.png") no-repeat 25% center;
+/*	background: url("../images/Screen_4/shekel.png") no-repeat 25% center;
 	background-size: 6%;
-	position: relative;
+*/	position: relative;
 	width: 140px;
 	top: 52%;
 	left: 51%;
@@ -576,14 +576,23 @@ main{
 	background-position: 50%;
 	background-repeat: no-repeat;
 }
-#Ayalon {background-image: url("../images/Screen_5/Box_Ayalon.png"); }
-#Klal {background-image: url("../images/Screen_5/Box_Klal.png") ;}
-#Harel {background-image	: url("../images/Screen_5/Box_Harel.png"); z-index: 1;  }
-#Harel2 {background-image: url("../images/Screen_5/Box_Harel2.png");	height: 335px;	width: 307px; 	z-index: 3; }
-#Menorah {background-image: url("../images/Screen_5/Box_Menorah.png"); }
-#Migdal {background-image: url("../images/Screen_5/Box_Migdal.png"); }
-#Phoenix {background-image: url("../images/Screen_5/Box_Phoenix.png");}
+#Ayalon {background-image: url("../images/Screen_5/Box_Ayalon.png"); z-index: 1; }
+#Ayalon2 {background-image: url("../images/Screen_5/Box_Ayalon2.png"); z-index: 3;}
 
+#Klal {background-image: url("../images/Screen_5/Box_Klal.png") ; z-index: 1;}
+#Klal2 {background-image: url("../images/Screen_5/Box_Klal2.png") ;z-index: 3;}
+
+#Harel {background-image	: url("../images/Screen_5/Box_Harel.png"); z-index: 1;  }
+#Harel2 {background-image: url("../images/Screen_5/Box_Harel2.png");	z-index: 3; }
+
+#Menorah {background-image: url("../images/Screen_5/Box_Menorah.png");  z-index: 1;}
+#Menorah2 {background-image: url("../images/Screen_5/Box_Menorah2.png"); z-index: 3;}
+
+#Migdal {background-image: url("../images/Screen_5/Box_Migdal.png"); z-index: 1; }
+#Migdal2 {background-image: url("../images/Screen_5/Box_Migdal2.png"); z-index: 3;}
+
+#Phoenix {background-image: url("../images/Screen_5/Box_Phoenix.png"); z-index: 1;}
+#Phoenix2 {background-image: url("../images/Screen_5/Box_Phoenix2.png");z-index: 3;}
 
 
 /* --------sec 6 --------------------------------------------------------------------*/

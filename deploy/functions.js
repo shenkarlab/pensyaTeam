@@ -373,8 +373,12 @@ $(document).ready(function(){
 	    $("#percentage_second").css("visibility","hidden");
 	    $("#per5,#per6,#per7").css("background","url(images/Screen_4/Selection.png) no-repeat center top");
 		$("#per5,#per6,#per7").css("background-size","25%");
-		$('#check_no_changed').val($('#check').val());
-		
+		if (   $('#check').val() >0  ) {
+			$('#check_no_changed').val("₪ "+$('#check').val());
+		} else {
+			$('#check_no_changed').val("₪  0");
+		}
+
 		$('#slider-wrapper5').css("display","none");	
 		$('#envelope5_part').css("display","block");	
 		$('#little_check2').css("top","-15%");
@@ -436,11 +440,23 @@ function unCommaSeparate(val) {
 function calcIt(valX,valPer) {
     	sal = unCommaSeparate(valX);
     	per = valPer;
-   		str_total = commaSeparateNumber(calculateContribution()).toString();
-   		str_month = commaSeparateNumber(sal*valPer/100).toString();
+    	total = calculateContribution();
+    	month = sal*valPer/100;
+    	
+		if (total > 0) {
+   			str_total = commaSeparateNumber(total).toString();
+   		} else {
+   			str_total = "0";
+   		}
+   		if (month > 0) {
+	   		str_month = commaSeparateNumber(month).toString();
+	   	} else {
+	   		str_month = "0";
+	   	}
+
    		$("#totalAmout").text("₪ "+str_total);
     	$("#perMonth").text("₪ "+str_month);
-    	$('#check_no_changed2').val(commaSeparateNumber(sal*valPer/100));
+    	$('#check_no_changed2').val("₪ "+str_month);
 	}
 	
 
@@ -534,7 +550,7 @@ $(document).ready(function(){
 		});
 		
 		
-		$("#Harel2").dblclick(function(){
+		$("#Harel2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
                     duration: 2000,
@@ -544,7 +560,7 @@ $(document).ready(function(){
             dbl = 1;
             pensionKeren = "Harel";
 		});	
-		$("#Ayalon2").dblclick(function(){
+		$("#Ayalon2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
                     duration: 2000,
@@ -554,7 +570,7 @@ $(document).ready(function(){
             dbl = 1;
             pensionKeren = "Ayalon";
 		});		
-		$("#Klal2").dblclick(function(){
+		$("#Klal2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
                     duration: 2000,
@@ -564,7 +580,7 @@ $(document).ready(function(){
             dbl = 1;
             pensionKeren = "Klal";
 		});		
-		$("#Menorah2").dblclick(function(){
+		$("#Menorah2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
                     duration: 2000,
@@ -574,7 +590,7 @@ $(document).ready(function(){
             dbl = 1;
             pensionKeren = "Menorah";
 		});		
-		$("#Migdal2").dblclick(function(){
+		$("#Migdal2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
                     duration: 2000,
@@ -584,7 +600,7 @@ $(document).ready(function(){
             dbl = 1;
             pensionKeren = "Migdal";
 		});		
-		$("#Phoenix2").dblclick(function(){
+		$("#Phoenix2").click(function(){
 			$('#drag_env').animate({ top:'45%'}, {
             		queue: false,
                     duration: 2000,
@@ -608,6 +624,8 @@ $(document).ready(function(){
 	$(document).keydown(function(key){ 
 		switch(key.which) {
         		case 37: // left
+					if(scrollPercent >= 41 && scrollPercent < 49) {
+        		
         				$('.active').removeClass('active').addClass('oldActive');    
 					     if ( $('.oldActive').is(':first-child')) {
 					      	   $('.sp').last().addClass('active');
@@ -631,7 +649,7 @@ $(document).ready(function(){
 					    $('.active').fadeIn();
 					    $('.active2').fadeIn();
 					 	
-					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+/*					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
 								$("#drag_env").fadeIn();
 					    }
 					     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
@@ -652,10 +670,12 @@ $(document).ready(function(){
 					    else {
 					    	$("#drag_env").fadeOut();
 					    }   
-        		
+  */    			}
         		break;
         	
         		case 39: //right
+        		
+        			if(scrollPercent >= 41 && scrollPercent < 49) {
 						$('.active').removeClass('active').addClass('oldActive');    
 				        if ( $('.oldActive').next().is(':last-child')) {
 				        		$('.sp').first().addClass('active');
@@ -682,7 +702,7 @@ $(document).ready(function(){
 					    
 					    //alert(pensionKeren+"  "+$('.sp.active').attr('id'));
 						
-					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+/*					    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
 								$("#drag_env").fadeIn();
 					    }
 					     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
@@ -703,6 +723,8 @@ $(document).ready(function(){
 					    else {
 					    	$("#drag_env").fadeOut();
 					    }
+*/
+					}
 				break;
 				default: return; // exit this handler for other keys
 			}
@@ -736,7 +758,7 @@ $(document).ready(function(){
 		    
 		    //alert(pensionKeren+"  "+$('.sp.active').attr('id'));
 			
-		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+/*		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
 					$("#drag_env").fadeIn();
 		    }
 		     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
@@ -757,7 +779,7 @@ $(document).ready(function(){
 		    else {
 		    	$("#drag_env").fadeOut();
 		    }
-		    
+*/		    
     });
     
        $('#button-previous').click(function(){
@@ -788,7 +810,7 @@ $(document).ready(function(){
 		    $('.active').fadeIn();
 		    $('.active2').fadeIn();
 		 	
-		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
+/*		    if(   $('.sp.active').attr('id') == "Harel" && (pensionKeren == "Harel")   ) {
 					$("#drag_env").fadeIn();
 		    }
 		     else if(   $('.sp.active').attr('id') == "Ayalon" && (pensionKeren == "Ayalon")) {
@@ -809,6 +831,7 @@ $(document).ready(function(){
 		    else {
 		    	$("#drag_env").fadeOut();
 		    }   
+    */
     });
 
 });
