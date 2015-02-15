@@ -698,8 +698,14 @@ main{
 	border: 0;
 	button { outline: 0; }
 }
-#sec6 input {background:url("../images/Screen 6/plus_normal.png");}
-#sec6 input:hover{background:url("../images/Screen 6/plus_hover.png");}
+#sec6 input {
+	background:url("../images/Screen 6/plus_normal.png")no-repeat center center;
+	background-size:95%;
+}
+#sec6 input:hover{
+	background:url("../images/Screen 6/plus_hover.png");
+	background-size:100%;
+}
 
 #plus1 {
 	position:absolute;
