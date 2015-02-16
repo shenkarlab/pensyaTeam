@@ -472,7 +472,11 @@ function calcIt(valX,valPer) {
 	  {
 			if(scrollPercent >= 33 && scrollPercent < 41 ){
 				console.log("Sec 4 reached");
-				$('#check_no_changed').val("₪ "+$('#check').val());
+				if (   $('#check').val() >0  ) {
+					$('#check_no_changed').val("₪ "+$('#check').val());
+				} else {
+					$('#check_no_changed').val("₪  0");
+				}
 				$('#little_check').css("display","block");
 				$('#little_check').animate({ top:'0%' }, {
             		queue: false,
