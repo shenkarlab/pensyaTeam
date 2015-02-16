@@ -4,8 +4,8 @@ var sexOfUser = "male";		// sex of the user with default value
 var ageOfUser = 27;			// age of the user with default value
 var pensionKeren = "none";
 var routeChosen = "no_idea";		// Pension route chosen by the user, with default value
-
-
+var fired = "cut";
+var character = "boy";
 
 var checkChanged = 1;
 //End Variables
@@ -271,6 +271,7 @@ $(document).ready(function(){
 						sofaImg = "images/Screen 2/Sofa_Boy.png";
 						emptySofa = "images/Screen 2/Sofa_boyandgirl_Empty.png";
 						imageHasChanged = 1;
+						character = "boy";
 					}
 					if(ageOfUser > 23 && ageOfUser < 50){
 						console.log('changing image');
@@ -278,6 +279,7 @@ $(document).ready(function(){
 						officeImg = "images/Screen 2/Office_Man.png";
 						sofaImg = "images/Screen 2/Sofa_Man.png";
 						imageHasChanged = 1;
+						character = "man";
 					}
 					if(ageOfUser > 50){
 						console.log('changing image');
@@ -285,6 +287,7 @@ $(document).ready(function(){
 						officeImg = "images/Screen 2/Office_Oldman.png";
 						sofaImg = "images/Screen 2/Sofa_Oldman.png";
 						imageHasChanged = 1;
+						character = "oldman";
 					}
 				}
 				else{
@@ -295,6 +298,7 @@ $(document).ready(function(){
 						sofaImg = "images/Screen 2/Sofa_Girl.png";
 						emptySofa = "images/Screen 2/Sofa_boyandgirl_Empty.png";
 						imageHasChanged = 1;
+						character = "girl";
 					}
 					if(ageOfUser > 23 && ageOfUser < 50){
 						console.log('changing image');
@@ -302,6 +306,7 @@ $(document).ready(function(){
 						officeImg = "images/Screen 2/Office_Woman.png";
 						sofaImg = "images/Screen 2/Sofa_Woman.png";
 						imageHasChanged = 1;
+						character = "woman";
 					}
 					if(ageOfUser > 50){
 						console.log('changing image');
@@ -309,6 +314,7 @@ $(document).ready(function(){
 						officeImg = "images/Screen 2/Office_Oldwoman.png";
 						sofaImg = "images/Screen 2/Sofa_Oldwoman.png";
 						imageHasChanged = 1;
+						character = "oldwoman";
 					}
 				}
 				
@@ -1064,6 +1070,7 @@ $(document).ready(function(){
         }, 1800);
         
         $("#sec9_header").text("!כל הכבוד, לא משכת");
+        fired = "king";
 	});
 	
 	$( "#B_yes" ).click(function() {
@@ -1120,6 +1127,7 @@ $(document).ready(function(){
         }, 1800);
 		
 		$("#sec9_header").text("!משכת, חבל");
+		fired = "cut";
 	});
 		
 });
@@ -1181,13 +1189,19 @@ $(document).ready(function(){
 				$("#percentage").css("background-image","url(images/Screen_12/End_m_"+per*100+".png)");
 				
 				// maslul  
-				//$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
-	
+				if (routeChosen == "no-idea") {
+						$("#maslul").css("background-image","url(images/Screen_12/End_Tracks_2.png)");
+				} else if(routeChosen == "danger" ){
+					$("#maslul").css("background-image","url(images/Screen_12/End_Tracks_1.png)");
+				} else if(routeChosen == "medium" ){
+					$("#maslul").css("background-image","url(images/Screen_12/End_Tracks_4.png)");
+				} else if(routeChosen == "solid" ){
+					$("#maslul").css("background-image","url(images/Screen_12/End_Tracks_3.png)");
+				}
+				
 				// piturim
-				//$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
+				$("#piturim").css("background-image","url(images/Screen_12/End_"+fired+"_"+character+".png)");
 	
-
-
 			}
 	  });	
 
