@@ -463,8 +463,7 @@ main{
 /* opening animation to sec 5 */
 
 #envelope5_part{
-/*	height: 520px; */
-	height: 87.1%;
+	height: 520px; 
 	width: 462px;
 	position: relative;
 	margin: auto;
