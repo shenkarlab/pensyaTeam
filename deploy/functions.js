@@ -6,8 +6,7 @@ var pensionKeren = "none";
 var routeChosen = "no_idea";		// Pension route chosen by the user, with default value
 var fired = "cut";
 var character = "boy";
-
-var perImage = 5;
+var per = 0.05;			// 5% 
 
 var checkChanged = 1;
 //End Variables
@@ -409,7 +408,6 @@ $(document).ready(function(){
 $(document).ready(function(){
 
 var sal = 9000;		 // salary
-var per = 5;			// 5% 
 
 var calculateContribution = function() {
 	// getting data from user
@@ -473,6 +471,7 @@ function calcIt(valX,valPer) {
 	 $(window).scroll(function()
 	  {
 			if(scrollPercent >= 33 && scrollPercent < 41 ){
+				
 				console.log("Sec 4 reached");
 				if (   $('#check').val() >0  ) {
 					$('#check_no_changed').val("₪ "+$('#check').val());
@@ -1192,15 +1191,9 @@ $(document).ready(function(){
 					$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
 				}
 				// percantage chosen (5/6/7)
-				if (per == "5")
-				perImage = Math.round(per);
-				
-				if (per == "5") {
-					$("#percentage").css("background-image","url(images/Screen_12/End_m_5.png)");
-				} else {
-					$("#percentage").css("background-image","url(images/Screen_12/End_m_"+per*100+".png)");
-				}
-				
+				perImage = Math.round(per*100);
+				$("#percentage").css("background-image","url(images/Screen_12/End_m_"+perImage+".png)");
+			
 				// maslul  
 				if (routeChosen == "no-idea") {
 						$("#maslul").css("background-image","url(images/Screen_12/End_Tracks_2.png)");
