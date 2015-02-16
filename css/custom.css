@@ -812,6 +812,8 @@ main{
 	height: 48%;
 	top: 26%;
 	left: 30%;
+	z-index: 3;
+	pointer-events: none;
 }
 #graph{
 	position:absolute;
@@ -827,7 +829,6 @@ main{
 	margin-left: 7%;
 	background: #ffc75f;
 	top: 14%;
-	opacity: 0.8; 
 }
 #KlalCol{    height: 86%;}
 #MenorahCol{   height: 74%;}
