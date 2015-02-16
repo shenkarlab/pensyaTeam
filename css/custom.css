@@ -471,7 +471,7 @@ main{
 }
 #env_up{
 	position: absolute;
-	top: 26.4%;					/* was 23 */
+	top: 23%; 	/*26.4%;	 was 23 */
 	left: 20%;
 	background: url("../images/Screen_5/env_up.png") no-repeat center top;
 	background-size: 60%; 
@@ -887,32 +887,38 @@ main{
 	background: #4a9e69	;
 	height:100vh;
 	width:100%;
+}
+#wrapper_sec8{
+	height: 580px;
+	width: 566px;
 	position: relative;
+	margin: auto;
+	top : 2%;
 }
 #envelope_up {
 	position: absolute;
-	top: 20%;				/* was 19 */
-	left: 28%;
+	bottom: 5%;
+	left: 0%;
 	height: 508px;
 	width: 566px;
-	background: url("../images/Screen 8/Envelope_Back.png") no-repeat center top;
+	background: url("../images/Screen 8/Envelope_Back.png") no-repeat center;
 	background-size: 100%;
 	z-index: 1;
 }
 #envelope_down {
 	position: absolute;
-	top: 42%;
-	left: 28%;
+	bottom: 0%;
+	left: 0%;
 	height: 382px;
 	width: 566px;
-	background: url("../images/Screen 8/Envelope.png") no-repeat center 50%;
+	background: url("../images/Screen 8/Envelope.png") no-repeat center bottom;
 	background-size: 100%;
 	z-index: 3;
 }
 #card {
 	position: absolute;
-	left: 28%;
-	top: 19.39%;				/* was 18 */
+	left: 0%;
+	top: 18%; 	  /* 19.39%;  was 18 */
 	height:	 380px;
 	margin: auto; 
 	width: 566px; 
@@ -1179,7 +1185,7 @@ main{
 	left: 3.25%;
 }			
 #percentage{
-	background-image: url("../images/Screen_12/End_m_7.png") ;
+	background-image: url("../images/Screen_12/End_m_5.png") ;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	display: inline-block;

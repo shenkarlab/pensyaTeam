@@ -7,6 +7,8 @@ var routeChosen = "no_idea";		// Pension route chosen by the user, with default 
 var fired = "cut";
 var character = "boy";
 
+var perImage = 5;
+
 var checkChanged = 1;
 //End Variables
 
@@ -403,11 +405,11 @@ $(document).ready(function(){
 /*
  * function for page which need to decide 5/6/7 percanetage of your salary you want to move to your pensya 
  */
-var sal = 9000;		 // salary
-var per = 5;			// 5% 
-
 
 $(document).ready(function(){
+
+var sal = 9000;		 // salary
+var per = 5;			// 5% 
 
 var calculateContribution = function() {
 	// getting data from user
@@ -1190,7 +1192,14 @@ $(document).ready(function(){
 					$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
 				}
 				// percantage chosen (5/6/7)
-				$("#percentage").css("background-image","url(images/Screen_12/End_m_"+per*100+".png)");
+				if (per == "5")
+				perImage = Math.round(per);
+				
+				if (per == "5") {
+					$("#percentage").css("background-image","url(images/Screen_12/End_m_5.png)");
+				} else {
+					$("#percentage").css("background-image","url(images/Screen_12/End_m_"+per*100+".png)");
+				}
 				
 				// maslul  
 				if (routeChosen == "no-idea") {
