@@ -204,7 +204,7 @@ main{
 	font-size: 40px;
 	color: #FFFFFF;
 	text-align: right;	
-	top: 62%;
+	top: 58.5%;
 	left: 66.8%;
 	font-weight: lighter;
 }
@@ -220,10 +220,12 @@ main{
 #sec2>img:nth-child(1){
 	margin-top:5%;
 	margin-left:17%;
+	cursor: pointer;
 }
 #sec2>img:nth-child(2){
 	margin-top:5%;
 	margin-left:21%;
+	cursor: pointer;
 }
 
 #sec2>h1 {
@@ -469,7 +471,7 @@ main{
 }
 #env_up{
 	position: absolute;
-	top: 23%;
+	top: 26.4%;					/* was 23 */
 	left: 20%;
 	background: url("../images/Screen_5/env_up.png") no-repeat center top;
 	background-size: 60%; 
@@ -568,6 +570,7 @@ main{
 	background-size: 100% 100%;	
 	background-position: 50%;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .sp2 {
 	position: absolute;
@@ -576,6 +579,7 @@ main{
 	background-size: 100% 100%;	
 	background-position: 50%;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 #Ayalon {background-image: url("../images/Screen_5/Box_Ayalon.png"); z-index: 1; }
 #Ayalon2 {background-image: url("../images/Screen_5/Box_Ayalon2.png"); z-index: 3;}
@@ -638,6 +642,7 @@ main{
 	margin-top:6%;
 	z-index:0;
 	height:0px;
+	cursor: pointer;
 }
 
 #medium{
@@ -646,6 +651,7 @@ main{
 	top:140%;
 	z-index:1;
 	height:0px;
+	cursor: pointer;
 }
 
 #solid{
@@ -654,6 +660,7 @@ main{
 	top:85%;
 	z-index:2;
 	height:0px;
+	cursor: pointer;
 }
 
 #danger{
@@ -662,6 +669,7 @@ main{
 	top:85%;
 	z-index:0;
 	height:0px;	
+	cursor: pointer;
 }
 
 #p1{
@@ -828,7 +836,7 @@ main{
 	width: 7%;
 	margin-left: 7%;
 	background: #ffc75f;
-	top: 14%;
+	top: 12%;
 }
 #KlalCol{    height: 86%;}
 #MenorahCol{   height: 74%;}
@@ -883,7 +891,7 @@ main{
 }
 #envelope_up {
 	position: absolute;
-	top: 19%;
+	top: 20%;				/* was 19 */
 	left: 28%;
 	height: 508px;
 	width: 566px;
@@ -904,7 +912,7 @@ main{
 #card {
 	position: absolute;
 	left: 28%;
-	top: 18%;
+	top: 19.39%;				/* was 18 */
 	height:	 380px;
 	margin: auto; 
 	width: 566px; 
@@ -1039,6 +1047,7 @@ main{
 	position:relative;
 	height:100vh;
 	width:100%;
+	cursor: pointer;
 }
 
 #sec10>h1 {
@@ -1059,6 +1068,7 @@ main{
 	width:115px;
 	height:115px;
 	background-image: url("../images/Screen 10/Bos_Face_1.png");
+	cursor: pointer;
 }
 
 #boss_talk{
