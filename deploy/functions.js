@@ -1,13 +1,12 @@
 //Variables...
 
-var sexOfUser = "male";		// sex of the user with default value 
-var ageOfUser = 27;			// age of the user with default value
+var sexOfUser = "male";				// sex of the user with default value 
+var ageOfUser = 27;					// age of the user with default value
+var routeChosen = "no_idea";		// Pension route chosen by the user, with default value
+
 
 
 var checkChanged = 1;
-
-
-
 //End Variables
 
 
@@ -772,7 +771,8 @@ $(document).ready(function(){
 /* --------sec 6 --------------------------------------------------------------------*/
 
 $(document).ready(function(){
-	  Animation_happend = 0;
+	  var Animation_happend = 0;
+	  var signClicked = "";
 	  $(window).scroll(function()
 	  {
 		if(scrollPercent >= 49 && Animation_happend == 0){
@@ -790,7 +790,7 @@ $(document).ready(function(){
                     easing: 'easeOutCubic',
                     complete: function() { /* Animation complete */ }
                 });
-            $('#danger').animate({ height:543, top:'6%' }, {
+            $('#danger').animate({ height:543, top:'6.5%' }, {
             		queue: false,
                     duration: 800,
                     easing: 'easeOutCubic',
@@ -827,6 +827,113 @@ $(document).ready(function(){
 	  $( "#plus4" ).toggle( "fold" );
 	  console.log("plus4");
 	});
+	
+	$( "#danger" ).hover(function() {
+		$( this ).css("top", '-=5px');
+		},
+		function() {
+		$( this ).css("top", '+=5px');
+	});
+	$( "#solid" ).hover(function() {
+		$( this ).css("top", '-=5px');
+		},
+		function() {
+		$( this ).css("top", '+=5px');
+	});
+	$( "#medium" ).hover(function() {
+		$( this ).css("top", '-=5px');
+		},
+		function() {
+		$( this ).css("top", '+=5px');
+	});
+	$( "#no_idea" ).hover(function() {
+		$( this ).css("top", '-=5px');
+		},
+		function() {
+		$( this ).css("top", '+=5px');
+	});
+	
+	$( "#danger" ).click(function() {
+		if(signClicked == ""){
+			$( this ).css("top", '-=5px');
+			$( '#solid' ).css("opacity", '0.2');
+			$( '#medium' ).css("opacity", '0.2');
+			$( '#no_idea' ).css("opacity", '0.2');
+			signClicked = "#danger";
+			routeChosen = "danger";
+		}
+		else{
+			$( signClicked ).css("top", '+=5px');
+			$( this ).css("top", '-=5px');
+			$( this ).css("opacity", '1');
+			$( '#solid' ).css("opacity", '0.2');
+			$( '#medium' ).css("opacity", '0.2');
+			$( '#no_idea' ).css("opacity", '0.2');
+			signClicked = "#danger";
+			routeChosen = "danger";
+		}
+	});
+	$( "#solid" ).click(function() {
+		if(signClicked == ""){
+			$( this ).css("top", '-=5px');
+			$( '#danger' ).css("opacity", '0.2');
+			$( '#medium' ).css("opacity", '0.2');
+			$( '#no_idea' ).css("opacity", '0.2');
+			signClicked = "#solid";
+			routeChosen = "solid";
+		}
+		else{
+			$( signClicked ).css("top", '+=5px');
+			$( this ).css("top", '-=5px');
+			$( this ).css("opacity", '1');
+			$( '#danger' ).css("opacity", '0.2');
+			$( '#medium' ).css("opacity", '0.2');
+			$( '#no_idea' ).css("opacity", '0.2');
+			signClicked = "#solid";
+			routeChosen = "solid";
+		}
+	});
+	$( "#medium" ).click(function() {
+		if(signClicked == ""){
+			$( this ).css("top", '-=5px');
+			$( '#solid' ).css("opacity", '0.2');
+			$( '#danger' ).css("opacity", '0.2');
+			$( '#no_idea' ).css("opacity", '0.2');
+			signClicked = "#medium";
+			routeChosen = "medium";
+		}
+		else{
+			$( signClicked ).css("top", '+=5px');
+			$( this ).css("opacity", '1');
+			$( this ).css("top", '-=5px');
+			$( '#solid' ).css("opacity", '0.2');
+			$( '#danger' ).css("opacity", '0.2');
+			$( '#no_idea' ).css("opacity", '0.2');
+			signClicked = "#medium";
+			routeChosen = "medium";
+		}
+	});
+	$( "#no_idea" ).click(function() {
+		if(signClicked == ""){
+			$( this ).css("top", '-=5px');
+			$( '#solid' ).css("opacity", '0.2');
+			$( '#medium' ).css("opacity", '0.2');
+			$( '#danger' ).css("opacity", '0.2');
+			signClicked = "#no_idea";
+			routeChosen = "no_idea";
+		}
+		else{
+			$( signClicked ).css("top", '+=5px');
+			$( this ).css("top", '-=5px');
+			$( this ).css("opacity", '1');
+			$( '#solid' ).css("opacity", '0.2');
+			$( '#medium' ).css("opacity", '0.2');
+			$( '#danger' ).css("opacity", '0.2');
+			signClicked = "#no_idea";
+			routeChosen = "no_idea";
+		}
+	});
+
 });
 
 /* --------sec 7 --------------------------------------------------------------------*/
