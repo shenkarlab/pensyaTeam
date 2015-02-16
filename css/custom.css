@@ -818,7 +818,7 @@ main{
 	position: absolute;
 	width: 42%;
 	height: 48%;
-	top: 26%;
+	top: 22%;
 	left: 30%;
 	z-index: 3;
 	pointer-events: none;
@@ -836,14 +836,14 @@ main{
 	width: 7%;
 	margin-left: 7%;
 	background: #ffc75f;
-	top: 12%;
+	top: 17%;
 }
-#KlalCol{    height: 86%;}
-#MenorahCol{   height: 74%;}
-#HarelCol{	height: 84%;}
-#MigdalCol{	height: 77%;}
-#AyalonCol{	height: 61%;}
-#PhoenixCol{	height: 55%;}
+#KlalCol{      height: 81%;}
+#MenorahCol{   height: 72%;}
+#HarelCol{	   height: 79%;}
+#MigdalCol{	   height: 69%;}
+#AyalonCol{	   height: 56%;}
+#PhoenixCol{   height: 50%;}
 
 .activeCol{
 	background: #E69400;
