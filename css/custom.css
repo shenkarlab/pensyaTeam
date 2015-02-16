@@ -1121,8 +1121,7 @@ main{
 /* --------sec 12 --------------------------------------------------------------------*/
 
 #sec12{	
-	background: #84c560 url("../images/Screen_12/final.png") no-repeat center center;
-	background-size: 40%;
+	background: #84c560; /*url("../images/Screen_12/final.png") no-repeat center center; */
 	height:100vh;
 	width:100%;
 	position: relative;
@@ -1138,7 +1137,79 @@ main{
 	font-weight: lighter;
 }
 
-
+#final_frame{
+	background: url("../images/Screen_12/frame.png") no-repeat;
+	background-size: 100%;
+	position: relative;
+	height: 432px;
+	width: 600px;
+	top: 17%;
+	left: 27%;
+}
+#maslul{
+	background-image: url("../images/Screen_12/End_Tracks_1.png") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	position: relative;
+	height:184px;
+	width:184px;
+	top: 10.3%;
+	left: 4.1%;
+}
+#keren{
+	background-image: url("../images/Screen_12/End_Company_Ayalon.png") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	position: relative;
+	height:184px;
+	width:184px;
+	top: 10.3%;
+	left: 3.25%;
+}			
+#percentage{
+	background-image: url("../images/Screen_12/End_m_7.png") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	position: relative;
+	height:184px;
+	width:184px;
+	top: 10.3%;
+	left: 2.55%;
+}
+#akamol{
+	background: url("../images/Screen_12/End_Age.png") no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	position: relative;
+	height:184px;
+	width:184px;
+	top: 8.8%;
+	left: 4.1%;
+}			
+#piturim{
+	background-image: url("../images/Screen_12/End_cut_man.png") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	position: relative;
+	height:184px;
+	width:184px;
+	top: 8.8%;
+	left: 3.25%;
+}			
+#talking{
+	background: url("../images/Screen_12/End_Bos.png") no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	position: relative;
+	height:184px;
+	width:184px;
+	top: 8.8%;
+	left: 2.55%;
+}
 
 
 /* Common styles and resets */

@@ -3,6 +3,7 @@
 var sexOfUser = "male";		// sex of the user with default value 
 var ageOfUser = 27;			// age of the user with default value
 
+var pensionKeren = "none";
 
 var checkChanged = 1;
 
@@ -466,6 +467,7 @@ function calcIt(valX,valPer) {
 	  {
 			if(scrollPercent >= 33 && scrollPercent < 41 ){
 				console.log("Sec 4 reached");
+				$('#check_no_changed').val("₪ "+$('#check').val());
 				$('#little_check').css("display","block");
 				$('#little_check').animate({ top:'0%' }, {
             		queue: false,
@@ -1060,5 +1062,26 @@ $(document).ready(function(){
 
 
 
+
+	 $(window).scroll(function()
+	  {
+			if(scrollPercent > 83 ){  // update pictures in sec 12 according to choises of the user
+				// keren pensya
+				if (pensionKeren != "none") {
+					$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
+				}
+				// percantage chosen (5/6/7)
+				$("#percentage").css("background-image","url(images/Screen_12/End_m_"+per*100+".png)");
+				
+				// maslul  
+				//$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
+	
+				// piturim
+				//$("#keren").css("background-image","url(images/Screen_12/End_Company_"+pensionKeren+".png)");
+	
+
+
+			}
+	  });	
 
 
