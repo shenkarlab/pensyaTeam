@@ -36,62 +36,71 @@
 			<section id="sec0">
 			</section>
 			<section id="sec1">
-				<h1> ..היי, כדאי שנכיר מעט קודם </h1>
-				<div id="slider_wrapper">
-					<div id="slider" class="draggable ui-widget-content">
-						<p id="slider_num"> 27 </p>
+				<div class="center">
+					<h1> ..היי, כדאי שנכיר מעט קודם </h1>
+					<div id="slider_wrapper">
+						<div id="slider" class="draggable ui-widget-content">
+							<p id="slider_num"> 27 </p>
+						</div>
 					</div>
+					<input type="image" src="images/Screen 1/Boy.png" id="male"></input>
+					<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
+					<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
+					<h2 id="or"> או </h2> 
 				</div>
-				<input type="image" src="images/Screen 1/Boy.png" id="male"></input>
-				<input type="image" src="images/Screen 1/Girl.png" id="female"></input> 
-				<img src="images/Screen 1/Age_Man_None.png" id="user"></img>  
-				<h2 id="or"> או </h2> 
 			</section>
 
 			<section id="sec2" ondragstart="dragStart(event)" ondragenter="dragEnter(event)" ondrop="dragDrop(event)" ondragover="dragOver(event)">
-				<h1> אל תתבטל, גרור את עצמך לעבודה </h1>
-				<img id="office" src="images/Screen 2/Office_Empty.png">	
-				<img id="sofa"   src="images/Screen 2/Sofa_Man.png">
-				<div id="sec2_info"></div>
-				<div id="gift"></div>
-				<div id="gift_top"></div>
+				<div class="center">
+					<h1> אל תתבטל, גרור את עצמך לעבודה </h1>
+					<img id="office" src="images/Screen 2/Office_Empty.png">	
+					<img id="sofa"   src="images/Screen 2/Sofa_Man.png">
+					<div id="sec2_info"></div>
+					<div id="gift"></div>
+					<div id="gift_top"></div>
+				</div>
 			</section>
 
 			<section id="sec3">
-				<h1> ?מהי ההכנסה החודשית שלך </h1>
-				<div id="paycheck">
-					<img src="images/Screen 3/Salary.png ">
-					<input id="check" name="paycheck" value="" type="text" placeholder="הקלד את המשכורת שלך" size="30">
+				<div class="center">
+					<h1> ?מהי ההכנסה החודשית שלך </h1>
+					<div id="paycheck">
+						<img src="images/Screen 3/Salary.png ">
+						<input id="check" name="paycheck" value="" type="text" placeholder="הקלד את המשכורת שלך" size="30">
+					</div>
+					<p>
+						!אנחנו ממש לא שומרים את המידע שלכם, זה רק סימולטור
+					</p>
 				</div>
-				<p>
-					!אנחנו ממש לא שומרים את המידע שלכם, זה רק סימולטור
-				</p>
 			</section>
 			
 			<section id="sec4">	 
-					<h1>איזה אחוז מהמשכורת<br>?אתה חוסך בכל חודש לפנסיה</h1>
-					<div id="little_check">
-						<input id="check_no_changed" value="" type="text" readonly> </input>
-					</div>
-					<img id="img_per" src=""> 
-					<article id="percentageButtons">
-						<p class="perButton" id="per7"> <br>  7%	 </p>
-						<p class="perButton" id="per6"> <br>	6%	 </p>
-						<p class="perButton" id="per5"> <br>	5%	 </p>
-					</article>
-					<h4>(ברירת מחדל)</h4>
-					<article id="percentage_second">	
-									<p class="text_sec4"> כלומר </p>
-									<p id="perMonth"> </label>
-									<p class="text_sec4">    בכל חודש, שבעוד</p>
-									<br>
-									<p class="text_sec4"> 40 שנה יהיה שווה       </p>
-									<p id="totalAmout"> </label> 
-									<input id="perMonth_in" type="text" name="monthly_secretion" value="450"> </label>	
-					</section>
+				<div class="center">
+						<h1>איזה אחוז מהמשכורת<br>?אתה חוסך בכל חודש לפנסיה</h1>
+						<div id="little_check">
+							<input id="check_no_changed" value="" type="text" readonly> </input>
+						</div>
+						<img id="img_per" src=""> 
+						<article id="percentageButtons">
+							<p class="perButton" id="per7"> <br>  7%	 </p>
+							<p class="perButton" id="per6"> <br>	6%	 </p>
+							<p class="perButton" id="per5"> <br>	5%	 </p>
+						</article>
+						<h4>(ברירת מחדל)</h4>
+						<article id="percentage_second">	
+										<p class="text_sec4"> כלומר </p>
+										<p id="perMonth"> </label>
+										<p class="text_sec4">    בכל חודש, שבעוד</p>
+										<br>
+										<p class="text_sec4"> 40 שנה יהיה שווה       </p>
+										<p id="totalAmout"> </label> 
+										<input id="perMonth_in" type="text" name="monthly_secretion" value="450"> </label>	
+						</article>
+				</div>
 			</section>
 
 			<section id="sec5">	 
+				<div class="center">
 					<h1> ?באיזו קרן פנסיה אתם חוסכים </h1>
 					<div id="slider-wrapper5">
 							<div id="drag_env"> </div>
@@ -124,157 +133,170 @@
 						<div id="env_up"> </div>
 						<div id="env_down"> </div>
 					</div>
-					
+				</div>
 			</section>
 
 			<section id="sec6">	 
-				<h1> כל גיל והמסלול שלו </h1>
-				<div id="no_idea">
-					<img src="images/Screen 6/sign_no_idea.png">
-					<input type="button" id="p1"></input>
-				</div>
-				<div id="medium">
-					<img  src="images/Screen 6/sign_medium.png">
-					<input type="button" id="p2"></input>
+				<div class="center">
+					<h1> כל גיל והמסלול שלו </h1>
+					<div id="no_idea">
+						<img src="images/Screen 6/sign_no_idea.png">
+						<input type="button" id="p1"></input>
+					</div>
+					<div id="medium">
+						<img  src="images/Screen 6/sign_medium.png">
+						<input type="button" id="p2"></input>
+					</div>	
+					<div id="solid">
+						<img   src="images/Screen 6/sign_solid.png">
+						<input type="button" id="p3"></input>
+					</div>	
+					<div id="danger">
+						<img   src="images/Screen 6/sign_danger.png">
+						<input type="button" id="p4"></input>
+					</div>
+					<div id="plus1">
+						<p>
+							<span class="headerz"> :מסלול כללי </span> <br>
+							מסלול ברירת המחדל. אם אין לכם מושג איזה מסלול אתם, קרוב לודאי שאתם כאן.
+						</p>
+					</div>
+					<div id="plus2">
+						<p>
+							 <span class="headerz"> :מסלול ביניים </span> <br>
+							 רוב הכסף שלכם יינתן כהלוואה למדינה, ולחברות הגדולות הנסחרות בבורסה
+						</p>
+					</div>
+					<div id="plus3">
+						<p>
+							 <span class="headerz"> :מסלול סולידי </span> <br>
+							 רוב הכסף שלכם יינתן כהלוואה למדינה, מה שאמורה להיות השקעה בטוחה
+						</p>
+					</div>
+					<div id="plus4">
+						<p>
+							 <span class="headerz"> :מסלול מסוכן </span> <br>
+							 חלק גדול מהכסף שלכם יושקע במניות של חברות שונות בבורסה
+						</p>
+					</div>	
 				</div>	
-				<div id="solid">
-					<img   src="images/Screen 6/sign_solid.png">
-					<input type="button" id="p3"></input>
-				</div>	
-				<div id="danger">
-					<img   src="images/Screen 6/sign_danger.png">
-					<input type="button" id="p4"></input>
-				</div>
-				<div id="plus1">
-					<p>
-						<span class="headerz"> :מסלול כללי </span> <br>
-						מסלול ברירת המחדל. אם אין לכם מושג איזה מסלול אתם, קרוב לודאי שאתם כאן.
-					</p>
-				</div>
-				<div id="plus2">
-					<p>
-						 <span class="headerz"> :מסלול ביניים </span> <br>
-						 רוב הכסף שלכם יינתן כהלוואה למדינה, ולחברות הגדולות הנסחרות בבורסה
-					</p>
-				</div>
-				<div id="plus3">
-					<p>
-						 <span class="headerz"> :מסלול סולידי </span> <br>
-						 רוב הכסף שלכם יינתן כהלוואה למדינה, מה שאמורה להיות השקעה בטוחה
-					</p>
-				</div>
-				<div id="plus4">
-					<p>
-						 <span class="headerz"> :מסלול מסוכן </span> <br>
-						 חלק גדול מהכסף שלכם יושקע במניות של חברות שונות בבורסה
-					</p>
-				</div>		
 			</section>
 		
 			<section id="sec7">	 
-				<h1>חשוב לבדוק דמי ניהול</h1>
-				<article></article>
-				<article></article>
-				<article></article>
-				<!-- klal -->
-				<article class="bubble" id="KlalCol_info">   
-					<article class="bubbleFrame">
-							<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 106,964</p> 
-							<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">11 % </p>
-					</article>  
-				</article>
-				<!-- menora -->
-				<article class="bubble" id="MenorahCol_info">   
-					<article class="bubbleFrame">
-							<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 95,945</p> 
-							<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">12 % </p>
-					</article>  
-				</article>
-				<!-- harel -->
-				<article class="bubble" id="HarelCol_info">   
-					<article class="bubbleFrame">
-							<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 103,110</p> 
-							<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">12 % </p>
-					</article>  
-				</article>
-				<!-- migdal -->
-				<article class="bubble" id="MigdalCol_info">   
-					<article class="bubbleFrame">
-							<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 93,987</p> 
-							<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">13 % </p>
-					</article>  
-				</article>
-				<!-- ayalon -->
-				<article class="bubble" id="AyalonCol_info">   
-					<article class="bubbleFrame">
-							<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 78,258</p> 
-							<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">16 % </p>
-					</article>  
-				</article>
-				<!-- pheonix -->
-				<article class="bubble" id="PhoenixCol_info">      
-					<article class="bubbleFrame">
-							<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 71,528</p> 
-							<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">18 % </p>
-					</article>  
-				</article>
+				<div class="center">
+					<h1>חשוב לבדוק דמי ניהול</h1>
+					<article></article>
+					<article></article>
+					<article></article>
+					<!-- klal -->
+					<article class="bubble" id="KlalCol_info">   
+						<article class="bubbleFrame">
+								<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 106,964</p> 
+								<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">11 % </p>
+						</article>  
+					</article>
+					<!-- menora -->
+					<article class="bubble" id="MenorahCol_info">   
+						<article class="bubbleFrame">
+								<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 95,945</p> 
+								<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">12 % </p>
+						</article>  
+					</article>
+					<!-- harel -->
+					<article class="bubble" id="HarelCol_info">   
+						<article class="bubbleFrame">
+								<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 103,110</p> 
+								<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">12 % </p>
+						</article>  
+					</article>
+					<!-- migdal -->
+					<article class="bubble" id="MigdalCol_info">   
+						<article class="bubbleFrame">
+								<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 93,987</p> 
+								<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">13 % </p>
+						</article>  
+					</article>
+					<!-- ayalon -->
+					<article class="bubble" id="AyalonCol_info">   
+						<article class="bubbleFrame">
+								<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 78,258</p> 
+								<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">16 % </p>
+						</article>  
+					</article>
+					<!-- pheonix -->
+					<article class="bubble" id="PhoenixCol_info">      
+						<article class="bubbleFrame">
+								<p class="bubbleTitel">תשואה</p> <p class="bubbleInfo">₪ 71,528</p> 
+								<p class="bubbleTitel"> <br>	דמי ניהול</p>	<p class="bubbleInfo">18 % </p>
+						</article>  
+					</article>
 
-				<section id="graph">
-					<div id="KlalCol" class="column"></div>
-					<div id="MenorahCol" class="column"></div>
-					<div id="HarelCol" class="column"></div>
-					<div id="MigdalCol" class="column"></div>
-					<div id="AyalonCol" class="column"></div>
-					<div id="PhoenixCol" class="column"></div>
-				</section>	
-				
+					<section id="graph">
+						<div id="KlalCol" class="column"></div>
+						<div id="MenorahCol" class="column"></div>
+						<div id="HarelCol" class="column"></div>
+						<div id="MigdalCol" class="column"></div>
+						<div id="AyalonCol" class="column"></div>
+						<div id="PhoenixCol" class="column"></div>
+					</section>	
+				</div>
 			</section>
 		
-			<section id="sec8">		
-				<section id="wrapper_sec8"> 
-					<div id="card"> </div>   
-					<div id="envelope_up"> </div>
-					<div id="envelope_down"> </div>
-				</section>
+			<section id="sec8">	
+				<div class="center">	
+					<section id="wrapper_sec8"> 
+						<div id="card"> </div>   
+						<div id="envelope_up"> </div>
+						<div id="envelope_down"> </div>
+					</section>
+				</div>
 			</section>
 		
 			<section id="sec9">
-				<h1 id="sec9_header"> ?משכת דמי פיצויים </h1>
-				<div id="hair"></div>
-				<div id="sec9_text"></div>
-				<div id="B_no"></div>
-				<div id="B_yes"></div>
-				<div id="crown"></div>
-				<div id="crown_info"></div> 
-				<div id="pull_info"></div> 
-				<div id="haircut_line"></div>
-				<div id="scissors"></div>
+				<div class="center" id="mini9">
+					<h1 id="sec9_header"> ?משכת דמי פיצויים </h1>
+					<div id="hair"></div>
+					<div id="sec9_text"></div>
+					<div id="B_no"></div>
+					<div id="B_yes"></div>
+					<div id="crown"></div>
+					<div id="crown_info"></div> 
+					<div id="pull_info"></div> 
+					<div id="haircut_line"></div>
+					<div id="scissors"></div>
+				<div>
 			</section>
 			
 			<section id="sec10"> 
-				<h1>במשא ומתן על השכר, אפשר ללחוץ על הבוס<br>
-					 כדי שהחיסכון לפנסיה יהיה מחושב מכל השכר</h1>
-				<div id="boss_face"></div>
-				<div class="progressbar">
-					 <span class="progressbar-value"></span>
-					 <div id="progressbar-per"></div>
+				<div class="center">
+					<h1>במשא ומתן על השכר, אפשר ללחוץ על הבוס<br>
+						 כדי שהחיסכון לפנסיה יהיה מחושב מכל השכר</h1>
+					<div id="boss_face"></div>
+					<div class="progressbar">
+						 <span class="progressbar-value"></span>
+						 <div id="progressbar-per"></div>
+					</div>
+					<div id="boss_talk"></div>
 				</div>
-				<div id="boss_talk"></div>
 			</section>
 			
 			<section id="sec11">
+				<div class="center">
 				 	<img src="images/Screen_11/info.png">  </img>
+				</div>
 			</section>
 			
 			<section id="sec12">	
-				<h1> ..משהו נחמד לסוף</h1>
-				<section id="final_frame">
-						<article id="maslul"></article>
-						<article id="keren"></article>			
-						<article id="percentage"></article>			
-						<article id="akamol"></article>			
-						<article id="piturim"></article>			
-						<article id="talking"></article>			
+				<div class="center">
+					<h1> ..משהו נחמד לסוף</h1>
+					<section id="final_frame">
+							<article id="maslul"></article>
+							<article id="keren"></article>			
+							<article id="percentage"></article>			
+							<article id="akamol"></article>			
+							<article id="piturim"></article>			
+							<article id="talking"></article>	
+				</div>		
 			</section>
 		</main>
 		<nav>

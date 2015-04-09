@@ -125,6 +125,12 @@ main{
 	width:100%;
 }
 
+.center{
+	position:relative;
+	height:660px;
+	width:1280px;
+	margin: 0 auto;
+}
 /* --------sec 0 --------------------------------------------------------------------*/
 #sec0{
 	background: #dddddd url("../images/Screen_0/opening.png") no-repeat 50%;
@@ -142,7 +148,7 @@ main{
 	width:100%;
 }
 
-#sec1>h1 {
+#sec1 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -217,18 +223,18 @@ main{
 	height:100vh;
 	width:100%;
 }
-#sec2>img:nth-child(1){
+#sec2 img:nth-child(1){
 	margin-top:5%;
 	margin-left:17%;
 	cursor: pointer;
 }
-#sec2>img:nth-child(2){
+#sec2 img:nth-child(2){
 	margin-top:5%;
 	margin-left:21%;
 	cursor: pointer;
 }
 
-#sec2>h1 {
+#sec2 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -278,7 +284,7 @@ main{
 	width:100%;
 	position: relative;
 }
-#sec3>h1 {
+#sec3 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -370,7 +376,7 @@ main{
 	text-align:center;
     font-family: aduma;
 }
-#sec4>h1{
+#sec4 h1{
 	position:absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -406,7 +412,7 @@ main{
 	top: 57%;
 	right: 8%;
 }
-#sec4>h4{ 
+#sec4 h4{ 
 	position:absolute;
 	font-family: EzerBlock,arial;
 	font-size: 20px;
@@ -449,7 +455,7 @@ main{
 	height:100vh;
 	width:100%;
 }
-#sec5>h1 {
+#sec5 h1 {
 	position:absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -595,13 +601,16 @@ main{
 
 /* --------sec 6 --------------------------------------------------------------------*/
 #sec6{	
-	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 45.5% 97%;
+	background: #c73746;
 	position:relative;
 	height:100vh;
 	width:100%;	
 	/* div.animate({ top: '-=100px' }, 600, 'easeOutCubic', function () { … }) */
 }
 
+#sec6>div{
+	background: #c73746 url("../images/Screen 6/sign_base.png") no-repeat 45.5% 97%;
+}
 #sec6 p{
 	text-align: right;
 	font-size:15px;
@@ -617,7 +626,7 @@ main{
 	font-family: aduma;
 }
 
-#sec6>h1 {
+#sec6 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -771,13 +780,17 @@ main{
 /* --------sec 7 --------------------------------------------------------------------*/
 
 #sec7{	
-	background: #3a5f8d url("../images/Screen_7/graph.png") no-repeat 45% 46%;
+	background: #3a5f8d;
 	background-size: 55%;
 	height:100vh;
 	width:100%;
 	position: relative;
 }
-#sec7>h1 {
+#sec7>div{
+	background: #3a5f8d url("../images/Screen_7/graph.png") no-repeat 45% 46%;
+}
+
+#sec7 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -787,7 +800,7 @@ main{
 	right: 40px;
 	font-weight: lighter;
 }
-#sec7>article:nth-child(2){
+#sec7 article:nth-child(2){
 	background: url("../images/Screen_7/info.png") no-repeat 45% top;
 	background-size: 66%;
 	position: absolute;
@@ -796,7 +809,7 @@ main{
 	top: 82%;
 	right: 0%;
 }
-#sec7>article:nth-child(3){
+#sec7 article:nth-child(3){
 	background: url("../images/Screen_7/mikra.png") no-repeat;
 	background-size: 80%;
 	position: absolute;
@@ -805,7 +818,7 @@ main{
 	top: 82%;
 	left: 18%;
 }
-#sec7>article:nth-child(4){
+#sec7 article:nth-child(4){
 	background: url("../images/Screen_7/line_per.png") no-repeat;
 	background-size: 90%;
 	position: absolute;
@@ -929,13 +942,16 @@ main{
 /* --------sec 9 --------------------------------------------------------------------*/
 
 #sec9{	
-	background: #b5b5b5 url("../images/Screen 9/Man_Box_full.png") no-repeat 50% 79%;
+	background: #b5b5b5;
 	position:relative;
 	height:100vh;
 	width:100%;
 }
+#sec9>div{
+	background: #b5b5b5 url("../images/Screen 9/Man_Box_full.png") no-repeat 50% 79%;
+}
 
-#sec9>h1 {
+#sec9 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -1042,14 +1058,16 @@ main{
 
 /* --------sec 10 --------------------------------------------------------------------*/
 #sec10{	
-	background: #ffbf47 url("../images/Screen 10/Bos.png") no-repeat 50% 70%;
-	position:relative;
+	background: #ffbf47;
 	height:100vh;
 	width:100%;
 	cursor: pointer;
 }
+#sec10>div{
+	background: #ffbf47 url("../images/Screen 10/Bos.png") no-repeat 50% 60%;
+}
 
-#sec10>h1 {
+#sec10 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -1115,12 +1133,15 @@ main{
   
 /* --------sec 11 --------------------------------------------------------------------*/
 #sec11{	
-	background: #84c560 url("../images/Screen_11/retirement.png") no-repeat 50% 34%;
+	background: #84c560;
 	background-size: 45%; 
 	height:100vh;
 	width:100%;
 }
-#sec11>img {
+#sec11>div{
+	background: #84c560 url("../images/Screen_11/retirement.png") no-repeat 50% 34%;
+}
+#sec11 img {
 	position: relative;
 	top: 21%;
 	left: 10%;
@@ -1135,7 +1156,7 @@ main{
 	width:100%;
 	position: relative;
 }
-#sec12>h1 {
+#sec12 h1 {
 	position: absolute;
 	font-family: aduma;
 	font-size: 40px;
@@ -1156,7 +1177,7 @@ main{
 	left: 27%;
 }
 #maslul{
-	background-image: url("../images/Screen_12/End_Tracks_2.png") ;
+	background-image: url("../images/Screen_12/End_Tracks_1.png") ;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	display: inline-block;
